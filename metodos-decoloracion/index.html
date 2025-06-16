@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Coloración en Microbiología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .method-card {
+            transition: all 0.3s ease;
+        }
+        .method-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #8B5CF6, #06B6D4);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.25rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: #8B5CF6;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+    
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <svg class="w-10 h-10 mr-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 8.172V5L8 4z"></path>
+                    </svg>
+                    <div>
+                        <h1 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+                            <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                                MÉTODOS DE COLORACIÓN
+                            </span>
+                        </h1>
+                        <p class="text-purple-300 text-sm sm:text-base">Fundamentos y Técnicas en Microbiología</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-purple-200 text-sm">Universidad Privada Franz Tamayo</p>
+                    <p class="text-purple-300 text-xs">Facultad de Ciencias de la Salud</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white/5 backdrop-blur-lg border-b border-white/10 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-2 text-sm">
+                <a href="#introduccion" class="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full hover:bg-purple-500/30 transition-colors">Introducción</a>
+                <a href="#fundamentos" class="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full hover:bg-blue-500/30 transition-colors">Fundamentos</a>
+                <a href="#gram" class="px-4 py-2 bg-green-500/20 text-green-300 rounded-full hover:bg-green-500/30 transition-colors">Tinción Gram</a>
+                <a href="#ziehl-neelsen" class="px-4 py-2 bg-red-500/20 text-red-300 rounded-full hover:bg-red-500/30 transition-colors">Ziehl-Neelsen</a>
+                <a href="#interpretacion" class="px-4 py-2 bg-yellow-500/20 text-yellow-300 rounded-full hover:bg-yellow-500/30 transition-colors">Interpretación</a>
+                <a href="#aplicaciones" class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full hover:bg-cyan-500/30 transition-colors">Aplicaciones</a>
+                <a href="#troubleshooting" class="px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full hover:bg-orange-500/30 transition-colors">Troubleshooting</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Imagen principal -->
+        <div class="text-center mb-12" id="introduccion">
+            <div class="relative inline-block">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-lg opacity-30"></div>
+                <img 
+                    src="https://via.placeholder.com/256x256/8B5CF6/ffffff?text=🔬+Microscopia" 
+                    alt="Microscopía y coloración bacteriana" 
+                    class="relative w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-full mx-auto shadow-2xl border-4 border-white/20"
+                >
+            </div>
+        </div>
+
+        <!-- Introducción y Importancia -->
+        <div class="section-card rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg mr-4 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                Métodos de Coloración en Microbiología
+            </h2>
+            
+            <!-- Importancia Clínica destacada -->
+            <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-6 mb-8 border border-blue-300/20">
+                <h3 class="text-xl font-bold text-blue-300 mb-4">🎯 Importancia en el Diagnóstico Clínico</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400">85%</div>
+                        <p class="text-gray-300 text-sm">De los diagnósticos microbiológicos dependen de técnicas de coloración</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-400">24h</div>
+                        <p class="text-gray-300 text-sm">Reducción promedio en tiempo de diagnóstico con coloraciones rápidas</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-pink-400">99%</div>
+                        <p class="text-gray-300 text-sm">Precisión en la diferenciación Gram cuando se realiza correctamente</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Definición y conceptos básicos -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-purple-300 mb-4">📖 Definición</h3>
+                    <p class="text-gray-200 mb-4">Los <strong>métodos de coloración</strong> son un conjunto de procedimientos fundamentados en principios físicos y químicos que permiten la visualización y diferenciación de microorganismos bajo el microscopio óptico.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-purple-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Fundamentos físicos:</strong> Absorción, ósmosis y capilaridad</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-purple-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Fundamentos químicos:</strong> Reacciones específicas entre colorantes y componentes celulares</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-violet-300 mb-4">🧪 Componentes de los Colorantes</h3>
+                    <div class="space-y-4">
+                        <div class="bg-violet-500/10 rounded-lg p-4 border border-violet-300/20">
+                            <h4 class="font-bold text-violet-300 mb-2">Radical Cromóforo</h4>
+                            <p class="text-gray-200 text-sm">Responsable del color. Incluye grupos como quinonas, azo compuestos, y sistemas aromáticos conjugados.</p>
+                        </div>
+                        <div class="bg-violet-500/10 rounded-lg p-4 border border-violet-300/20">
+                            <h4 class="font-bold text-violet-300 mb-2">Radical Auxócromo</h4>
+                            <p class="text-gray-200 text-sm">Modifica la intensidad del color y confiere propiedades de unión. Incluye grupos -OH, -NH₂, -COOH.</p>
+                        </div>
+                        <div class="bg-violet-500/10 rounded-lg p-4 border border-violet-300/20">
+                            <h4 class="font-bold text-violet-300 mb-2">Mordiente</h4>
+                            <p class="text-gray-200 text-sm">Facilita la fijación del colorante al tejido bacteriano, aumentando la afinidad y estabilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fundamentos y Fijación -->
+        <div class="section-card rounded-2xl p-8 mb-8" id="fundamentos">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mr-4 flex items-center justify-center text-2xl">⚗️</div>
+                Fundamentos y Fijación de Muestras
+            </h2>
+
+            <!-- Tipos de fijadores -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-300 mb-4">🔥 Fijadores Físicos</h3>
+                    <div class="space-y-4">
+                        <div class="method-card bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-300/20">
+                            <h4 class="font-bold text-blue-300 mb-2">Calor Seco</h4>
+                            <p class="text-gray-200 text-sm mb-2">Flameado rápido del portaobjetos. Temperatura: 60-80°C por 2-3 segundos.</p>
+                            <p class="text-cyan-300 text-xs"><strong>Ventaja:</strong> Rápido y simple | <strong>Desventaja:</strong> Puede deformar células</p>
+                        </div>
+                        <div class="method-card bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-300/20">
+                            <h4 class="font-bold text-blue-300 mb-2">Calor Húmedo</h4>
+                            <p class="text-gray-200 text-sm mb-2">Vapor de agua a 100°C por 1-2 minutos. Preserva mejor la morfología.</p>
+                            <p class="text-cyan-300 text-xs"><strong>Aplicación:</strong> Microorganismos delicados</p>
+                        </div>
+                        <div class="method-card bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-300/20">
+                            <h4 class="font-bold text-blue-300 mb-2">Desecación</h4>
+                            <p class="text-gray-200 text-sm mb-2">Secado al aire libre durante 10-15 minutos.</p>
+                            <p class="text-cyan-300 text-xs"><strong>Uso:</strong> Preparaciones especiales y muestras líquidas</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">🧪 Fijadores Químicos</h3>
+                    <div class="space-y-4">
+                        <div class="bg-cyan-500/10 rounded-lg p-4 border border-cyan-300/20">
+                            <h4 class="font-bold text-cyan-300 mb-3">Oxidantes</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <span class="text-gray-200">• Óxido crómico</span>
+                                <span class="text-gray-200">• Ácido acético</span>
+                                <span class="text-gray-200">• Ácido pícrico</span>
+                                <span class="text-gray-200">• Acetona</span>
+                                <span class="text-gray-200">• Dicromato K⁺</span>
+                                <span class="text-gray-200">• Permanganato</span>
+                            </div>
+                        </div>
+                        <div class="bg-cyan-500/10 rounded-lg p-4 border border-cyan-300/20">
+                            <h4 class="font-bold text-cyan-300 mb-3">Reductores</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <span class="text-gray-200">• Formaldehído</span>
+                                <span class="text-gray-200">• Glutaraldehído</span>
+                                <span class="text-gray-200">• Etanol</span>
+                                <span class="text-gray-200">• Metanol</span>
+                                <span class="text-gray-200">• Paraldehído</span>
+                                <span class="text-gray-200">• Tetróxido osmio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clasificación de métodos de coloración -->
+            <h3 class="text-2xl font-bold text-white mb-6">🎨 Clasificación de Métodos de Coloración</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="method-card bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl p-6 border border-yellow-300/20">
+                    <h4 class="font-bold text-yellow-300 text-lg mb-3">1. Tinción Simple</h4>
+                    <p class="text-gray-200 text-sm mb-3">Un solo colorante para visualizar morfología básica.</p>
+                    <div class="space-y-1 text-xs">
+                        <p class="text-yellow-200">• Tinción de Loeffler (azul de metileno)</p>
+                        <p class="text-yellow-200">• Azul de algodón</p>
+                        <p class="text-yellow-200">• Safranina</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-xl p-6 border border-gray-300/20">
+                    <h4 class="font-bold text-gray-300 text-lg mb-3">2. Tinción Negativa</h4>
+                    <p class="text-gray-200 text-sm mb-3">El fondo se tiñe, las bacterias permanecen claras.</p>
+                    <div class="space-y-1 text-xs">
+                        <p class="text-gray-200">• Tinta china</p>
+                        <p class="text-gray-200">• Nigrosina</p>
+                        <p class="text-gray-200">• Ideal para cápsulas</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-300/20">
+                    <h4 class="font-bold text-green-300 text-lg mb-3">3. Tinción Estructural</h4>
+                    <p class="text-gray-200 text-sm mb-3">Visualiza estructuras específicas.</p>
+                    <div class="space-y-1 text-xs">
+                        <p class="text-green-200">• Método de Leifson (flagelos)</p>
+                        <p class="text-green-200">• Método de Hiss (cápsulas)</p>
+                        <p class="text-green-200">• Schaeffer-Fulton (esporas)</p>
+                        <p class="text-green-200">• Neisser (corpúsculos metacromáticos)</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl p-6 border border-red-300/20">
+                    <h4 class="font-bold text-red-300 text-lg mb-3">4. Tinción Especial</h4>
+                    <p class="text-gray-200 text-sm mb-3">Para microorganismos específicos.</p>
+                    <div class="space-y-1 text-xs">
+                        <p class="text-red-200">• Fontana-Tribondeau (Treponemas)</p>
+                        <p class="text-red-200">• Warthin-Starry (Helicobacter)</p>
+                        <p class="text-red-200">• Calcofluor (hongos)</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-6 border border-purple-300/20">
+                    <h4 class="font-bold text-purple-300 text-lg mb-3">5. Tinción Diferencial</h4>
+                    <p class="text-gray-200 text-sm mb-3">Diferencia grupos de bacterias.</p>
+                    <div class="space-y-1 text-xs">
+                        <p class="text-purple-200">• Tinción de Gram</p>
+                        <p class="text-purple-200">• Ziehl-Neelsen</p>
+                        <p class="text-purple-200">• Kinyoun (ácido-resistente)</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-indigo-500/20 to-blue-500/20 rounded-xl p-6 border border-indigo-300/20">
+                    <h4 class="font-bold text-indigo-300 text-lg mb-3">6. Tinción Vital</h4>
+                    <p class="text-gray-200 text-sm mb-3">Coloración de células vivas.</p>
+                    <div class="space-y-1 text-xs">
+                        <p class="text-indigo-200">• Azul de tripán (viabilidad)</p>
+                        <p class="text-indigo-200">• Fluorescencia (DAPI, FITC)</p>
+                        <p class="text-indigo-200">• Rojo neutro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tinción de Gram -->
+        <div class="section-card rounded-2xl p-8 mb-8" id="gram">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mr-4 flex items-center justify-center text-2xl">🔬</div>
+                Tinción de Gram
+            </h2>
+
+            <!-- Historia -->
+            <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 mb-8 border border-green-300/20">
+                <h3 class="text-xl font-bold text-green-300 mb-4">📚 Historia y Desarrollo</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="timeline-item">
+                        <h4 class="font-bold text-green-300 mb-2">1875 - Carl Weigert</h4>
+                        <p class="text-gray-200 text-sm">Desarrolló los primeros métodos de coloración diferencial usando anilinas. Estableció las bases teóricas de la coloración bacteriana.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-bold text-emerald-300 mb-2">1884 - Hans Christian Gram</h4>
+                        <p class="text-gray-200 text-sm">Describió la técnica mientras estudiaba la etiología de la neumonía. Su método permitió diferenciar dos grandes grupos bacterianos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fundamento de la pared bacteriana -->
+            <h3 class="text-2xl font-bold text-green-300 mb-6">🧱 Fundamento: Estructura de la Pared Bacteriana</h3>
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-300/20">
+                    <h4 class="font-bold text-blue-300 text-xl mb-4">Bacterias Gram Positivas</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Pared celular gruesa:</strong> 20-80 nm de espesor</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>90% peptidoglicano:</strong> Múltiples capas de mureína</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Ácidos teicoicos:</strong> Polímeros de ribitol y glicerol fosfato</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Entrecruzamiento:</strong> Enlaces peptídicos entre cadenas de peptidoglicano</p>
+                        </div>
+                        <div class="bg-blue-500/10 rounded-lg p-3 mt-4">
+                            <p class="text-blue-200 text-sm"><strong>Resultado:</strong> Retiene el complejo cristal violeta-yodo = <strong>PÚRPURA</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl p-6 border border-red-300/20">
+                    <h4 class="font-bold text-red-300 text-xl mb-4">Bacterias Gram Negativas</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-red-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Pared celular delgada:</strong> 2-7 nm de peptidoglicano</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-red-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Membrana externa:</strong> Lipopolisacáridos (LPS)</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-red-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Espacio periplásmico:</strong> Entre membranas interna y externa</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-red-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200"><strong>Porinas:</strong> Proteínas que forman canales en la membrana externa</p>
+                        </div>
+                        <div class="bg-red-500/10 rounded-lg p-3 mt-4">
+                            <p class="text-red-200 text-sm"><strong>Resultado:</strong> Pierde el colorante primario, toma el contraste = <strong>ROSA</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Procedimiento detallado -->
+            <h3 class="text-2xl font-bold text-green-300 mb-6">⚗️ Procedimiento Paso a Paso</h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded-lg p-4 border border-purple-300/20">
+                        <h4 class="font-bold text-purple-300 mb-2">PASO 1: Colorante Primario</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Cristal Violeta</strong> - 1 a 3 minutos</p>
+                        <p class="text-purple-200 text-xs">Todas las bacterias se tiñen de púrpura. El colorante penetra tanto en Gram+ como Gram-.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg p-4 border border-yellow-300/20">
+                        <h4 class="font-bold text-yellow-300 mb-2">PASO 2: Mordiente</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Yodo (Lugol)</strong> - 1 minuto</p>
+                        <p class="text-yellow-200 text-xs">Forma complejo cristal violeta-yodo, fijando el colorante. Intensifica la coloración púrpura.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-lg p-4 border border-red-300/20">
+                        <h4 class="font-bold text-red-300 mb-2">PASO 3: Decolorante</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Alcohol-Acetona</strong> - 30 segundos a 1 minuto</p>
+                        <p class="text-red-200 text-xs">CRÍTICO: Gram- pierden el color, Gram+ lo retienen. Control del tiempo es esencial.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-lg p-4 border border-pink-300/20">
+                        <h4 class="font-bold text-pink-300 mb-2">PASO 4: Contraste</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Safranina</strong> - 1 a 3 minutos</p>
+                        <p class="text-pink-200 text-xs">Las bacterias decoloradas toman el color rosa/rojo. No afecta a las Gram+.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factores críticos -->
+            <div class="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-300/20">
+                <h3 class="text-xl font-bold text-orange-300 mb-4">⚠️ Factores Críticos para el Éxito</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                        <h4 class="font-bold text-orange-300 mb-2">Edad del Cultivo</h4>
+                        <p class="text-gray-200 text-sm">Cultivos de 18-24 horas. Cultivos viejos pueden dar falsos Gram-.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-orange-300 mb-2">Tiempo de Decoloración</h4>
+                        <p class="text-gray-200 text-sm">El paso más crítico. Sub-decoloración: falsos Gram+. Sobre-decoloración: falsos Gram-.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-orange-300 mb-2">Grosor del Frotis</h4>
+                        <p class="text-gray-200 text-sm">Frotis delgado y uniforme. Frotis gruesos impiden la penetración adecuada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tinción de Ziehl-Neelsen -->
+        <div class="section-card rounded-2xl p-8 mb-8" id="ziehl-neelsen">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg mr-4 flex items-center justify-center text-2xl">🔴</div>
+                Tinción de Ziehl-Neelsen
+            </h2>
+
+            <!-- Historia y desarrollo -->
+            <div class="bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-xl p-6 mb-8 border border-red-300/20">
+                <h3 class="text-xl font-bold text-red-300 mb-4">📚 Historia y Colaboraciones Científicas</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-red-300 mb-1">1854-1915 - Paul Ehrlich</h4>
+                            <p class="text-gray-200 text-sm">Pionero en quimioterapia, descubrió la afinidad de ciertas bacterias por colorantes ácidos.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-red-300 mb-1">1843-1910 - Robert Koch</h4>
+                            <p class="text-gray-200 text-sm">Describió el <em>Mycobacterium tuberculosis</em> y la necesidad de métodos específicos para su visualización.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-pink-300 mb-1">1857-1926 - Franz Ziehl</h4>
+                            <p class="text-gray-200 text-sm">Desarrolló la fórmula de fucsina fenicada que permitía la coloración con calor.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-pink-300 mb-1">1854-1894 - Adolf Neelsen</h4>
+                            <p class="text-gray-200 text-sm">Perfeccionó la técnica con ácido sulfúrico como decolorante, estableciendo el método estándar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Microorganismos objetivo -->
+            <h3 class="text-2xl font-bold text-red-300 mb-6">🎯 Microorganismos Ácido-Alcohol Resistentes (BAAR)</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl p-4 border border-red-300/20 text-center">
+                    <h4 class="font-bold text-red-300 mb-2">Mycobacterium</h4>
+                    <div class="text-gray-300 text-sm space-y-1">
+                        <p>M. tuberculosis</p>
+                        <p>M. leprae</p>
+                        <p>M. avium</p>
+                        <p>M. kansasii</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-4 border border-orange-300/20 text-center">
+                    <h4 class="font-bold text-orange-300 mb-2">Nocardia</h4>
+                    <div class="text-gray-300 text-sm space-y-1">
+                        <p>N. asteroides</p>
+                        <p>N. brasiliensis</p>
+                        <p>N. farcinica</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-xl p-4 border border-pink-300/20 text-center">
+                    <h4 class="font-bold text-pink-300 mb-2">Rhodococcus</h4>
+                    <div class="text-gray-300 text-sm space-y-1">
+                        <p>R. equi</p>
+                        <p>R. rhodochrous</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-4 border border-purple-300/20 text-center">
+                    <h4 class="font-bold text-purple-300 mb-2">Otros</h4>
+                    <div class="text-gray-300 text-sm space-y-1">
+                        <p>Gordonia</p>
+                        <p>Tsukamurella</p>
+                        <p>Cryptosporidium</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Composición de la pared celular -->
+            <h3 class="text-2xl font-bold text-red-300 mb-4">🧱 Composición Única de la Pared Celular</h3>
+            <div class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl p-6 mb-6 border border-yellow-300/20">
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-yellow-300 mb-3">Componentes Estructurales</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• <strong>Ácido mesodiaminopimélico (mDAP):</strong> Entrecruzamiento del peptidoglicano</p>
+                            <p class="text-gray-200">• <strong>Alanina (ALA) y Glutamato (GLU):</strong> Aminoácidos estructurales</p>
+                            <p class="text-gray-200">• <strong>N-acetilglucosamina y ácido murámico:</strong> Esqueleto del peptidoglicano</p>
+                            <p class="text-gray-200">• <strong>Arabinosa y galactosa:</strong> Azúcares del arabinogalactano</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-orange-300 mb-3">Fracciones Lipídicas</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• <strong>Ácidos micólicos:</strong> 30-60% del peso seco de la pared</p>
+                            <p class="text-gray-200">• <strong>Lipoarabinomanano (LAM):</strong> Glicolípido único</p>
+                            <p class="text-gray-200">• <strong>Fosfatidilinositol manósidos:</strong> Componentes antigénicos</p>
+                            <p class="text-gray-200">• <strong>Cord factor:</strong> Factor de virulencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-orange-500/10 rounded-lg p-4 mt-4">
+                    <p class="text-orange-200 text-sm"><strong>Característica clave:</strong> La alta concentración de lípidos (hasta 60%) confiere hidrofobicidad y resistencia a ácidos y alcoholes.</p>
+                </div>
+            </div>
+
+            <!-- Procedimiento de obtención de muestra -->
+            <h3 class="text-2xl font-bold text-red-300 mb-6">🥼 Obtención y Procesamiento de Muestras</h3>
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-red-300 mb-4">Tipos de Esputo y Características</h4>
+                    <div class="space-y-3">
+                        <div class="bg-red-500/10 rounded-lg p-3 border border-red-300/20">
+                            <h5 class="font-bold text-red-300 mb-1">Mucoso</h5>
+                            <p class="text-gray-200 text-sm">Transparente, viscoso. Menor probabilidad de BAAR.</p>
+                        </div>
+                        <div class="bg-orange-500/10 rounded-lg p-3 border border-orange-300/20">
+                            <h5 class="font-bold text-orange-300 mb-1">Mucopurulento</h5>
+                            <p class="text-gray-200 text-sm">Amarillento, viscoso. Buena calidad para diagnóstico.</p>
+                        </div>
+                        <div class="bg-yellow-500/10 rounded-lg p-3 border border-yellow-300/20">
+                            <h5 class="font-bold text-yellow-300 mb-1">Purulento</h5>
+                            <p class="text-gray-200 text-sm">Amarillo-verdoso, denso. Excelente para BAAR.</p>
+                        </div>
+                        <div class="bg-red-600/10 rounded-lg p-3 border border-red-400/20">
+                            <h5 class="font-bold text-red-400 mb-1">Hemopurulento</h5>
+                            <p class="text-gray-200 text-sm">Con sangre, indicativo de lesión avanzada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-pink-300 mb-4">Métodos de Recolección</h4>
+                    <div class="space-y-4">
+                        <div class="method-card bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-lg p-4 border border-pink-300/20">
+                            <h5 class="font-bold text-pink-300 mb-2">Expectoración Espontánea</h5>
+                            <p class="text-gray-200 text-sm">Método estándar. Muestra matutina preferible (mayor concentración).</p>
+                        </div>
+                        <div class="method-card bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg p-4 border border-purple-300/20">
+                            <h5 class="font-bold text-purple-300 mb-2">Inducción de Esputo</h5>
+                            <p class="text-gray-200 text-sm">Solución salina hipertónica al 3-5%. Para pacientes que no expectoran.</p>
+                        </div>
+                        <div class="method-card bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-lg p-4 border border-violet-300/20">
+                            <h5 class="font-bold text-violet-300 mb-2">Lavado Gástrico</h5>
+                            <p class="text-gray-200 text-sm">En niños o casos especiales. Muestra en ayunas.</p>
+                        </div>
+                        <div class="method-card bg-gradient-to-br from-indigo-500/20 to-violet-500/20 rounded-lg p-4 border border-indigo-300/20">
+                            <h5 class="font-bold text-indigo-300 mb-2">Lavado Bronquial</h5>
+                            <p class="text-gray-200 text-sm">Broncoscopía con lavado. Casos complejos o inmunodeprimidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medidas de bioseguridad -->
+            <div class="bg-gradient-to-r from-red-600/20 to-pink-600/20 rounded-xl p-6 mb-8 border border-red-400/20">
+                <h3 class="text-xl font-bold text-red-300 mb-4">🛡️ Medidas de Bioseguridad Esenciales</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-red-300 mb-3">Equipo de Protección Personal</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• <strong>Respirador N95 o FFP2:</strong> Protección contra aerosoles</p>
+                            <p class="text-gray-200">• <strong>Guantes de nitrilo:</strong> Doble par recomendado</p>
+                            <p class="text-gray-200">• <strong>Bata de laboratorio:</strong> Manga larga, puños ajustados</p>
+                            <p class="text-gray-200">• <strong>Protección ocular:</strong> Gafas o pantalla facial</p>
+                            <p class="text-gray-200">• <strong>Gorro quirúrgico:</strong> Cubre completamente el cabello</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-pink-300 mb-3">Infraestructura de Laboratorio</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• <strong>Cabina de seguridad biológica:</strong> Clase II tipo A2 mínimo</p>
+                            <p class="text-gray-200">• <strong>Presión negativa:</strong> Laboratorio BSL-2 o superior</p>
+                            <p class="text-gray-200">• <strong>Desinfección continua:</strong> Hipoclorito de sodio 0.5%</p>
+                            <p class="text-gray-200">• <strong>Autoclave:</strong> Para descontaminación de materiales</p>
+                            <p class="text-gray-200">• <strong>Acceso restringido:</strong> Personal autorizado únicamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Técnica de tinción paso a paso -->
+            <h3 class="text-2xl font-bold text-red-300 mb-6">⚗️ Técnica de Tinción Paso a Paso</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-lg p-4 border border-red-300/20">
+                        <h4 class="font-bold text-red-300 mb-2">PASO 1: Colorante Primario</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Fucsina Fenicada (Ziehl)</strong> + Calor - 5 minutos</p>
+                        <p class="text-red-200 text-xs">Aplicar calor suave hasta emisión de vapores. El fenol actúa como mordiente y facilita la penetración.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg p-4 border border-blue-300/20">
+                        <h4 class="font-bold text-blue-300 mb-2">PASO 2: Enfriamiento</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Lavado suave</strong> - 30 segundos</p>
+                        <p class="text-blue-200 text-xs">Enfriar gradualmente para evitar choque térmico y desprendimiento de la muestra.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg p-4 border border-yellow-300/20">
+                        <h4 class="font-bold text-yellow-300 mb-2">PASO 3: Decolorante</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Ácido-Alcohol</strong> - 1 a 3 minutos</p>
+                        <p class="text-yellow-200 text-xs">HCl al 3% en etanol 97%. Solo los BAAR retienen el colorante. Paso crítico del método.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-600/20 to-indigo-500/20 rounded-lg p-4 border border-blue-400/20">
+                        <h4 class="font-bold text-blue-400 mb-2">PASO 4: Contraste</h4>
+                        <p class="text-gray-200 text-sm mb-2"><strong>Azul de Metileno</strong> - 1 a 3 minutos</p>
+                        <p class="text-blue-300 text-xs">Colorea el fondo y células decoloradas. Los BAAR permanecen rojos sobre fondo azul.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interpretación y Lecturas -->
+        <div class="section-card rounded-2xl p-8 mb-8" id="interpretacion">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg mr-4 flex items-center justify-center text-2xl">👁️</div>
+                Interpretación y Lectura de Resultados
+            </h2>
+
+            <!-- Bacterioscopía cualitativa y cuantitativa -->
+            <h3 class="text-2xl font-bold text-yellow-300 mb-6">🔍 Análisis Bacterioscópico</h3>
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-yellow-300 mb-4">Análisis Cualitativo</h4>
+                    <div class="space-y-4">
+                        <div class="bg-yellow-500/10 rounded-lg p-4 border border-yellow-300/20">
+                            <h5 class="font-bold text-yellow-300 mb-2">Morfología Bacteriana</h5>
+                            <div class="text-gray-200 text-sm space-y-1">
+                                <p>• <strong>Cocos:</strong> Esféricos (Streptococcus, Staphylococcus)</p>
+                                <p>• <strong>Bacilos:</strong> Alargados (E. coli, Bacillus, Mycobacterium)</p>
+                                <p>• <strong>Espirilos:</strong> Helicoidales (Spirillum, Helicobacter)</p>
+                                <p>• <strong>Vibriones:</strong> Curvados (Vibrio cholerae)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-500/10 rounded-lg p-4 border border-orange-300/20">
+                            <h5 class="font-bold text-orange-300 mb-2">Patrones de Agrupación</h5>
+                            <div class="text-gray-200 text-sm space-y-1">
+                                <p>• <strong>Diplococos:</strong> Pares (Pneumococcus)</p>
+                                <p>• <strong>Estreptococos:</strong> Cadenas (S. pyogenes)</p>
+                                <p>• <strong>Estafilococos:</strong> Racimos (S. aureus)</p>
+                                <p>• <strong>Tetrádas:</strong> Grupos de 4 (Micrococcus)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-orange-300 mb-4">Análisis Cuantitativo - BAAR</h4>
+                    <div class="space-y-4">
+                        <div class="bg-red-500/10 rounded-lg p-4 border border-red-300/20">
+                            <h5 class="font-bold text-red-300 mb-2">Escala de Reporte</h5>
+                            <div class="text-gray-200 text-sm space-y-2">
+                                <p><strong>Negativo:</strong> 0 BAAR en 300 campos (objetivo 100x)</p>
+                                <p><strong>1-9 BAAR:</strong> Reportar número exacto en 100 campos</p>
+                                <p><strong>Positivo (+):</strong> 10-99 BAAR en 100 campos</p>
+                                <p><strong>Positivo (++):</strong> 1-10 BAAR por campo en 50 campos</p>
+                                <p><strong>Positivo (+++):</strong> >10 BAAR por campo en 20 campos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-300/20">
+                            <h5 class="font-bold text-purple-300 mb-2">Índice Baciloscópico</h5>
+                            <p class="text-gray-200 text-sm mb-2">IB = Número total de BAAR / Número total de campos examinados</p>
+                            <div class="bg-purple-600/20 rounded p-3">
+                                <p class="text-purple-200 text-xs"><strong>Correlación clínica:</strong> IB >1.0 indica alta carga bacilar y mayor contagiosidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Criterios de calidad del frotis -->
+            <h3 class="text-2xl font-bold text-yellow-300 mb-6">✅ Criterios de Calidad del Frotis</h3>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="method-card bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-300/20">
+                    <h4 class="font-bold text-green-300 text-lg mb-3">Frotis Óptimo ✅</h4>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-gray-200">• Grosor uniforme y delgado</p>
+                        <p class="text-gray-200">• Sin precipitados de colorante</p>
+                        <p class="text-gray-200">• Células bien distribuidas</p>
+                        <p class="text-gray-200">• Contraste adecuado</p>
+                        <p class="text-gray-200">• Sin áreas vacías</p>
+                    </div>
+                </div>
+                
+                <div class="method-card bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl p-6 border border-yellow-300/20">
+                    <h4 class="font-bold text-yellow-300 text-lg mb-3">Frotis Aceptable ⚠️</h4>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-gray-200">• Ligeramente grueso en zonas</p>
+                        <p class="text-gray-200">• Coloración algo intensa</p>
+                        <p class="text-gray-200">• Distribución irregular menor</p>
+                        <p class="text-gray-200">• Pocos artefactos</p>
+                        <p class="text-gray-200">• Lectura posible</p>
+                    </div>
+                </div>
+                
+                <div class="method-card bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl p-6 border border-red-300/20">
+                    <h4 class="font-bold text-red-300 text-lg mb-3">Frotis Inaceptable ❌</h4>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-gray-200">• Excesivamente grueso</p>
+                        <p class="text-gray-200">• Sobre o sub-coloración</p>
+                        <p class="text-gray-200">• Múltiples precipitados</p>
+                        <p class="text-gray-200">• Células lisadas</p>
+                        <p class="text-gray-200">• Requiere repetición</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interpretación clínica -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-300/20">
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">🏥 Correlación Clínica</h3>
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-indigo-300 mb-3">Significado de los Resultados</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200"><strong>BAAR (+++):</strong> Paciente altamente contagioso, probable TB pulmonar avanzada</p>
+                            <p class="text-gray-200"><strong>BAAR (++):</strong> Contagiosidad moderada, seguimiento estrecho</p>
+                            <p class="text-gray-200"><strong>BAAR (+):</strong> Baja carga bacilar, confirmar con cultivo</p>
+                            <p class="text-gray-200"><strong>1-9 BAAR:</strong> Resultado indeterminado, repetir muestra</p>
+                            <p class="text-gray-200"><strong>Negativo:</strong> No descarta TB, considerar otros métodos</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-purple-300 mb-3">Factores que Afectan la Sensibilidad</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• <strong>Carga bacilar:</strong> Mínimo 10⁴ BAAR/ml para detección</p>
+                            <p class="text-gray-200">• <strong>Calidad de muestra:</strong> Esputo vs saliva</p>
+                            <p class="text-gray-200">• <strong>Estadío de enfermedad:</strong> TB cavitaria vs miliar</p>
+                            <p class="text-gray-200">• <strong>Tratamiento previo:</strong> Puede reducir la positividad</p>
+                            <p class="text-gray-200">• <strong>Competencia técnica:</strong> Experiencia del microscopista</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aplicaciones Clínicas -->
+        <div class="section-card rounded-2xl p-8 mb-8" id="aplicaciones">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg mr-4 flex items-center justify-center text-2xl">🏥</div>
+                Aplicaciones Clínicas y Diagnósticas
+            </h2>
+
+            <!-- Aplicaciones por especialidad -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-6">🫁 Neumología y Medicina Interna</h3>
+                    <div class="space-y-4">
+                        <div class="method-card bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl p-4 border border-cyan-300/20">
+                            <h4 class="font-bold text-cyan-300 mb-2">Tuberculosis Pulmonar</h4>
+                            <p class="text-gray-200 text-sm mb-2">Diagnóstico inicial y seguimiento de tratamiento. Baciloscopía en esputo seriado.</p>
+                            <div class="text-cyan-200 text-xs">
+                                <p><strong>Sensibilidad:</strong> 50-80% | <strong>Especificidad:</strong> >95%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl p-4 border border-blue-300/20">
+                            <h4 class="font-bold text-blue-300 mb-2">Neumonías Bacterianas</h4>
+                            <p class="text-gray-200 text-sm mb-2">Diferenciación rápida entre Gram+ y Gram-. Orientación terapéutica inicial.</p>
+                            <div class="text-blue-200 text-xs">
+                                <p><strong>Tiempo de reporte:</strong> <1 hora vs 24-48h cultivo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-4 border border-indigo-300/20">
+                            <h4 class="font-bold text-indigo-300 mb-2">Micobacterias Atípicas</h4>
+                            <p class="text-gray-200 text-sm mb-2">MAC, M. kansasii en inmunodeprimidos. Diferenciación morfológica.</p>
+                            <div class="text-indigo-200 text-xs">
+                                <p><strong>Población objetivo:</strong> VIH+, trasplantados, terapia inmunosupresora</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-300 mb-6">🦠 Microbiología Clínica</h3>
+                    <div class="space-y-4">
+                        <div class="method-card bg-gradient-to-br from-green-500/20 to-cyan-500/20 rounded-xl p-4 border border-green-300/20">
+                            <h4 class="font-bold text-green-300 mb-2">Hemocultivos</h4>
+                            <p class="text-gray-200 text-sm mb-2">Coloración directa de cultivos positivos. Orientación antibiótica precoz.</p>
+                            <div class="text-green-200 text-xs">
+                                <p><strong>Impacto:</strong> Reducción 12-24h en tiempo de diagnóstico</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-gradient-to-br from-teal-500/20 to-green-500/20 rounded-xl p-4 border border-teal-300/20">
+                            <h4 class="font-bold text-teal-300 mb-2">Líquidos Corporales</h4>
+                            <p class="text-gray-200 text-sm mb-2">LCR, líquido pleural, ascítico. Diagnóstico directo de infecciones.</p>
+                            <div class="text-teal-200 text-xs">
+                                <p><strong>Crítico en:</strong> Meningitis, peritonitis, empiema</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-xl p-4 border border-cyan-300/20">
+                            <h4 class="font-bold text-cyan-300 mb-2">Infecciones de Tejidos Blandos</h4>
+                            <p class="text-gray-200 text-sm mb-2">Heridas, abscesos, úlceras. Diferenciación entre flora y patógenos.</p>
+                            <div class="text-cyan-200 text-xs">
+                                <p><strong>Valor agregado:</strong> Evaluación de PMN y microorganismos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Algoritmos diagnósticos -->
+            <h3 class="text-2xl font-bold text-cyan-300 mb-6">🔄 Algoritmos Diagnósticos</h3>
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-6 border border-purple-300/20">
+                    <h4 class="font-bold text-purple-300 text-xl mb-4">Sospecha de Tuberculosis</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs mr-3">1</div>
+                            <p class="text-gray-200">Baciloscopía en 2-3 muestras de esputo</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs mr-3">2</div>
+                            <p class="text-gray-200">Si positiva: Iniciar tratamiento + cultivo</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs mr-3">3</div>
+                            <p class="text-gray-200">Si negativa: GeneXpert, cultivo, biopsia</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs mr-3">4</div>
+                            <p class="text-gray-200">Seguimiento: Baciloscopía mensual</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-300/20">
+                    <h4 class="font-bold text-green-300 text-xl mb-4">Infección Respiratoria Aguda</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">1</div>
+                            <p class="text-gray-200">Coloración de Gram en esputo/BAL</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">2</div>
+                            <p class="text-gray-200">Evaluación de calidad (células epiteliales <10)</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">3</div>
+                            <p class="text-gray-200">Gram+: Cobertura anti-estafilocócica/estreptocócica</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">4</div>
+                            <p class="text-gray-200">Gram-: Cobertura anti-bacilos Gram negativos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Limitaciones y consideraciones -->
+            <div class="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-300/20">
+                <h3 class="text-xl font-bold text-orange-300 mb-4">⚠️ Limitaciones y Consideraciones Importantes</h3>
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-bold text-orange-300 mb-3">Limitaciones Técnicas</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• No diferencia especies dentro del género</p>
+                            <p class="text-gray-200">• Sensibilidad limitada (10⁴-10⁵ UFC/ml)</p>
+                            <p class="text-gray-200">• Dependiente de la experiencia del operador</p>
+                            <p class="text-gray-200">• No detecta resistencia antibiótica</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-red-300 mb-3">Falsos Positivos</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• Micobacterias ambientales</p>
+                            <p class="text-gray-200">• Contaminación cruzada</p>
+                            <p class="text-gray-200">• Precipitados de colorante</p>
+                            <p class="text-gray-200">• Artefactos en la preparación</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-pink-300 mb-3">Falsos Negativos</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-200">• Baja carga bacilar (TB extrapulmonar)</p>
+                            <p class="text-gray-200">• Muestra inadecuada (saliva vs esputo)</p>
+                            <p class="text-gray-200">• Técnica deficiente</p>
+                            <p class="text-gray-200">• Tratamiento antibiótico previo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="section-card rounded-2xl p-8 mb-8" id="troubleshooting">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mr-4 flex items-center justify-center text-2xl">🔧</div>
+                Troubleshooting y Solución de Problemas
+            </h2>
+
+            <!-- Problemas comunes en Gram -->
+            <h3 class="text-2xl font-bold text-orange-300 mb-6">🔍 Problemas en Tinción de Gram</h3>
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-orange-300 mb-4">Problemas de Coloración</h4>
+                    <div class="space-y-4">
+                        <div class="bg-red-500/10 rounded-lg p-4 border border-red-300/20">
+                            <h5 class="font-bold text-red-300 mb-2">Todas las bacterias aparecen rojas</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Sobre-decoloración, cristal violeta vencido, tiempo insuficiente</p>
+                            <p class="text-red-200 text-xs"><strong>Solución:</strong> Reducir tiempo de decoloración, verificar reactivos, asegurar fijación adecuada</p>
+                        </div>
+                        
+                        <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-300/20">
+                            <h5 class="font-bold text-purple-300 mb-2">Todas las bacterias aparecen púrpuras</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Sub-decoloración, alcohol diluido, frotis muy grueso</p>
+                            <p class="text-purple-200 text-xs"><strong>Solución:</strong> Aumentar tiempo de decoloración, verificar concentración de alcohol</p>
+                        </div>
+                        
+                        <div class="bg-yellow-500/10 rounded-lg p-4 border border-yellow-300/20">
+                            <h5 class="font-bold text-yellow-300 mb-2">Coloración desigual</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Frotis irregular, fijación inadecuada, reactivos contaminados</p>
+                            <p class="text-yellow-200 text-xs"><strong>Solución:</strong> Preparar frotis más uniforme, verificar técnica de fijación</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-red-300 mb-4">Problemas de Preparación</h4>
+                    <div class="space-y-4">
+                        <div class="bg-blue-500/10 rounded-lg p-4 border border-blue-300/20">
+                            <h5 class="font-bold text-blue-300 mb-2">Frotis se desprende</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Fijación insuficiente, portaobjetos graso</p>
+                            <p class="text-blue-200 text-xs"><strong>Solución:</strong> Desengrasar correctamente, fijar por más tiempo</p>
+                        </div>
+                        
+                        <div class="bg-green-500/10 rounded-lg p-4 border border-green-300/20">
+                            <h5 class="font-bold text-green-300 mb-2">Precipitados excesivos</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Reactivos vencidos, filtración insuficiente</p>
+                            <p class="text-green-200 text-xs"><strong>Solución:</strong> Filtrar colorantes, renovar reactivos</p>
+                        </div>
+                        
+                        <div class="bg-cyan-500/10 rounded-lg p-4 border border-cyan-300/20">
+                            <h5 class="font-bold text-cyan-300 mb-2">Bacterias deformadas</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Exceso de calor, pH inadecuado</p>
+                            <p class="text-cyan-200 text-xs"><strong>Solución:</strong> Flameado más suave, verificar pH de colorantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problemas en Ziehl-Neelsen -->
+            <h3 class="text-2xl font-bold text-red-300 mb-6">🌡️ Problemas en Ziehl-Neelsen</h3>
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-red-300 mb-4">Problemas de Sensibilidad</h4>
+                    <div class="space-y-4">
+                        <div class="bg-red-500/10 rounded-lg p-4 border border-red-300/20">
+                            <h5 class="font-bold text-red-300 mb-2">BAAR no se observan (falso negativo)</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Calentamiento insuficiente, fucsina degradada, muestra inadecuada</p>
+                            <p class="text-red-200 text-xs"><strong>Solución:</strong> Aumentar temperatura, renovar colorante, obtener mejor muestra</p>
+                        </div>
+                        
+                        <div class="bg-orange-500/10 rounded-lg p-4 border border-orange-300/20">
+                            <h5 class="font-bold text-orange-300 mb-2">Coloración débil de BAAR</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Tiempo insuficiente, concentración baja de fucsina</p>
+                            <p class="text-orange-200 text-xs"><strong>Solución:</strong> Prolongar tinción, verificar preparación de colorante</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-pink-300 mb-4">Problemas de Especificidad</h4>
+                    <div class="space-y-4">
+                        <div class="bg-pink-500/10 rounded-lg p-4 border border-pink-300/20">
+                            <h5 class="font-bold text-pink-300 mb-2">Todo aparece rojo (falso positivo)</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Decoloración insuficiente, ácido-alcohol diluido</p>
+                            <p class="text-pink-200 text-xs"><strong>Solución:</strong> Prolongar decoloración, verificar concentración de ácido</p>
+                        </div>
+                        
+                        <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-300/20">
+                            <h5 class="font-bold text-purple-300 mb-2">Artefactos rojos</h5>
+                            <p class="text-gray-200 text-sm mb-2"><strong>Causas:</strong> Cristales de colorante, fibras, contaminación</p>
+                            <p class="text-purple-200 text-xs"><strong>Solución:</strong> Filtrar fucsina, limpiar área de trabajo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control de calidad -->
+            <h3 class="text-2xl font-bold text-orange-300 mb-6">✅ Control de Calidad</h3>
+            <div class="bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-xl p-6 border border-green-300/20">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-green-300 mb-4">Controles Diarios</h4>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Control positivo:</strong> Cepa conocida Gram+ y Gram-</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Control negativo:</strong> Portaobjetos sin muestra</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Verificación de reactivos:</strong> Color, pH, fecha</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Tiempo de reacción:</strong> Cronometraje exacto</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-cyan-300 mb-4">Controles Periódicos</h4>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-cyan-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Evaluación externa:</strong> Programa nacional de QC</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-cyan-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Correlación cultivo:</strong> Verificar concordancia</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-cyan-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Revisión ciega:</strong> Re-lectura de positivos</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-cyan-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                                <p class="text-gray-200"><strong>Capacitación continua:</strong> Actualización técnica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Innovaciones y Futuro -->
+        <div class="section-card rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg mr-4 flex items-center justify-center text-2xl">🚀</div>
+                Innovaciones y Tendencias Futuras
+            </h2>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <div class="method-card bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-xl p-6 border border-violet-300/20">
+                    <h3 class="font-bold text-violet-300 text-lg mb-3">Microscopia Digital</h3>
+                    <p class="text-gray-200 text-sm mb-3">Sistemas automatizados de lectura con inteligencia artificial para detección de BAAR y clasificación Gram.</p>
+                    <div class="text-violet-200 text-xs">
+                        <p><strong>Ventajas:</strong> Objetividad, velocidad, telemedicina</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-300/20">
+                    <h3 class="font-bold text-purple-300 text-lg mb-3">Coloraciones Fluorescentes</h3>
+                    <p class="text-gray-200 text-sm mb-3">Auramina-rodamina para BAAR, DAPI para DNA bacteriano. Mayor sensibilidad y especificidad.</p>
+                    <div class="text-purple-200 text-xs">
+                        <p><strong>Beneficio:</strong> Detección más rápida, menor fatiga visual</p>
+                    </div>
+                </div>
+
+                <div class="method-card bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-xl p-6 border border-pink-300/20">
+                    <h3 class="font-bold text-pink-300 text-lg mb-3">Point-of-Care Testing</h3>
+                    <p class="text-gray-200 text-sm mb-3">Dispositivos portátiles para diagnóstico inmediato en consulta médica y áreas remotas.</p>
+                    <div class="text-pink-200 text-xs">
+                        <p><strong>Impacto:</strong> Reducción de tiempos, acceso universal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuevas técnicas moleculares -->
+            <div class="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-6 mt-8 border border-indigo-300/20">
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">🧬 Integración con Técnicas Moleculares</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-indigo-300 mb-3">Hibridación in situ</h4>
+                        <p class="text-gray-200 text-sm">Combinación de coloración tradicional con sondas de DNA específicas para identificación directa de especies.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-purple-300 mb-3">Secuenciación rápida</h4>
+                        <p class="text-gray-200 text-sm">Oxford Nanopore y otras tecnologías permiten identificación en tiempo real complementando la microscopia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusiones -->
+        <div class="section-card rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mr-4 flex items-center justify-center text-2xl">📝</div>
+                Conclusiones y Puntos Clave
+            </h2>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-green-300 mb-4">💡 Aspectos Fundamentales</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">Los métodos de coloración siguen siendo la <strong>base del diagnóstico microbiológico</strong>, proporcionando información rápida y costo-efectiva.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">La <strong>estandarización de técnicas</strong> y el control de calidad son esenciales para obtener resultados confiables y reproducibles.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">La <strong>capacitación continua</strong> del personal técnico es crucial para mantener la calidad diagnóstica.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">La <strong>bioseguridad</strong> debe ser prioritaria, especialmente en el manejo de muestras potencialmente infectocontagiosas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-300 mb-4">🎯 Recomendaciones Prácticas</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-emerald-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">Implementar <strong>protocolos escritos</strong> detallados para cada técnica de coloración en el laboratorio.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-emerald-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">Establecer <strong>controles de calidad diarios</strong> y participar en programas de evaluación externa.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-emerald-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">Mantener <strong>correlación clínico-laboratorio</strong> para optimizar la utilidad diagnóstica de los resultados.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-emerald-400 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                            <p class="text-gray-200 text-sm">Considerar la <strong>integración de nuevas tecnologías</strong> manteniendo los fundamentos clásicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensaje final -->
+            <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-6 mt-8 border border-blue-300/20 text-center">
+                <h3 class="text-xl font-bold text-blue-300 mb-4">🔬 La Excelencia en el Diagnóstico</h3>
+                <p class="text-gray-200 text-lg mb-4">
+                    Los métodos de coloración representan más de un siglo de desarrollo científico y siguen siendo herramientas indispensables 
+                    en la medicina moderna. Su correcta aplicación puede ser determinante entre la vida y la muerte de un paciente.
+                </p>
+                <p class="text-blue-300 font-semibold">
+                    "La precisión técnica de hoy es la salud del paciente de mañana"
+                </p>
+            </div>
+        </div>
+
+        <!-- Referencias y Material de Estudio -->
+        <div class="section-card rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-lg mr-4 flex items-center justify-center text-2xl">📚</div>
+                Referencias y Material de Estudio
+            </h2>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-amber-300 mb-4">📖 Bibliografía Recomendada</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="bg-amber-500/10 rounded-lg p-3 border border-amber-300/20">
+                            <p class="text-gray-200"><strong>Manual de Microbiología Clínica</strong> - ASM Press (American Society for Microbiology)</p>
+                        </div>
+                        <div class="bg-yellow-500/10 rounded-lg p-3 border border-yellow-300/20">
+                            <p class="text-gray-200"><strong>Bailey & Scott's Diagnostic Microbiology</strong> - Elsevier (14ª Edición)</p>
+                        </div>
+                        <div class="bg-orange-500/10 rounded-lg p-3 border border-orange-300/20">
+                            <p class="text-gray-200"><strong>Color Atlas of Medical Bacteriology</strong> - ASM Press</p>
+                        </div>
+                        <div class="bg-red-500/10 rounded-lg p-3 border border-red-300/20">
+                            <p class="text-gray-200"><strong>WHO Guidelines for Treatment of Tuberculosis</strong> - World Health Organization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-yellow-300 mb-4">🌐 Recursos Online</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="bg-blue-500/10 rounded-lg p-3 border border-blue-300/20">
+                            <p class="text-gray-200"><strong>CDC Laboratory Guidelines</strong> - Centros para el Control de Enfermedades</p>
+                        </div>
+                        <div class="bg-green-500/10 rounded-lg p-3 border border-green-300/20">
+                            <p class="text-gray-200"><strong>CLSI Standards</strong> - Clinical and Laboratory Standards Institute</p>
+                        </div>
+                        <div class="bg-purple-500/10 rounded-lg p-3 border border-purple-300/20">
+                            <p class="text-gray-200"><strong>Atlas de Microbiología</strong> - Universidad Virtual de Salud</p>
+                        </div>
+                        <div class="bg-pink-500/10 rounded-lg p-3 border border-pink-300/20">
+                            <p class="text-gray-200"><strong>Programa Nacional de Tuberculosis</strong> - Ministerio de Salud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <button 
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+        class="back-to-top bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-full shadow-lg hover:from-purple-600 hover:to-pink-600 hover:scale-110 transition-all duration-300"
+        title="Volver al inicio"
+    >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 backdrop-blur-lg border-t border-white/10 py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <h3 class="text-xl font-bold text-white mb-2">Universidad Privada Franz Tamayo</h3>
+                <p class="text-purple-300">Facultad de Ciencias de la Salud - Carrera de Medicina</p>
+                <p class="text-purple-400 text-sm">Microbiología Médica</p>
+            </div>
+            <div class="mb-4">
+                <p class="text-gray-300 text-sm">Dr. Andrés F. Mendoza</p>
+                <p class="text-gray-400 text-xs">Material educativo para uso académico</p>
+            </div>
+            <div class="border-t border-white/10 pt-4">
+                <p class="text-gray-500 text-xs">
+                    © 2024 - Material de estudio. Todos los derechos reservados.
+                    <br>
+                    "La educación es el arma más poderosa que puedes usar para cambiar el mundo" - Nelson Mandela
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.visibility = 'visible';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.visibility = 'hidden';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.method-card, .section-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Highlight active navigation item
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-opacity-40');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('bg-opacity-40');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

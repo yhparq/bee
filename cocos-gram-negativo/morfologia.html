@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morfología - Cocos Gram Negativos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900">
+    
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-4">
+                <a href="index.html" class="text-violet-400 hover:text-white transition-colors duration-300 text-sm flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver
+                </a>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
+                <span class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
+                    Morfología
+                </span>
+                <span class="text-gray-200">Microscópica</span>
+            </h1>
+            <p class="text-center text-violet-200 mt-2 text-lg">Características Estructurales</p>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Características Generales -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-3 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    Características Morfológicas Generales
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-violet-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-violet-300 mb-3">Forma</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li>• <strong>Cocos:</strong> Esféricos</li>
+                            <li>• <strong>Diplococos:</strong> En pares</li>
+                            <li>• <strong>Forma individual:</strong> "Riñón" o "grano de café"</li>
+                            <li>• <strong>Tamaño:</strong> 0.6-1.0 μm diámetro</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-purple-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-purple-300 mb-3">Tinción de Gram</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li>• <strong>Gram negativos:</strong> Color rosado</li>
+                            <li>• <strong>Pared celular:</strong> Fina capa de peptidoglicano</li>
+                            <li>• <strong>Membrana externa:</strong> LPS presente</li>
+                            <li>• <strong>Espacio periplásmico:</strong> Visible</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-pink-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-pink-300 mb-3">Movilidad</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li>• <strong>Inmóviles:</strong> Sin flagelos</li>
+                            <li>• <strong>Pilosidades:</strong> Pili tipo IV</li>
+                            <li>• <strong>Función pili:</strong> Adhesión y competencia</li>
+                            <li>• <strong>Twitching:</strong> Movimiento por retracción</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-indigo-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-indigo-300 mb-3">Agrupación</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li>• <strong>Diplococos:</strong> Predominante</li>
+                            <li>• <strong>Tétradas:</strong> Ocasional</li>
+                            <li>• <strong>Cadenas cortas:</strong> Raro</li>
+                            <li>• <strong>Intracelular:</strong> En PMN (gonococos)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparación Morfológica -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Comparación Morfológica por Especie</h2>
+                
+                <div class="grid lg:grid-cols-3 gap-6">
+                    
+                    <!-- N. gonorrhoeae -->
+                    <div class="bg-red-500/20 p-6 rounded-lg border border-red-500/30">
+                        <h3 class="text-xl font-bold text-red-300 mb-4 text-center">N. gonorrhoeae</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-red-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-red-200 mb-2">Microscopía</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Diplococos Gram (-) típicos</li>
+                                    <li>• Forma de riñón marcada</li>
+                                    <li>• Intracelulares en PMN</li>
+                                    <li>• 0.6-1.0 μm diámetro</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-red-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-red-200 mb-2">Ultraestructura</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Pilosidades largas y abundantes</li>
+                                    <li>• Vesículas de membrana externa</li>
+                                    <li>• Proteínas Opa variables</li>
+                                    <li>• Sin cápsula visible</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-red-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-red-200 mb-2">Colonias</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Pequeñas (1-2 mm)</li>
+                                    <li>• Convexas y brillantes</li>
+                                    <li>• Translúcidas u opacas</li>
+                                    <li>• Consistencia mucoide</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- N. meningitidis -->
+                    <div class="bg-purple-500/20 p-6 rounded-lg border border-purple-500/30">
+                        <h3 class="text-xl font-bold text-purple-300 mb-4 text-center">N. meningitidis</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-purple-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-purple-200 mb-2">Microscopía</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Diplococos Gram (-)</li>
+                                    <li>• Extra e intracelulares</li>
+                                    <li>• Cápsula polisacárida visible</li>
+                                    <li>• 0.6-0.8 μm diámetro</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-purple-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-purple-200 mb-2">Ultraestructura</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Cápsula gruesa de polisacáridos</li>
+                                    <li>• Pilosidades tipo IV</li>
+                                    <li>• Blebs de membrana externa</li>
+                                    <li>• Proteínas de adhesión</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-purple-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-purple-200 mb-2">Colonias</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Medianas a grandes (2-4 mm)</li>
+                                    <li>• Convexas y húmedas</li>
+                                    <li>• Grisáceas o translúcidas</li>
+                                    <li>• Muy mucoides</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- M. catarrhalis -->
+                    <div class="bg-orange-500/20 p-6 rounded-lg border border-orange-500/30">
+                        <h3 class="text-xl font-bold text-orange-300 mb-4 text-center">M. catarrhalis</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-orange-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-orange-200 mb-2">Microscopía</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Diplococos Gram (-)</li>
+                                    <li>• Predominantemente extracelulares</li>
+                                    <li>• Sin cápsula</li>
+                                    <li>• 0.8-1.0 μm diámetro</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-orange-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-orange-200 mb-2">Ultraestructura</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Pilosidades menos prominentes</li>
+                                    <li>• Proteínas de membrana externa</li>
+                                    <li>• β-lactamasas periplásticas</li>
+                                    <li>• Fimbrias de adhesión</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-orange-600/30 p-3 rounded">
+                                <h4 class="font-semibold text-orange-200 mb-2">Colonias</h4>
+                                <ul class="text-sm text-gray-200 space-y-1">
+                                    <li>• Grandes (3-5 mm)</li>
+                                    <li>• Lisas y brillantes</li>
+                                    <li>• Blanco-grisáceas</li>
+                                    <li>• Fácil emulsificación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Estructura de la Pared Celular -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Estructura de la Pared Celular</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="bg-blue-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-300 mb-3">Membrana Citoplasmática</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Composición:</strong> Bicapa fosfolipídica</li>
+                                <li>• <strong>Proteínas:</strong> Transportadores, enzimas</li>
+                                <li>• <strong>Función:</strong> Permeabilidad selectiva</li>
+                                <li>• <strong>Respiración:</strong> Cadena de transporte de electrones</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-teal-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-teal-300 mb-3">Espacio Periplásmico</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Ubicación:</strong> Entre membranas</li>
+                                <li>• <strong>Contenido:</strong> Enzimas hidrolíticas</li>
+                                <li>• <strong>β-lactamasas:</strong> En M. catarrhalis</li>
+                                <li>• <strong>Proteínas de unión:</strong> Nutrientes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-green-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-green-300 mb-3">Peptidoglicano</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Espesor:</strong> Capa fina (2-7 nm)</li>
+                                <li>• <strong>Composición:</strong> N-acetilglucosamina y ácido murámico</li>
+                                <li>• <strong>Entrecruzamiento:</strong> Péptidos cortos</li>
+                                <li>• <strong>Función:</strong> Forma y protección osmótica</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-purple-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-purple-300 mb-3">Membrana Externa</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Cara interna:</strong> Fosfolípidos</li>
+                                <li>• <strong>Cara externa:</strong> Lipopolisacáridos (LPS)</li>
+                                <li>• <strong>Proteínas:</strong> Porinas, adhesinas</li>
+                                <li>• <strong>Función:</strong> Barrera selectiva</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-red-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-red-300 mb-3">Lipopolisacáridos (LPS)</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Lípido A:</strong> Actividad endotóxica</li>
+                                <li>• <strong>Core:</strong> Oligosacárido conservado</li>
+                                <li>• <strong>Antígeno O:</strong> Variable entre especies</li>
+                                <li>• <strong>Función:</strong> Virulencia, mimetismo molecular</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-yellow-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-yellow-300 mb-3">Estructuras Superficiales</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Pilosidades:</strong> Adhesión, competencia</li>
+                                <li>• <strong>Cápsula:</strong> Solo N. meningitidis</li>
+                                <li>• <strong>Fimbrias:</strong> Adhesión específica</li>
+                                <li>• <strong>OMVs:</strong> Vesículas de membrana externa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Técnicas de Observación -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Técnicas de Observación Microscópica</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-violet-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-violet-300 mb-3">Tinción de Gram</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li><strong>Objetivo:</strong> Diferenciación</li>
+                            <li><strong>Resultado:</strong> Rosado/rojo</li>
+                            <li><strong>Contraste:</strong> Safranina</li>
+                            <li><strong>Tiempo:</strong> 4-5 minutos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-blue-300 mb-3">Azul de Metileno</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li><strong>Objetivo:</strong> Morfología simple</li>
+                            <li><strong>Resultado:</strong> Azul uniforme</li>
+                            <li><strong>Ventaja:</strong> Rápido</li>
+                            <li><strong>Uso:</strong> Screening inicial</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-green-300 mb-3">Tinta China</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li><strong>Objetivo:</strong> Visualizar cápsula</li>
+                            <li><strong>Resultado:</strong> Halo claro</li>
+                            <li><strong>Específico:</strong> N. meningitidis</li>
+                            <li><strong>LCR:</strong> Diagnóstico rápido</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-orange-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-orange-300 mb-3">Inmunofluorescencia</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li><strong>Objetivo:</strong> Identificación específica</li>
+                            <li><strong>Resultado:</strong> Fluorescencia</li>
+                            <li><strong>Ventaja:</strong> Alta especificidad</li>
+                            <li><strong>Uso:</strong> Confirmación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Criterios de Identificación Morfológica -->
+        <section>
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Criterios de Identificación Morfológica</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-6 rounded-lg">
+                        <h3 class="font-semibold text-blue-300 mb-4 text-lg">Algoritmo de Identificación</h3>
+                        <div class="grid md:grid-cols-3 gap-4 text-sm">
+                            <div class="bg-blue-600/30 p-3 rounded">
+                                <h4 class="font-medium text-blue-200 mb-2">Paso 1: Tinción de Gram</h4>
+                                <p class="text-gray-300">Diplococos Gram negativos → Continuar</p>
+                            </div>
+                            <div class="bg-purple-600/30 p-3 rounded">
+                                <h4 class="font-medium text-purple-200 mb-2">Paso 2: Localización</h4>
+                                <p class="text-gray-300">Intracelular PMN → Sospecha gonococos<br>
+                                Extra/intracelular → Sospecha meningococos</p>
+                            </div>
+                            <div class="bg-violet-600/30 p-3 rounded">
+                                <h4 class="font-medium text-violet-200 mb-2">Paso 3: Fuente clínica</h4>
+                                <p class="text-gray-300">Genital → Gonorrea<br>
+                                LCR → Meningitis<br>
+                                Respiratorio → Moraxella</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-yellow-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-yellow-300 mb-3">Puntos Clave Diferenciales</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Forma típica:</strong> "Riñón" o "grano de café"</li>
+                                <li>• <strong>Agrupación:</strong> Siempre en pares</li>
+                                <li>• <strong>Tamaño uniforme:</strong> No pleomorfismo</li>
+                                <li>• <strong>Tinción homogénea:</strong> No granulaciones</li>
+                                <li>• <strong>Ausencia:</strong> Esporas, flagelos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-red-500/20 p-4 rounded-lg">
+                            <h3 class="font-semibold text-red-300 mb-3">Errores Comunes</h3>
+                            <ul class="text-sm text-gray-200 space-y-2">
+                                <li>• <strong>Confusión:</strong> Con enterococos</li>
+                                <li>• <strong>Sobredecoloración:</strong> Falsos Gram negativos</li>
+                                <li>• <strong>Contaminación:</strong> Flora normal</li>
+                                <li>• <strong>Degradación:</strong> Muestras viejas</li>
+                                <li>• <strong>Técnica:</strong> Fijación inadecuada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 backdrop-blur-lg border-t border-white/10 py-6 mt-auto">
+        <div class="container mx-auto text-center px-4 sm:px-6">
+            <p class="text-sm md:text-base text-gray-300">© 2025 Microbiología Leída - Ivett Jaliri Ccuno</p>
+            <p class="text-xs text-gray-400 mt-1">Universidad Privada Franz Tamayo - Carrera de Medicina</p>
+        </div>
+    </footer>
+
+</body>
+</html>

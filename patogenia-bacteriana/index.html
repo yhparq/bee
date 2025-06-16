@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecanismos de Patogenia Bacteriana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'bacteria-pattern': 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="36" cy="8" r="5"/%3E%3Ccircle cx="4" cy="24" r="3"/%3E%3Ccircle cx="56" cy="44" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 bacteria-pattern">
+    <!-- Header -->
+    <header class="relative">
+        <div class="glass rounded-b-3xl shadow-xl">
+            <div class="container mx-auto px-6 py-8">
+                <div class="text-center">
+                    <h1 class="text-5xl font-bold text-white mb-4">
+                        🦠 Mecanismos de Patogenia Bacteriana
+                    </h1>
+                    <p class="text-xl text-white/90 max-w-3xl mx-auto">
+                        Comprendiendo cómo las bacterias causan enfermedad en el organismo humano
+                    </p>
+                    <div class="mt-6 text-sm text-white/80">
+                        Dr. Andrés F. Mendoza - Microbiología
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-8 space-y-8">
+        <!-- Introducción -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-4 flex items-center">
+                <span class="bg-gradient-to-r from-yellow-400 to-orange-500 p-2 rounded-full mr-3">🌡️</span>
+                Introducción
+            </h2>
+            <div class="bg-white/10 rounded-xl p-4 text-white/90 leading-relaxed">
+                Para la bacteria, el cuerpo humano es un conjunto de <strong>nichos ambientales</strong> que proporcionan 
+                el calor, la humedad y el alimento necesarios para el crecimiento. Las bacterias han adquirido características 
+                genéticas que les permiten <strong>invadir, colonizar, obtener nutrientes y evadir las defensas</strong> del hospedador.
+            </div>
+        </section>
+
+        <!-- Factores de Virulencia -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-red-500 to-pink-500 p-2 rounded-full mr-3">⚔️</span>
+                Factores de Virulencia
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-xl font-semibold text-yellow-300 mb-3">🧬 Mecanismos de Virulencia</h3>
+                    <ul class="text-white/90 space-y-2 text-sm">
+                        <li>• <strong>Adherencia</strong> - Unión a células hospedadoras</li>
+                        <li>• <strong>Invasión</strong> - Penetración en tejidos</li>
+                        <li>• <strong>Toxinas</strong> - Daño directo a células</li>
+                        <li>• <strong>Enzimas degradativas</strong> - Destrucción tisular</li>
+                        <li>• <strong>Cápsula</strong> - Evasión inmunitaria</li>
+                        <li>• <strong>Resistencia antibióticos</strong></li>
+                        <li>• <strong>Proliferación intracelular</strong></li>
+                    </ul>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-xl font-semibold text-green-300 mb-3">🔥 Respuesta Sistémica</h3>
+                    <div class="space-y-3">
+                        <div class="bg-red-500/20 rounded-lg p-3 border border-red-400/30">
+                            <h4 class="font-semibold text-red-200">IL-1, IL-6, TNF-α</h4>
+                            <p class="text-sm text-white/80">Reactantes de fase aguda</p>
+                        </div>
+                        <div class="text-white/90 text-sm">
+                            <strong>Efectos:</strong> Fiebre, inflamación, activación del complemento, 
+                            producción de proteínas de fase aguda
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Microbiota Normal vs Patógenos -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-green-500 to-blue-500 p-2 rounded-full mr-3">🌿</span>
+                Microbiota Normal vs Bacterias Patógenas
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Microbiota Normal -->
+                <div class="glass-dark rounded-xl p-5">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4 flex items-center">
+                        <span class="mr-2">✅</span> Microbiota Normal
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-green-500/20 rounded-lg p-3 border border-green-400/30">
+                            <h4 class="font-semibold text-green-200">Funciones Beneficiosas:</h4>
+                            <ul class="text-sm text-white/90 mt-2 space-y-1">
+                                <li>• Ayuda en la digestión</li>
+                                <li>• Produce vitaminas (ej. vitamina K)</li>
+                                <li>• Protege contra patógenos</li>
+                                <li>• Activa respuestas inmunitarias</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-500/20 rounded-lg p-3 border border-yellow-400/30">
+                            <h4 class="font-semibold text-yellow-200">Puede causar enfermedad cuando:</h4>
+                            <p class="text-sm text-white/90 mt-1">Invade zonas estériles del organismo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bacterias Patógenas -->
+                <div class="glass-dark rounded-xl p-5">
+                    <h3 class="text-xl font-semibold text-red-300 mb-4 flex items-center">
+                        <span class="mr-2">⚠️</span> Bacterias Patógenas
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-red-500/20 rounded-lg p-3 border border-red-400/30">
+                            <h4 class="font-semibold text-red-200">Virulentas:</h4>
+                            <p class="text-sm text-white/90">Mecanismos que favorecen su crecimiento a expensas de los tejidos del hospedador</p>
+                        </div>
+                        <div class="bg-orange-500/20 rounded-lg p-3 border border-orange-400/30">
+                            <h4 class="font-semibold text-orange-200">Oportunistas:</h4>
+                            <p class="text-sm text-white/90">Aprovechan condiciones como inmunodepresión</p>
+                            <p class="text-xs text-white/70 mt-1">Ej: <em>Pseudomonas aeruginosa</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Factores que Afectan la Enfermedad -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-purple-500 to-indigo-500 p-2 rounded-full mr-3">📊</span>
+                Factores que Determinan la Enfermedad
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-lg font-semibold text-purple-300 mb-3">🔢 Inóculo Bacteriano</h3>
+                    <div class="space-y-2 text-sm text-white/90">
+                        <div class="bg-purple-500/20 rounded-lg p-2">
+                            <strong>Shigella:</strong> &lt;200 bacterias
+                        </div>
+                        <div class="bg-purple-500/20 rounded-lg p-2">
+                            <strong>Vibrio cholerae:</strong> 10⁸ bacterias
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-lg font-semibold text-blue-300 mb-3">🧪 Cepa Bacteriana</h3>
+                    <p class="text-sm text-white/90">
+                        Diferentes cepas tienen distintos niveles de virulencia y 
+                        capacidad patogénica
+                    </p>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-lg font-semibold text-green-300 mb-3">🏥 Estado del Hospedador</h3>
+                    <ul class="text-sm text-white/90 space-y-1">
+                        <li>• Inmunodepresión</li>
+                        <li>• Edad</li>
+                        <li>• Enfermedades crónicas</li>
+                        <li>• Uso de antibióticos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vías de Entrada -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full mr-3">🚪</span>
+                Vías de Entrada de las Bacterias
+            </h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-white/10 rounded-lg">
+                            <th class="text-left text-white font-semibold p-3 rounded-l-lg">Vía</th>
+                            <th class="text-left text-white font-semibold p-3 rounded-r-lg">Ejemplos de Microorganismos</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-white/90">
+                        <tr class="border-b border-white/10">
+                            <td class="p-3 font-medium text-yellow-300">Ingestión</td>
+                            <td class="p-3">Salmonella, Shigella, E. coli, Vibrio, Campylobacter, Clostridium</td>
+                        </tr>
+                        <tr class="border-b border-white/10">
+                            <td class="p-3 font-medium text-blue-300">Inhalación</td>
+                            <td class="p-3">Mycobacterium, Legionella, Bordetella, Streptococcus</td>
+                        </tr>
+                        <tr class="border-b border-white/10">
+                            <td class="p-3 font-medium text-red-300">Traumatismo</td>
+                            <td class="p-3">Clostridium tetani</td>
+                        </tr>
+                        <tr class="border-b border-white/10">
+                            <td class="p-3 font-medium text-green-300">Venopunción</td>
+                            <td class="p-3">Staphylococcus aureus, Pseudomonas</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-medium text-pink-300">Transmisión sexual</td>
+                            <td class="p-3">Neisseria gonorrhoeae, Chlamydia, Treponema</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Colonización y Adhesión -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-yellow-500 to-orange-500 p-2 rounded-full mr-3">🔗</span>
+                Colonización, Adhesión e Invasión
+            </h2>
+
+            <div class="bg-white/10 rounded-xl p-4 mb-4">
+                <p class="text-white/90 text-center text-lg">
+                    Se produce una <strong>interacción específica</strong> entre la característica de adhesión 
+                    de la bacteria y el receptor celular del hospedador
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-xl font-semibold text-yellow-300 mb-3">🧲 Factores de Adhesión</h3>
+                    <div class="space-y-2 text-sm text-white/90">
+                        <div class="flex justify-between bg-white/10 rounded p-2">
+                            <span><strong>Fimbrias</strong></span>
+                            <span>E. coli, Neisseria</span>
+                        </div>
+                        <div class="flex justify-between bg-white/10 rounded p-2">
+                            <span><strong>Proteínas</strong></span>
+                            <span>Streptococcus</span>
+                        </div>
+                        <div class="flex justify-between bg-white/10 rounded p-2">
+                            <span><strong>Lectinas</strong></span>
+                            <span>Chlamydia</span>
+                        </div>
+                        <div class="flex justify-between bg-white/10 rounded p-2">
+                            <span><strong>Pili</strong></span>
+                            <span>Vibrio cholerae</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-3">🎯 Receptores Celulares</h3>
+                    <div class="space-y-2 text-sm text-white/90">
+                        <div class="bg-white/10 rounded p-2">
+                            <strong>Fibronectina</strong> - Streptococcus
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                            <strong>D-manosa</strong> - E. coli
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                            <strong>Gangliósidos</strong> - Vibrio cholerae
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                            <strong>Ácido siálico</strong> - Mycoplasma
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toxinas -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-red-600 to-red-400 p-2 rounded-full mr-3">☠️</span>
+                Toxinas Bacterianas
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Exotoxinas -->
+                <div class="glass-dark rounded-xl p-5">
+                    <h3 class="text-2xl font-semibold text-red-300 mb-4 flex items-center">
+                        <span class="mr-2">💥</span> EXOTOXINAS
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <div class="bg-red-500/20 rounded p-2 text-center border border-red-400/30">
+                                <strong>Gram (+) y (-)</strong>
+                            </div>
+                            <div class="bg-blue-500/20 rounded p-2 text-center border border-blue-400/30">
+                                <strong>Polipéptidos</strong>
+                            </div>
+                            <div class="bg-yellow-500/20 rounded p-2 text-center border border-yellow-400/30">
+                                <strong>Inestables 60°C</strong>
+                            </div>
+                            <div class="bg-green-500/20 rounded p-2 text-center border border-green-400/30">
+                                <strong>Alta especificidad</strong>
+                            </div>
+                            <div class="bg-purple-500/20 rounded p-2 text-center border border-purple-400/30">
+                                <strong>Muy tóxicas</strong>
+                            </div>
+                            <div class="bg-pink-500/20 rounded p-2 text-center border border-pink-400/30">
+                                <strong>No inducen fiebre</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-red-600/20 rounded-lg p-3 border border-red-400/30">
+                            <h4 class="font-semibold text-red-200 mb-2">Ejemplos:</h4>
+                            <ul class="text-xs text-white/90 space-y-1">
+                                <li>• <strong>Toxina botulínica:</strong> Parálisis flácida</li>
+                                <li>• <strong>Toxina tetánica:</strong> Parálisis espástica</li>
+                                <li>• <strong>Toxina diftérica:</strong> Inhibición síntesis proteínas</li>
+                                <li>• <strong>Toxina colérica:</strong> Diarrea secretora</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endotoxinas -->
+                <div class="glass-dark rounded-xl p-5">
+                    <h3 class="text-2xl font-semibold text-blue-300 mb-4 flex items-center">
+                        <span class="mr-2">🧱</span> ENDOTOXINAS
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <div class="bg-blue-500/20 rounded p-2 text-center border border-blue-400/30">
+                                <strong>Solo Gram (-)</strong>
+                            </div>
+                            <div class="bg-cyan-500/20 rounded p-2 text-center border border-cyan-400/30">
+                                <strong>Lipopolisacárido</strong>
+                            </div>
+                            <div class="bg-purple-500/20 rounded p-2 text-center border border-purple-400/30">
+                                <strong>Estables 60°C</strong>
+                            </div>
+                            <div class="bg-green-500/20 rounded p-2 text-center border border-green-400/30">
+                                <strong>Baja especificidad</strong>
+                            </div>
+                            <div class="bg-yellow-500/20 rounded p-2 text-center border border-yellow-400/30">
+                                <strong>Menos tóxicas</strong>
+                            </div>
+                            <div class="bg-red-500/20 rounded p-2 text-center border border-red-400/30">
+                                <strong>Inducen fiebre</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-600/20 rounded-lg p-3 border border-blue-400/30">
+                            <h4 class="font-semibold text-blue-200 mb-2">Efectos del LPS:</h4>
+                            <ul class="text-xs text-white/90 space-y-1">
+                                <li>• Fiebre y leucocitosis</li>
+                                <li>• Activación del complemento</li>
+                                <li>• Coagulación intravascular</li>
+                                <li>• Shock séptico</li>
+                                <li>• Muerte</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de Exotoxinas Específicas -->
+            <div class="mt-6 glass-dark rounded-xl p-4">
+                <h3 class="text-xl font-semibold text-white mb-4 text-center">🎯 Principales Exotoxinas y sus Efectos</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs">
+                        <thead>
+                            <tr class="bg-white/10">
+                                <th class="text-left text-white p-2">Toxina</th>
+                                <th class="text-left text-white p-2">Microorganismo</th>
+                                <th class="text-left text-white p-2">Mecanismo</th>
+                                <th class="text-left text-white p-2">Efecto</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-white/90">
+                            <tr class="border-b border-white/10">
+                                <td class="p-2 font-medium text-yellow-300">Carbunco</td>
+                                <td class="p-2">Bacillus anthracis</td>
+                                <td class="p-2">↑ AMPc</td>
+                                <td class="p-2">Edema, muerte celular</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="p-2 font-medium text-blue-300">Pertussis</td>
+                                <td class="p-2">Bordetella pertussis</td>
+                                <td class="p-2">Bloqueo proteínas G</td>
+                                <td class="p-2">Tos ferina</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="p-2 font-medium text-red-300">Shiga</td>
+                                <td class="p-2">Shigella dysenteriae</td>
+                                <td class="p-2">Inhibición síntesis proteínas</td>
+                                <td class="p-2">Muerte celular</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 font-medium text-green-300">Colérica</td>
+                                <td class="p-2">Vibrio cholerae</td>
+                                <td class="p-2">Activación adenilil ciclasa</td>
+                                <td class="p-2">Diarrea masiva</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mecanismos de Evasión -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-indigo-500 to-purple-500 p-2 rounded-full mr-3">🛡️</span>
+                Mecanismos de Evasión del Hospedador
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-lg font-semibold text-purple-300 mb-3">🔄 Inhibición de Fagocitosis</h3>
+                    <ul class="text-sm text-white/90 space-y-2">
+                        <li>• <strong>Cápsula:</strong> Streptococcus pneumoniae</li>
+                        <li>• <strong>Proteína A:</strong> S. aureus</li>
+                        <li>• <strong>Citotoxinas:</strong> Destruyen fagocitos</li>
+                    </ul>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-lg font-semibold text-blue-300 mb-3">🧬 Supervivencia Intracelular</h3>
+                    <ul class="text-sm text-white/90 space-y-2">
+                        <li>• <strong>Inhibición fusión:</strong> Legionella, Mycobacterium</li>
+                        <li>• <strong>Resistencia enzimas:</strong> Salmonella</li>
+                        <li>• <strong>Escape al citoplasma:</strong> Listeria</li>
+                    </ul>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-lg font-semibold text-green-300 mb-3">🎭 Variación Antigénica</h3>
+                    <ul class="text-sm text-white/90 space-y-2">
+                        <li>• <strong>Cambio de fase:</strong> Salmonella</li>
+                        <li>• <strong>Mimética molecular:</strong> Streptococcus</li>
+                        <li>• <strong>Degradación IgA:</strong> Neisseria</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Islotes de Patogenicidad -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-orange-500 to-red-500 p-2 rounded-full mr-3">🏝️</span>
+                Islotes de Patogenicidad
+            </h2>
+
+            <div class="bg-white/10 rounded-xl p-4 mb-4">
+                <p class="text-white/90 text-center text-lg">
+                    Grandes regiones genéticas que contienen <strong>grupos de genes de virulencia</strong> 
+                    que requieren expresión coordinada
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-xl font-semibold text-orange-300 mb-3">📍 Características</h3>
+                    <ul class="text-white/90 space-y-2">
+                        <li>• Se activan por <strong>estímulo único</strong></li>
+                        <li>• Ubicados en <strong>transposones</strong></li>
+                        <li>• Se transfieren como <strong>unidad completa</strong></li>
+                        <li>• Permiten <strong>expresión coordinada</strong></li>
+                    </ul>
+                </div>
+
+                <div class="glass-dark rounded-xl p-4">
+                    <h3 class="text-xl font-semibold text-red-300 mb-3">🔬 Ejemplo: SPI-2</h3>
+                    <div class="bg-red-500/20 rounded-lg p-3 border border-red-400/30">
+                        <p class="text-white/90 text-sm">
+                            <strong>Salmonella:</strong> El islote SPI-2 se activa por el pH ácido 
+                            de la vesícula fagocítica dentro del macrófago
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conceptos Clave -->
+        <section class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <span class="bg-gradient-to-r from-yellow-500 to-orange-500 p-2 rounded-full mr-3">🎯</span>
+                Conceptos Clave para Recordar
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="glass-dark rounded-xl p-4">
+                        <h3 class="text-lg font-semibold text-yellow-300 mb-2">🦠 Patogenia Bacteriana</h3>
+                        <p class="text-white/90 text-sm">
+                            Resultado de la combinación entre el <strong>daño directo</strong> de las bacterias 
+                            y las <strong>respuestas inmunitarias</strong> del hospedador
+                        </p>
+                    </div>
+                    
+                    <div class="glass-dark rounded-xl p-4">
+                        <h3 class="text-lg font-semibold text-blue-300 mb-2">⚡ Septicemia</h3>
+                        <p class="text-white/90 text-sm">
+                            Cuanto más tiempo permanece la bacteria, mayor su capacidad 
+                            de <strong>diseminarse y causar daño</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="glass-dark rounded-xl p-4">
+                        <h3 class="text-lg font-semibold text-green-300 mb-2">🛡️ Defensas Naturales</h3>
+                        <p class="text-white/90 text-sm">
+                            <strong>Mucosidad, epitelio ciliado, lisozima</strong> - Las bacterias desarrollan 
+                            mecanismos para superarlas
+                        </p>
+                    </div>
+                    
+                    <div class="glass-dark rounded-xl p-4">
+                        <h3 class="text-lg font-semibold text-red-300 mb-2">💊 C. difficile</h3>
+                        <p class="text-white/90 text-sm">
+                            Los <strong>antibióticos de amplio espectro</strong> alteran la microbiota 
+                            permitiendo colonización patógena
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass rounded-t-3xl shadow-xl mt-12">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <p class="text-white/90 text-lg font-semibold mb-2">
+                🧬 Microbiología Clínica - Patogenia Bacteriana
+            </p>
+            <p class="text-white/70 text-sm">
+                Material de estudio - Dr. Andrés F. Mendoza Moscoso
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico - Cocos Gram Negativos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+    
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-4">
+                <a href="index.html" class="text-blue-400 hover:text-white transition-colors duration-300 text-sm flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver
+                </a>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
+                <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    Diagnóstico
+                </span>
+                <span class="text-gray-200">Laboratorial</span>
+            </h1>
+            <p class="text-center text-blue-200 mt-2 text-lg">Métodos de Identificación</p>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Flujograma de Diagnóstico -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                    Flujograma Diagnóstico
+                </h2>
+                
+                <div class="text-center space-y-4">
+                    <!-- Paso 1 -->
+                    <div class="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-300 mb-2">1. Muestra Clínica</h3>
+                        <p class="text-gray-200 text-sm">Exudado uretral/endocervical, LCR, secreción respiratoria</p>
+                    </div>
+                    
+                    <div class="text-blue-300">↓</div>
+                    
+                    <!-- Paso 2 -->
+                    <div class="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-purple-300 mb-2">2. Examen Directo (Frotis)</h3>
+                        <p class="text-gray-200 text-sm">Tinción de Gram → Diplococos Gram negativos</p>
+                    </div>
+                    
+                    <div class="text-blue-300">↓</div>
+                    
+                    <!-- Paso 3 -->
+                    <div class="bg-gradient-to-r from-green-500/20 to-teal-500/20 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-green-300 mb-2">3. Cultivo</h3>
+                        <p class="text-gray-200 text-sm">Agar chocolate / Thayer-Martin, 5% CO₂, 37°C</p>
+                    </div>
+                    
+                    <div class="text-blue-300">↓</div>
+                    
+                    <!-- Paso 4 -->
+                    <div class="bg-gradient-to-r from-orange-500/20 to-red-500/20 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-orange-300 mb-2">4. Identificación</h3>
+                        <p class="text-gray-200 text-sm">Oxidasa, fermentación de carbohidratos, serotipado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métodos de Diagnóstico -->
+        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            
+            <!-- Examen Directo -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h3 class="text-xl font-bold text-blue-300 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    Examen Directo
+                </h3>
+                <div class="space-y-3 text-sm text-gray-200">
+                    <div>
+                        <h4 class="font-semibold text-blue-200">Tinción de Gram</h4>
+                        <p>Diplococos Gram negativos en forma de "riñón"</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-blue-200">Localización</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>Gonococos: Intracelulares en PMN</li>
+                            <li>Meningococos: Extra e intracelulares</li>
+                            <li>Moraxella: Extracelulares</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-blue-200">Sensibilidad</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>Exudado uretral ♂: 90%</li>
+                            <li>Exudado endocervical ♀: 50%</li>
+                            <li>LCR: 70-85%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cultivo -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h3 class="text-xl font-bold text-green-300 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                    Cultivo
+                </h3>
+                <div class="space-y-3 text-sm text-gray-200">
+                    <div>
+                        <h4 class="font-semibold text-green-200">Medios de Cultivo</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li><strong>Agar chocolate:</strong> N. meningitidis</li>
+                            <li><strong>Thayer-Martin:</strong> N. gonorrhoeae</li>
+                            <li><strong>Agar sangre:</strong> M. catarrhalis</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-green-200">Condiciones</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>Temperatura: 37°C</li>
+                            <li>Atmósfera: 5% CO₂</li>
+                            <li>Tiempo: 24-48 horas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-green-200">Colonias</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>Gonococos: Pequeñas, convexas</li>
+                            <li>Meningococos: Grandes, mucoides</li>
+                            <li>Moraxella: Grandes, lisas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pruebas Bioquímicas -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h3 class="text-xl font-bold text-purple-300 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    Pruebas Bioquímicas
+                </h3>
+                <div class="space-y-3 text-sm text-gray-200">
+                    <div>
+                        <h4 class="font-semibold text-purple-200">Oxidasa</h4>
+                        <p class="text-xs">Todas son <strong>POSITIVAS</strong> (color púrpura)</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-purple-200">Fermentación</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li><strong>N. gonorrhoeae:</strong> Solo glucosa</li>
+                            <li><strong>N. meningitidis:</strong> Glucosa + maltosa</li>
+                            <li><strong>M. catarrhalis:</strong> Ninguno</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-purple-200">β-lactamasas</h4>
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>Gonococos: Algunas cepas</li>
+                            <li>Meningococos: Negativo</li>
+                            <li>Moraxella: >90% positivo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Tabla de Diferenciación -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Tabla de Diferenciación</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-white/20">
+                                <th class="text-left py-3 px-4 text-blue-300">Prueba</th>
+                                <th class="text-center py-3 px-4 text-red-300">N. gonorrhoeae</th>
+                                <th class="text-center py-3 px-4 text-purple-300">N. meningitidis</th>
+                                <th class="text-center py-3 px-4 text-orange-300">M. catarrhalis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-200">
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">Oxidasa</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">Glucosa</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">Maltosa</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">Lactosa</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">Sacarosa</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">Cápsula</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                            </tr>
+                            <tr class="border-b border-white/10">
+                                <td class="py-3 px-4 font-medium">β-lactamasa</td>
+                                <td class="text-center py-3 px-4 text-yellow-400">Variable</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Crecimiento a 22°C</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-red-400">-</td>
+                                <td class="text-center py-3 px-4 text-green-400">+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métodos Moleculares -->
+        <section class="mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    Métodos Moleculares
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-cyan-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-cyan-300 mb-3">PCR (Reacción en Cadena de la Polimerasa)</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li><strong>Ventajas:</strong> Rápido, alta sensibilidad y especificidad</li>
+                            <li><strong>Muestras:</strong> Orina, exudados genitales</li>
+                            <li><strong>Tiempo:</strong> 2-4 horas</li>
+                            <li><strong>Uso:</strong> Detección directa, especialmente N. gonorrhoeae</li>
+                        </ul>
+                    </div>
+                    <div class="bg-teal-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-teal-300 mb-3">Antígenos y Serología</h3>
+                        <ul class="text-sm text-gray-200 space-y-2">
+                            <li><strong>Detección de antígenos:</strong> LCR para meningococos</li>
+                            <li><strong>Aglutinación en látex:</strong> Cápsula de N. meningitidis</li>
+                            <li><strong>ELISA:</strong> Anticuerpos contra N. gonorrhoeae</li>
+                            <li><strong>Limitaciones:</strong> Reacciones cruzadas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interpretación de Resultados -->
+        <section>
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h2 class="text-2xl font-bold text-white mb-6">Interpretación de Resultados</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-red-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-red-300 mb-3">N. gonorrhoeae</h3>
+                        <ul class="text-sm text-gray-200 space-y-1">
+                            <li>• Diplococos Gram (-) intracelulares</li>
+                            <li>• Cultivo en Thayer-Martin</li>
+                            <li>• Oxidasa (+), solo glucosa (+)</li>
+                            <li>• Considerar resistencias</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-purple-300 mb-3">N. meningitidis</h3>
+                        <ul class="text-sm text-gray-200 space-y-1">
+                            <li>• Diplococos Gram (-) en LCR</li>
+                            <li>• Cultivo en agar chocolate</li>
+                            <li>• Glucosa (+), maltosa (+)</li>
+                            <li>• Serotipado para serogrupos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-orange-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-orange-300 mb-3">M. catarrhalis</h3>
+                        <ul class="text-sm text-gray-200 space-y-1">
+                            <li>• Diplococos Gram (-) extracelulares</li>
+                            <li>• Cultivo en agar sangre</li>
+                            <li>• No fermentación de azúcares</li>
+                            <li>• β-lactamasa (+) en >90%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 backdrop-blur-lg border-t border-white/10 py-6 mt-auto">
+        <div class="container mx-auto text-center px-4 sm:px-6">
+            <p class="text-sm md:text-base text-gray-300">© 2025 Microbiología Leída - Ivett Jaliri Ccuno</p>
+        </div>
+    </footer>
+
+</body>
+</html>

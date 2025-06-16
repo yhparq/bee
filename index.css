@@ -1,0 +1,119 @@
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    33% { 
+        transform: translateY(-10px) rotate(5deg); 
+    }
+    66% { 
+        transform: translateY(5px) rotate(-3deg); 
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -2s;
+}
+
+.float-delayed-2 {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -4s;
+}
+
+
+/* asdsadas */
+
+
+
+/* Estilos para Flashcards Biomédicos */
+.flashcard-container {
+    perspective: 1200px;
+    height: 480px;
+}
+
+.flashcard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.flashcard:hover {
+    transform: translateY(-8px);
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped:hover {
+    transform: rotateY(180deg) translateY(-8px);
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Efectos de hover para botones */
+.flashcard button {
+    transition: all 0.3s ease;
+}
+
+.flashcard button:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones adicionales */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .flashcard-container {
+        height: 420px;
+    }
+    
+    .flashcard h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .flashcard-container {
+        height: 380px;
+    }
+}

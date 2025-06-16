@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factores de Virulencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+    
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-center">Factores de Virulencia</h1>
+        </div>
+    </header>
+
+    <main class="flex-1 container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto space-y-8">
+            
+            <!-- Componentes Estructurales -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                <h2 class="text-2xl font-bold mb-6 text-emerald-400">Componentes Estructurales</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="bg-red-900/30 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg">Cápsula</h3>
+                            <p class="text-gray-300">Inhibe la quimiotaxis y la fagocitosis; inhibe la proliferación de células mononucleares</p>
+                        </div>
+                        <div class="bg-blue-900/30 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg">Capa de limo</h3>
+                            <p class="text-gray-300">Facilita la adherencia a cuerpos extraños; inhibe la fagocitosis</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-purple-900/30 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg">Peptidoglucanos</h3>
+                            <p class="text-gray-300">Estabilidad osmótica; estimula producción de pirógeno endógeno</p>
+                        </div>
+                        <div class="bg-green-900/30 p-4 rounded-lg">
+                            <h3 class="font-bold text-lg">Proteína A</h3>
+                            <p class="text-gray-300">Inhibe eliminación mediada por anticuerpos; atrae leucocitos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toxinas Principales -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                <h2 class="text-2xl font-bold mb-6 text-red-400">Toxinas Principales</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg mb-3">Hemolisinas (4 tipos)</h3>
+                        <ul class="text-sm space-y-1 text-gray-300">
+                            <li>• α hemolisina - Actúa en membrana celular</li>
+                            <li>• Toxina β - Degradación de esfingomielina</li>
+                            <li>• Toxina δ - Lisis de membrana celular</li>
+                            <li>• Hemolisina γ - Lisis de leucocitos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg mb-3">Toxina Exfoliativa</h3>
+                        <ul class="text-sm space-y-1 text-gray-300">
+                            <li>• Toxina A: termoestable</li>
+                            <li>• Toxina B: termolábil</li>
+                            <li>• Descamación de epidermis</li>
+                            <li>• Superantígenos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg mb-3">TSST-1</h3>
+                        <ul class="text-sm space-y-1 text-gray-300">
+                            <li>• Síndrome de shock tóxico</li>
+                            <li>• Superantígeno prototipo</li>
+                            <li>• Fiebre y shock</li>
+                            <li>• Exantema descamativo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enzimas y Enterotoxina -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                    <h2 class="text-2xl font-bold mb-6 text-blue-400">Enzimas</h2>
+                    <div class="space-y-3">
+                        <div class="bg-white/5 p-3 rounded-lg">
+                            <h3 class="font-semibold">Coagulasa</h3>
+                            <p class="text-gray-300 text-sm">Convierte fibrinógeno en fibrina</p>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded-lg">
+                            <h3 class="font-semibold">Hialuronidasa</h3>
+                            <p class="text-gray-300 text-sm">Hidroliza ácidos hialurónicos del tejido conjuntivo</p>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded-lg">
+                            <h3 class="font-semibold">Fibrinolisina</h3>
+                            <p class="text-gray-300 text-sm">Disuelve coágulos de fibrina</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                    <h2 class="text-2xl font-bold mb-6 text-orange-400">Enterotoxina</h2>
+                    <div class="space-y-3">
+                        <p class="text-gray-300">
+                            <strong>15 enterotoxinas (A-E, G-P)</strong> consideradas superantígenos
+                        </p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Termoestables y resistentes a enzimas intestinales</li>
+                            <li>• Causas importantes de intoxicación alimentaria</li>
+                            <li>• Codificadas por bacteriófagos</li>
+                            <li>• Estimulan proliferación de linfocitos T</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-black/20 backdrop-blur-lg border-t border-white/10 py-4">
+        <div class="container mx-auto text-center px-4">
+            <a href="index.html" class="text-cyan-400 hover:text-white transition-colors">← Volver al menú principal</a>
+        </div>
+    </footer>
+
+</body>
+</html>

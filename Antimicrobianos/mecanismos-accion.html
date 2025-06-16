@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecanismos de Acción - Antimicrobianos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .mechanism-card {
+            transition: all 0.3s ease;
+        }
+        .mechanism-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="index.html" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Volver al Inicio
+            </a>
+        </nav>
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <div class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 glass-effect">
+                <h1 class="text-4xl font-bold mb-4">🧬 Mecanismos de Acción de los Antimicrobianos</h1>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto">
+                    Los antimicrobianos actúan mediante <strong>4 mecanismos principales</strong> que interfieren 
+                    con procesos vitales específicos de las células bacterianas
+                </p>
+            </div>
+        </header>
+
+        <!-- Inhibición de Síntesis de Pared Celular -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8 mechanism-card">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    🧱 Inhibición de Síntesis de Pared Celular
+                </h2>
+                
+                <div class="bg-blue-500/20 p-6 rounded-xl border border-blue-500/30 mb-6">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-4">🔍 Mecanismo:</h3>
+                    <p class="text-gray-200 mb-4">
+                        Cuando la pared celular se lesiona o su formación se inhibe, <strong class="text-blue-300">la célula se lisa</strong>. 
+                        En ambiente hipertónico, se forman <strong>"protoplastos"</strong> en grampositivos o 
+                        <strong>"esferoplastos"</strong> en gramnegativos que explotan en tonicidad normal.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-6 rounded-xl border border-blue-500/30">
+                        <h4 class="text-lg font-semibold text-cyan-300 mb-4">🎯 Pasos de la Síntesis Inhibidos:</h4>
+                        <ol class="text-gray-300 space-y-2">
+                            <li><strong>1.</strong> Síntesis de precursores (NAG y NAM)</li>
+                            <li><strong>2.</strong> Formación de cadena peptídica</li>
+                            <li><strong>3.</strong> Ensamblaje y transporte</li>
+                            <li><strong>4.</strong> Transglicosilación</li>
+                            <li><strong>5.</strong> Transpeptidación</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 p-6 rounded-xl border border-blue-500/30">
+                        <h4 class="text-lg font-semibold text-indigo-300 mb-4">💊 Fármacos Principales:</h4>
+                        <ul class="text-gray-300 space-y-3">
+                            <li>• <strong class="text-blue-300">Beta-lactámicos:</strong> Penicilinas, cefalosporinas, carbapenémicos, monobactámicos</li>
+                            <li>• <strong class="text-cyan-300">Vancomicina:</strong> Inhibe transpeptidación</li>
+                            <li>• <strong class="text-indigo-300">Fosfomicina:</strong> Bloquea síntesis de NAG/NAM</li>
+                            <li>• <strong class="text-purple-300">Bacitracina:</strong> Inhibe transporte</li>
+                            <li>• <strong class="text-pink-300">Cicloserina:</strong> Interfiere con D-alanina</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inhibición de Síntesis de Proteínas -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8 mechanism-card">
+                <h2 class="text-3xl font-bold text-green-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    🧬 Inhibición de Síntesis de Proteínas
+                </h2>
+                
+                <div class="bg-green-500/20 p-6 rounded-xl border border-green-500/30 mb-6">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4">🔍 Mecanismo:</h3>
+                    <p class="text-gray-200 mb-4">
+                        <strong class="text-green-300">Bloquean el proceso de traducción</strong> en las bacterias al unirse a 
+                        componentes específicos del ribosoma bacteriano (30S y 50S). Esto detiene la producción de proteínas, 
+                        llevando a la muerte celular o detención del crecimiento.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-6 rounded-xl border border-green-500/30">
+                        <h4 class="text-lg font-semibold text-emerald-300 mb-4">🎯 Subunidad 30S:</h4>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• <strong class="text-green-300">Aminoglucósidos:</strong> Gentamicina, amikacina, estreptomicina</li>
+                            <li>• <strong class="text-emerald-300">Tetraciclinas:</strong> Doxiciclina, minociclina</li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-green-700/20 rounded">
+                            <p class="text-sm text-gray-300">Interfieren con la iniciación y elongación</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-6 rounded-xl border border-green-500/30">
+                        <h4 class="text-lg font-semibold text-teal-300 mb-4">🎯 Subunidad 50S:</h4>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• <strong class="text-green-300">Macrólidos:</strong> Azitromicina, claritromicina</li>
+                            <li>• <strong class="text-teal-300">Lincosamidas:</strong> Clindamicina</li>
+                            <li>• <strong class="text-cyan-300">Cloranfenicol</strong></li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-teal-700/20 rounded">
+                            <p class="text-sm text-gray-300">Bloquean la formación del enlace peptídico</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-600/20 to-lime-600/20 p-6 rounded-xl border border-green-500/30">
+                        <h4 class="text-lg font-semibold text-lime-300 mb-4">🎯 Mecanismos Especiales:</h4>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• <strong class="text-green-300">Estreptograminas:</strong> Inhibición dual</li>
+                            <li>• <strong class="text-lime-300">Linezolid:</strong> Previene formación del complejo de iniciación</li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-lime-700/20 rounded">
+                            <p class="text-sm text-gray-300">Múltiples sitios de acción</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-gradient-to-r from-green-500/20 to-blue-500/20 p-4 rounded-xl border border-green-500/30">
+                    <h4 class="text-lg font-semibold text-blue-300 mb-2">📚 Proceso de Traducción:</h4>
+                    <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-300">
+                        <div><strong>1. Iniciación:</strong> Formación del complejo</div>
+                        <div><strong>2. Elongación:</strong> Reconocimiento, enlace, translocación</div>
+                        <div><strong>3. Terminación:</strong> Liberación de la proteína</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inhibición de Síntesis de Ácidos Nucleicos -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8 mechanism-card">
+                <h2 class="text-3xl font-bold text-purple-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h4"></path>
+                    </svg>
+                    🔬 Inhibición de Síntesis de Ácidos Nucleicos
+                </h2>
+                
+                <div class="bg-purple-500/20 p-6 rounded-xl border border-purple-500/30 mb-6">
+                    <h3 class="text-xl font-semibold text-purple-300 mb-4">🔍 Mecanismo:</h3>
+                    <p class="text-gray-200 mb-4">
+                        <strong class="text-purple-300">Interfieren con la replicación del ADN o transcripción del ARN</strong> 
+                        en las células microbianas. Al bloquear estos procesos, impiden la síntesis de material genético 
+                        vital para la reproducción y supervivencia bacteriana.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 p-6 rounded-xl border border-purple-500/30">
+                        <h4 class="text-lg font-semibold text-indigo-300 mb-4">🎯 Quinolonas:</h4>
+                        <ul class="text-gray-300 space-y-2 mb-4">
+                            <li>• Ciprofloxacina</li>
+                            <li>• Levofloxacina</li>
+                            <li>• Moxifloxacina</li>
+                        </ul>
+                        <div class="p-3 bg-indigo-700/20 rounded">
+                            <p class="text-sm text-gray-300">Inhiben <strong>ADN girasa</strong> y <strong>topoisomerasa IV</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 rounded-xl border border-purple-500/30">
+                        <h4 class="text-lg font-semibold text-pink-300 mb-4">🎯 Metronidazol:</h4>
+                        <ul class="text-gray-300 space-y-2 mb-4">
+                            <li>• Activo contra anaerobios</li>
+                            <li>• Requiere reducción intracelular</li>
+                            <li>• Forma metabolitos reactivos</li>
+                        </ul>
+                        <div class="p-3 bg-pink-700/20 rounded">
+                            <p class="text-sm text-gray-300"><strong>Fragmentación directa</strong> del ADN</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-600/20 to-red-600/20 p-6 rounded-xl border border-purple-500/30">
+                        <h4 class="text-lg font-semibold text-red-300 mb-4">🎯 Rifampicina:</h4>
+                        <ul class="text-gray-300 space-y-2 mb-4">
+                            <li>• Antituberculoso principal</li>
+                            <li>• Se une a ARN polimerasa</li>
+                            <li>• Bloquea elongación del ARN</li>
+                        </ul>
+                        <div class="p-3 bg-red-700/20 rounded">
+                            <p class="text-sm text-gray-300">Inhibe <strong>ARN polimerasa</strong> bacteriana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alteración de Función de Membrana -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8 mechanism-card">
+                <h2 class="text-3xl font-bold text-red-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    💊 Alteración de Función de Membrana Celular
+                </h2>
+                
+                <div class="bg-red-500/20 p-6 rounded-xl border border-red-500/30 mb-6">
+                    <h3 class="text-xl font-semibold text-red-300 mb-4">🔍 Mecanismo:</h3>
+                    <p class="text-gray-200 mb-4">
+                        Destruyen la <strong class="text-red-300">integridad de la membrana celular bacteriana</strong>, 
+                        alterando su permeabilidad y función, lo que resulta en la pérdida de contenido celular y muerte bacteriana.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-red-600/20 to-orange-600/20 p-6 rounded-xl border border-red-500/30">
+                        <h4 class="text-lg font-semibold text-orange-300 mb-4">🎯 Polimixinas:</h4>
+                        <ul class="text-gray-300 space-y-2 mb-4">
+                            <li>• <strong>Colistina</strong> (Polimixina E)</li>
+                            <li>• <strong>Polimixina B</strong></li>
+                            <li>• Activas principalmente contra gramnegativos</li>
+                        </ul>
+                        <div class="p-4 bg-orange-700/20 rounded">
+                            <p class="text-sm text-gray-300">
+                                Se fijan en los <strong>fosfolípidos</strong> y destruyen la membrana mediante 
+                                <strong class="text-orange-300">efecto detergente</strong>, aumentando la permeabilidad
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-red-600/20 to-pink-600/20 p-6 rounded-xl border border-red-500/30">
+                        <h4 class="text-lg font-semibold text-pink-300 mb-4">🎯 Daptomicina:</h4>
+                        <ul class="text-gray-300 space-y-2 mb-4">
+                            <li>• <strong>Bactericida</strong> contra grampositivos</li>
+                            <li>• Requiere calcio para su actividad</li>
+                            <li>• Resistencia cruzada limitada</li>
+                        </ul>
+                        <div class="p-4 bg-pink-700/20 rounded">
+                            <p class="text-sm text-gray-300">
+                                Se une provocando <strong class="text-pink-300">despolarización</strong> y conduce a 
+                                inhibición rápida de síntesis de <strong>proteínas, ADN y ARN</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen Comparativo -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 glass-effect">
+                <h2 class="text-3xl font-bold text-white mb-6 text-center">📊 Resumen Comparativo</h2>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-gray-600">
+                                <th class="pb-3 text-cyan-300">Mecanismo</th>
+                                <th class="pb-3 text-cyan-300">Sitio de Acción</th>
+                                <th class="pb-3 text-cyan-300">Ejemplos Principales</th>
+                                <th class="pb-3 text-cyan-300">Efecto</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-gray-700">
+                                <td class="py-3"><strong class="text-blue-300">Pared Celular</strong></td>
+                                <td class="py-3">Peptidoglicano</td>
+                                <td class="py-3">Beta-lactámicos, Vancomicina</td>
+                                <td class="py-3">Lisis celular</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="py-3"><strong class="text-green-300">Síntesis Proteínas</strong></td>
+                                <td class="py-3">Ribosomas 30S/50S</td>
+                                <td class="py-3">Aminoglucósidos, Macrólidos</td>
+                                <td class="py-3">Detención traducción</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="py-3"><strong class="text-purple-300">Ácidos Nucleicos</strong></td>
+                                <td class="py-3">ADN/ARN</td>
+                                <td class="py-3">Quinolonas, Rifampicina</td>
+                                <td class="py-3">Bloqueo replicación</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3"><strong class="text-red-300">Membrana</strong></td>
+                                <td class="py-3">Fosfolípidos</td>
+                                <td class="py-3">Polimixinas, Daptomicina</td>
+                                <td class="py-3">Despolarización</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="index.html" class="inline-flex items-center px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg border border-blue-500/30 transition-all">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Inicio
+            </a>
+            <a href="actividad-in-vitro.html" class="inline-flex items-center px-6 py-3 bg-purple-600/20 hover:bg-purple-600/30 rounded-lg border border-purple-500/30 transition-all">
+                Actividad In Vitro
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

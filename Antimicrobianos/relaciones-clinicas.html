@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones Clínicas - Antimicrobianos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .clinical-card {
+            transition: all 0.3s ease;
+        }
+        .clinical-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .relationship-diagram {
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="index.html" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Volver al Inicio
+            </a>
+        </nav>
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <div class="bg-gradient-to-r from-red-600/20 to-rose-600/20 rounded-2xl p-8 glass-effect">
+                <h1 class="text-4xl font-bold mb-4">🩺 Relaciones Clínicas de los Antimicrobianos</h1>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto">
+                    <strong>Interacciones complejas</strong> entre fármaco, microorganismo y hospedador que determinan 
+                    el <strong class="text-rose-400">éxito terapéutico</strong> en la práctica clínica
+                </p>
+            </div>
+        </header>
+
+        <!-- Diagrama de Relaciones -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8 relationship-diagram">
+                <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">🔗 Triángulo de Relaciones Terapéuticas</h2>
+                
+                <div class="relative">
+                    <!-- Diagrama Central -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                        <!-- Fármaco -->
+                        <div class="text-center">
+                            <div class="bg-blue-500/20 p-8 rounded-2xl border border-blue-500/30 clinical-card">
+                                <div class="text-6xl mb-4">💊</div>
+                                <h3 class="text-2xl font-bold text-blue-300 mb-4">FÁRMACO</h3>
+                                <div class="text-left space-y-2 text-gray-300">
+                                    <p>• <strong class="text-blue-400">Absorción</strong></p>
+                                    <p>• <strong class="text-blue-400">Distribución</strong></p>
+                                    <p>• <strong class="text-blue-400">Metabolismo</strong></p>
+                                    <p>• <strong class="text-blue-400">Eliminación</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Microorganismo -->
+                        <div class="text-center">
+                            <div class="bg-red-500/20 p-8 rounded-2xl border border-red-500/30 clinical-card">
+                                <div class="text-6xl mb-4">🦠</div>
+                                <h3 class="text-2xl font-bold text-red-300 mb-4">MICROORGANISMO</h3>
+                                <div class="text-left space-y-2 text-gray-300">
+                                    <p>• <strong class="text-red-400">Susceptibilidad</strong></p>
+                                    <p>• <strong class="text-red-400">Resistencia</strong></p>
+                                    <p>• <strong class="text-red-400">Localización</strong></p>
+                                    <p>• <strong class="text-red-400">Virulencia</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hospedador -->
+                        <div class="text-center">
+                            <div class="bg-green-500/20 p-8 rounded-2xl border border-green-500/30 clinical-card">
+                                <div class="text-6xl mb-4">👤</div>
+                                <h3 class="text-2xl font-bold text-green-300 mb-4">HOSPEDADOR</h3>
+                                <div class="text-left space-y-2 text-gray-300">
+                                    <p>• <strong class="text-green-400">Inmunidad</strong></p>
+                                    <p>• <strong class="text-green-400">Función orgánica</strong></p>
+                                    <p>• <strong class="text-green-400">Comorbilidades</strong></p>
+                                    <p>• <strong class="text-green-400">Microbiota</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conexiones -->
+                    <div class="text-center p-6 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-xl border border-purple-500/30">
+                        <h3 class="text-xl font-bold text-purple-300 mb-3">⚡ Interacciones Dinámicas</h3>
+                        <p class="text-gray-200">
+                            El <strong class="text-blue-400">éxito terapéutico</strong> depende del equilibrio y optimización 
+                            de estas <strong class="text-purple-400">tres variables interdependientes</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relación Fármaco-Microorganismo -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    </svg>
+                    💊↔️🦠 Relación Fármaco - Microorganismo
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="bg-blue-500/20 p-6 rounded-xl border border-blue-500/30">
+                            <h3 class="text-xl font-semibold text-blue-300 mb-4">🎯 Factores del Fármaco</h3>
+                            <div class="space-y-4">
+                                <div class="bg-blue-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-200 mb-2">Distribución Desigual:</h4>
+                                    <p class="text-gray-300 text-sm">
+                                        La distribución de antibiótico es <strong class="text-blue-300">desigual</strong>, 
+                                        muchos no llegan al SNC o tienen penetración limitada en tejidos específicos.
+                                    </p>
+                                    <ul class="text-gray-400 text-xs mt-2 space-y-1">
+                                        <li>• Barrera hematoencefálica</li>
+                                        <li>• Penetración prostática</li>
+                                        <li>• Concentración ósea</li>
+                                        <li>• Difusión ocular</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-indigo-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-indigo-200 mb-2">Sustancias Interferentes:</h4>
+                                    <p class="text-gray-300 text-sm">
+                                        El ambiente bioquímico de los microorganismos en el cuerpo es 
+                                        <strong class="text-indigo-300">muy complejo e interfiere</strong> considerablemente.
+                                    </p>
+                                    <ul class="text-gray-400 text-xs mt-2 space-y-1">
+                                        <li>• Proteínas plasmáticas</li>
+                                        <li>• pH tisular variable</li>
+                                        <li>• Enzimas degradantes</li>
+                                        <li>• Quelantes endógenos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-500/20 p-6 rounded-xl border border-red-500/30">
+                            <h3 class="text-xl font-semibold text-red-300 mb-4">🦠 Factores del Microorganismo</h3>
+                            <div class="space-y-4">
+                                <div class="bg-red-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-200 mb-2">Localización Tisular:</h4>
+                                    <p class="text-gray-300 text-sm">
+                                        Los microorganismos dentro de las células penetran a 
+                                        <strong class="text-red-300">distinta velocidad</strong> según el tejido.
+                                    </p>
+                                </div>
+
+                                <div class="bg-rose-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-rose-200 mb-2">Estado Metabólico:</h4>
+                                    <p class="text-gray-300 text-sm">
+                                        Actividad reducida de biosíntesis hace que sean 
+                                        <strong class="text-rose-300">relativamente insensibles</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-6 rounded-xl border border-cyan-500/30">
+                        <h3 class="text-xl font-semibold text-cyan-300 mb-4">📊 Parámetros Farmacocinéticos/Farmacodinámicos</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-cyan-500/20 p-4 rounded-lg border border-cyan-500/30">
+                                <h4 class="font-semibold text-cyan-200 mb-3">⏱️ Tiempo-Dependientes:</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li>• <strong>Beta-lactámicos:</strong> Tiempo > MIC crítico</li>
+                                    <li>• <strong>Objetivo:</strong> Mantener concentraciones efectivas</li>
+                                    <li>• <strong>Estrategia:</strong> Dosificación frecuente o infusión continua</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-blue-500/20 p-4 rounded-lg border border-blue-500/30">
+                                <h4 class="font-semibold text-blue-200 mb-3">📈 Concentración-Dependientes:</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li>• <strong>Aminoglucósidos:</strong> Pico/MIC ratio</li>
+                                    <li>• <strong>Quinolonas:</strong> AUC/MIC ratio</li>
+                                    <li>• <strong>Estrategia:</strong> Dosis altas, intervalos prolongados</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-indigo-500/20 p-4 rounded-lg border border-indigo-500/30">
+                                <h4 class="font-semibold text-indigo-200 mb-3">🔄 Efecto Post-Antibiótico:</h4>
+                                <p class="text-gray-300 text-sm">
+                                    <strong class="text-indigo-300">Proliferación tardía</strong> permite 
+                                    intervalos de dosificación más prolongados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relación Hospedador-Microorganismo -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8">
+                <h2 class="text-3xl font-bold text-green-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    👤↔️🦠 Relación Hospedador - Microorganismo
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 p-6 rounded-xl border border-blue-500/30 clinical-card">
+                        <h3 class="text-xl font-semibold text-blue-300 mb-4">🔧 Modificación de Respuesta del Tejido</h3>
+                        <div class="space-y-4">
+                            <div class="bg-blue-500/20 p-4 rounded-lg border border-blue-500/30">
+                                <h4 class="font-semibold text-blue-200 mb-2">Principio:</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Existe <strong class="text-blue-300">modificación</strong> cuando el fármaco 
+                                    suprime la multiplicación del microorganismo.
+                                </p>
+                            </div>
+                            <div class="bg-indigo-500/20 p-4 rounded-lg border border-indigo-500/30">
+                                <h4 class="font-semibold text-indigo-200 mb-2">Manifestaciones:</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• Reducción de inflamación</li>
+                                    <li>• Cambios en perfusión tisular</li>
+                                    <li>• Modulación de mediadores</li>
+                                    <li>• Facilitación de reparación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-6 rounded-xl border border-green-500/30 clinical-card">
+                        <h3 class="text-xl font-semibold text-green-300 mb-4">🛡️ Modificación de Respuesta Inmunitaria</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-500/20 p-4 rounded-lg border border-green-500/30">
+                                <h4 class="font-semibold text-green-200 mb-2">Alteración:</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Se <strong class="text-green-300">altera la respuesta inmunitaria</strong> 
+                                    del hospedador cuando la infección se modifica.
+                                </p>
+                            </div>
+                            <div class="bg-emerald-500/20 p-4 rounded-lg border border-emerald-500/30">
+                                <h4 class="font-semibold text-emerald-200 mb-2">Consecuencias:</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• Reducción de carga antigénica</li>
+                                    <li>• Cambios en respuesta humoral</li>
+                                    <li>• Modulación de inmunidad celular</li>
+                                    <li>• Impacto en memoria inmunológica</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-600/20 to-red-600/20 p-6 rounded-xl border border-orange-500/30 clinical-card">
+                        <h3 class="text-xl font-semibold text-orange-300 mb-4">🦠 Modificación de la Microbiota</h3>
+                        <div class="space-y-4">
+                            <div class="bg-orange-500/20 p-4 rounded-lg border border-orange-500/30">
+                                <h4 class="font-semibold text-orange-200 mb-2">Impacto Amplio:</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Los antibióticos afectan <strong class="text-orange-300">no solo patógenos</strong> 
+                                    sino miembros sensibles del microbiota normal.
+                                </p>
+                            </div>
+                            <div class="bg-red-500/20 p-4 rounded-lg border border-red-500/30">
+                                <h4 class="font-semibold text-red-200 mb-2">Efectos Adversos:</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• <strong>Disbiosis intestinal</strong></li>
+                                    <li>• <strong>C. difficile</strong> colitis</li>
+                                    <li>• <strong>Candidosis</strong> oportunista</li>
+                                    <li>• <strong>Resistencia</strong> secundaria</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optimización Terapéutica -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8">
+                <h2 class="text-3xl font-bold text-purple-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    🎯 Optimización de la Terapia Antimicrobiana
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="bg-purple-500/20 p-6 rounded-xl border border-purple-500/30">
+                            <h3 class="text-xl font-semibold text-purple-300 mb-4">📊 Monitoreo Terapéutico</h3>
+                            <div class="space-y-4">
+                                <div class="bg-purple-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-200 mb-2">Niveles Séricos:</h4>
+                                    <ul class="text-gray-300 text-sm space-y-1">
+                                        <li>• <strong>Aminoglucósidos:</strong> Pico y valle</li>
+                                        <li>• <strong>Vancomicina:</strong> Valle pre-dosis</li>
+                                        <li>• <strong>Voriconazol:</strong> Concentración steady-state</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-indigo-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-indigo-200 mb-2">Biomarcadores:</h4>
+                                    <ul class="text-gray-300 text-sm space-y-1">
+                                        <li>• <strong>PCR, procalcitonina:</strong> Respuesta inflamatoria</li>
+                                        <li>• <strong>Lactato:</strong> Perfusión tisular</li>
+                                        <li>• <strong>Leucocitos:</strong> Respuesta inmune</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-cyan-500/20 p-6 rounded-xl border border-cyan-500/30">
+                            <h3 class="text-xl font-semibold text-cyan-300 mb-4">⚖️ Ajustes Individualizados</h3>
+                            <div class="space-y-3">
+                                <div class="bg-cyan-600/20 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-cyan-200 mb-1">Función Renal:</h4>
+                                    <p class="text-gray-300 text-sm">Ajuste según ClCr para fármacos eliminados renalmente</p>
+                                </div>
+                                <div class="bg-blue-600/20 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-blue-200 mb-1">Función Hepática:</h4>
+                                    <p class="text-gray-300 text-sm">Modificación para fármacos metabolizados</p>
+                                </div>
+                                <div class="bg-teal-600/20 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-teal-200 mb-1">Peso Corporal:</h4>
+                                    <p class="text-gray-300 text-sm">Consideración de distribución y dosificación</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-green-500/20 p-6 rounded-xl border border-green-500/30">
+                            <h3 class="text-xl font-semibold text-green-300 mb-4">🔄 Estrategias de Dosificación</h3>
+                            <div class="space-y-4">
+                                <div class="bg-green-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-200 mb-2">Infusion Continua:</h4>
+                                    <ul class="text-gray-300 text-sm space-y-1">
+                                        <li>• Beta-lactámicos en infecciones graves</li>
+                                        <li>• Mantiene concentraciones > MIC</li>
+                                        <li>• Reduce desarrollo de resistencia</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-emerald-600/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-emerald-200 mb-2">Dosis Altas Intermitentes:</h4>
+                                    <ul class="text-gray-300 text-sm space-y-1">
+                                        <li>• Aminoglucósidos una vez al día</li>
+                                        <li>• Maximiza pico/MIC ratio</li>
+                                        <li>• Aprovecha efecto post-antibiótico</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-orange-500/20 p-6 rounded-xl border border-orange-500/30">
+                            <h3 class="text-xl font-semibold text-orange-300 mb-4">🛡️ Prevención de Resistencia</h3>
+                            <div class="space-y-3">
+                                <div class="bg-orange-600/20 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-orange-200 mb-1">Terapia Combinada:</h4>
+                                    <p class="text-gray-300 text-sm">Múltiples mecanismos de acción</p>
+                                </div>
+                                <div class="bg-red-600/20 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-red-200 mb-1">Duración Apropiada:</h4>
+                                    <p class="text-gray-300 text-sm">Ni muy corta ni excesivamente prolongada</p>
+                                </div>
+                                <div class="bg-yellow-600/20 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-yellow-200 mb-1">Uso Racional:</h4>
+                                    <p class="text-gray-300 text-sm">Indicaciones precisas y justificadas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poblaciones Especiales -->
+        <section class="mb-12">
+            <div class="glass-effect rounded-2xl p-8">
+                <h2 class="text-3xl font-bold text-amber-400 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                    </svg>
+                    👥 Consideraciones en Poblaciones Especiales
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-pink-600/20 to-rose-600/20 p-6 rounded-xl border border-pink-500/30 clinical-card">
+                        <h3 class="text-lg font-semibold text-pink-300 mb-4">🤱 Embarazo</h3>
+                        <div class="space-y-3">
+                            <div class="bg-pink-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-pink-200 text-sm mb-2">Seguros:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Penicilinas</li>
+                                    <li>• Cefalosporinas</li>
+                                    <li>• Eritromicina</li>
+                                    <li>• Azitromicina</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-red-200 text-sm mb-2">Evitar:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Quinolonas</li>
+                                    <li>• Tetraciclinas</li>
+                                    <li>• Metronidazol (1er trimestre)</li>
+                                    <li>• Sulfonamidas (3er trimestre)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-6 rounded-xl border border-blue-500/30 clinical-card">
+                        <h3 class="text-lg font-semibold text-blue-300 mb-4">👶 Pediatría</h3>
+                        <div class="space-y-3">
+                            <div class="bg-blue-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-blue-200 text-sm mb-2">Consideraciones:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Dosificación por peso</li>
+                                    <li>• Desarrollo renal inmaduro</li>
+                                    <li>• Formulaciones apropiadas</li>
+                                </ul>
+                            </div>
+                            <div class="bg-cyan-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-cyan-200 text-sm mb-2">Restricciones:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Quinolonas (&lt;18 años)</li>
+                                    <li>• Tetraciclinas (&lt;8 años)</li>
+                                    <li>• Cloranfenicol (neonatos)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 p-6 rounded-xl border border-purple-500/30 clinical-card">
+                        <h3 class="text-lg font-semibold text-purple-300 mb-4">👴 Geriatría</h3>
+                        <div class="space-y-3">
+                            <div class="bg-purple-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-purple-200 text-sm mb-2">Cambios Fisiológicos:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Función renal disminuida</li>
+                                    <li>• Metabolismo hepático reducido</li>
+                                    <li>• Polifarmacia</li>
+                                </ul>
+                            </div>
+                            <div class="bg-indigo-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-indigo-200 text-sm mb-2">Ajustes:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Dosis reducidas</li>
+                                    <li>• Intervalos prolongados</li>
+                                    <li>• Monitoreo estrecho</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-red-600/20 to-orange-600/20 p-6 rounded-xl border border-red-500/30 clinical-card">
+                        <h3 class="text-lg font-semibold text-red-300 mb-4">🛡️ Inmunodeprimidos</h3>
+                        <div class="space-y-3">
+                            <div class="bg-red-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-red-200 text-sm mb-2">Características:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Respuesta inmune limitada</li>
+                                    <li>• Patógenos oportunistas</li>
+                                    <li>• Infecciones diseminadas</li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-500/20 p-3 rounded-lg">
+                                <h4 class="font-semibold text-orange-200 text-sm mb-2">Estrategias:</h4>
+                                <ul class="text-gray-300 text-xs space-y-1">
+                                    <li>• Terapia empírica amplia</li>
+                                    <li>• Duración prolongada</li>
+                                    <li>• Combinaciones sinérgicas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen Final -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl p-8 glass-effect">
+                <h2 class="text-3xl font-bold text-white mb-6 text-center">✅ Principios Clave de las Relaciones Clínicas</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="bg-green-500/20 p-6 rounded-xl border border-green-500/30">
+                            <h3 class="text-xl font-semibold text-green-300 mb-4">🎯 Éxito Terapéutico Requiere:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• <strong class="text-green-400">Selección apropiada:</strong> Antimicrobiano correcto</li>
+                                <li>• <strong class="text-green-400">Dosificación óptima:</strong> Concentraciones efectivas</li>
+                                <li>• <strong class="text-green-400">Duración adecuada:</strong> Erradicación completa</li>
+                                <li>• <strong class="text-green-400">Monitoreo continuo:</strong> Respuesta y toxicidad</li>
+                                <li>• <strong class="text-green-400">Individualización:</strong> Características del paciente</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-red-500/20 p-6 rounded-xl border border-red-500/30">
+                            <h3 class="text-xl font-semibold text-red-300 mb-4">⚠️ Factores de Falla Terapéutica:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• <strong class="text-red-400">Resistencia microbiana:</strong> Intrínseca o adquirida</li>
+                                <li>• <strong class="text-red-400">Concentraciones inadecuadas:</strong> Farmacocinética alterada</li>
+                                <li>• <strong class="text-red-400">Localización inaccesible:</strong> Santuarios anatómicos</li>
+                                <li>• <strong class="text-red-400">Inmunidad comprometida:</strong> Respuesta deficiente</li>
+                                <li>• <strong class="text-red-400">Adherencia deficiente:</strong> Cumplimiento terapéutico</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center p-6 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl border border-blue-500/30">
+                    <p class="text-xl text-gray-200">
+                        <strong class="text-blue-400">La medicina antimicrobiana</strong> es tanto 
+                        <strong class="text-purple-400">ciencia como arte</strong>, requiriendo comprensión profunda de 
+                        las <strong class="text-cyan-400">interacciones complejas</strong> entre los tres componentes fundamentales.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="factores-modificadores.html" class="inline-flex items-center px-6 py-3 bg-orange-600/20 hover:bg-orange-600/30 rounded-lg border border-orange-500/30 transition-all">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Factores Modificadores
+            </a>
+            <a href="index.html" class="inline-flex items-center px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg border border-blue-500/30 transition-all">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Inicio
+            </a>
+        </div>
+    </div>
+</body>
+</html>
