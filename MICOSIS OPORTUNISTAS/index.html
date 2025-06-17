@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micosis Oportunistas - Microbiología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .pathogen-card {
+            transition: all 0.3s ease;
+        }
+        .pathogen-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fungal-icon {
+            color: #d97706;
+            filter: drop-shadow(0 0 10px rgba(217, 119, 6, 0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-amber-900 via-orange-900 to-red-900">
+    
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-white hover:text-amber-300 transition-colors duration-300 flex items-center">
+                    <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="hidden sm:inline">Volver</span>
+                </a>
+                <h1 class="text-2xl sm:text-4xl font-bold text-white text-center tracking-tight">
+                    <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+                        🍄 MICOSIS OPORTUNISTAS
+                    </span>
+                </h1>
+                <div class="w-8"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Introducción -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <div class="text-center">
+                <div class="fungal-icon text-6xl mb-4">🍄</div>
+                <h2 class="text-3xl font-bold text-white mb-4">Infecciones Fúngicas Oportunistas</h2>
+                <p class="text-amber-100 text-lg leading-relaxed max-w-4xl mx-auto">
+                    Las micosis oportunistas son infecciones causadas por hongos que afectan principalmente a 
+                    pacientes inmunocomprometidos, aprovechando el debilitamiento del sistema inmune para establecer 
+                    infecciones graves y potencialmente mortales.
+                </p>
+            </div>
+        </section>
+
+        <!-- Grid de Micosis Oportunistas -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            
+            <!-- CANDIDIASIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">🦠</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Candidiasis</h3>
+                        <p class="text-amber-200 italic">Candida spp.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Características</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Parte de la microbiota normal</p>
+                            <p>• Células de levadura ovaladas</p>
+                            <p>• Forman seudohifas al crecer</p>
+                            <p>• C. albicans puede generar hifas reales</p>
+                            <p>• Colonias color crema con olor a levadura</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• <strong>Local:</strong> Heridas en piel, invasión de seudohifas</p>
+                            <p>• <strong>Sistémica:</strong> Ingreso al torrente sanguíneo</p>
+                            <p>• Llega a riñones y válvulas cardíacas</p>
+                            <p>• Respuesta inmune: Th1, Th17, Th2</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔍 Diagnóstico</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Muestras microscópicas con tinción Gram</p>
+                            <p>• Cultivo en medios fúngicos a 37°C</p>
+                            <p>• CHROMagar para identificar especies</p>
+                            <p>• PCR para muestras de sangre</p>
+                            <p>• Serología: detección de manano</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• <strong>Tópica:</strong> Nistatina, Ketoconazol</p>
+                            <p>• <strong>Oral:</strong> Fluconazol</p>
+                            <p>• <strong>Sistémica:</strong> Anfotericina B</p>
+                            <p>• Inmunosuprimidos: tratamiento de por vida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CRIPTOCOCOSIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">🔵</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Criptococosis</h3>
+                        <p class="text-amber-200 italic">Cryptococcus neoformans/gattii</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Características</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Grandes cápsulas características</p>
+                            <p>• 90% C. neoformans (heces de paloma)</p>
+                            <p>• 10% C. gattii (árboles, tierra)</p>
+                            <p>• Producen ureasa y laccasa</p>
+                            <p>• 5 serotipos: A-D, AD y B-C</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Ingreso por vía pulmonar</p>
+                            <p>• Diseminación hematógena</p>
+                            <p>• Afecta huesos, ojos, próstata y SNC</p>
+                            <p>• Esqueleto de polimanosa en cápsula</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔍 Diagnóstico</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Cultivo a 37°C</p>
+                            <p>• Detección de ureasa</p>
+                            <p>• Agar Sabouraud dextrosa</p>
+                            <p>• Colonias blanquecinas en 2-3 días</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Anfotericina B</p>
+                            <p>• Flucitosina (combinación)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASPERGILOSIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">🌿</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Aspergilosis</h3>
+                        <p class="text-amber-200 italic">Aspergillus spp.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Características</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Hifas septadas hialinas</p>
+                            <p>• Ramificación en ángulo agudo (45°)</p>
+                            <p>• Conidióforos con vesículas y fiálides</p>
+                            <p>• Esporas pequeñas (2-5 µm)</p>
+                            <p>• Crecimiento rápido (2-6 días)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎨 Especies Principales</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• <strong>A. fumigatus:</strong> Verde-azulado</p>
+                            <p>• <strong>A. flavus:</strong> Amarillo-verdoso</p>
+                            <p>• <strong>A. niger:</strong> Negro</p>
+                            <p>• <strong>A. terreus y A. nidulans</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Esporas inhaladas colonizan vías respiratorias</p>
+                            <p>• Producción de toxinas (aflatoxina)</p>
+                            <p>• Adhesinas (rodletina en conidios)</p>
+                            <p>• Enzimas proteolíticas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• <strong>Primera línea:</strong> Voriconazol</p>
+                            <p>• Anfotericina B</p>
+                            <p>• Equinocandinas (caspofungina)</p>
+                            <p>• <strong>Resistencia:</strong> Algunas cepas a azoles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MUCORMICOSIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">🕸️</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Mucormicosis</h3>
+                        <p class="text-amber-200 italic">Zigomicosis</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Morfología</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Hifas anchas (6-25 µm)</p>
+                            <p>• No tabicadas (aseptadas)</p>
+                            <p>• Ramificaciones en ángulo de 90°</p>
+                            <p>• Esporangios con esporangiosporas</p>
+                            <p>• Crecimiento rápido (24-48h)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• <strong>Inhalación:</strong> Mucormicosis pulmonar/rinocerebral</p>
+                            <p>• <strong>Traumática:</strong> Mucormicosis cutánea</p>
+                            <p>• <strong>Ingesta:</strong> Mucormicosis gastrointestinal</p>
+                            <p>• Invasión vascular con quitina sintasas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">⚡ Factores de Virulencia</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Crecimiento en alto estrés</p>
+                            <p>• pH bajo, hiperglucemia</p>
+                            <p>• Receptor GRP78 para invasión</p>
+                            <p>• Termotolerantes (37°C)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎨 Colonias</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Algodonosas blanco/grisáceas</p>
+                            <p>• Se oscurecen con la edad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEOHIFOMICOSIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">⚫</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Feohifomicosis</h3>
+                        <p class="text-amber-200 italic">Hongos dematiáceos</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Características</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• <strong>Agentes:</strong> Cladophialophora bantiana, Exophiala dermatitidis</p>
+                            <p>• Producen melanina</p>
+                            <p>• Contagio por tierra y agua</p>
+                            <p>• Ambientes tropicales</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">⚡ Factores de Virulencia</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Proteasas y peptidasas</p>
+                            <p>• Hialuronidasas</p>
+                            <p>• Quitina</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🏥 Manifestaciones Clínicas</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Piel negra, otitis, queratitis</p>
+                            <p>• Quiste micótico y nódulo diseminado</p>
+                            <p>• Formas cerebrales y diseminadas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔍 Diagnóstico</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Hisopado en agar Sabouraud (25-28°C)</p>
+                            <p>• Colonias negras, después mohosas (20 días)</p>
+                            <p>• Biopsia con centro necrótico</p>
+                            <p>• Fontana-Masson para melanina</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Itraconazol</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HIALOHIFOMICOSIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">⚪</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Hialohifomicosis</h3>
+                        <p class="text-amber-200 italic">Hongos hialinos</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">❓ Definición</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Infección fúngica por hongos hialohifos</p>
+                            <p>• Principales géneros: Acremonium, Fusarium, Scedosporium</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Hongos hialinos saprófitos</p>
+                            <p>• Causan problemas en condiciones adecuadas</p>
+                            <p>• Infección por inhalación de esporas</p>
+                            <p>• Inoculación directa en heridas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">⚠️ Factores de Riesgo</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Diabetes mellitus</p>
+                            <p>• Traumatismos</p>
+                            <p>• Condiciones ambientales</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Itraconazol</p>
+                            <p>• Anfotericina B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PNEUMOCYSTIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">🫁</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Pneumocystis pneumonia</h3>
+                        <p class="text-amber-200 italic">Pneumocystis jirovecii</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Características</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Infección pulmonar por P. jirovecii</p>
+                            <p>• Afecta pacientes inmunocomprometidos</p>
+                            <p>• Especialmente con VIH/SIDA</p>
+                            <p>• Se encuentra en el medio ambiente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Inhalación de esporas ambientales</p>
+                            <p>• En personas sanas: sistema inmune controla la infección</p>
+                            <p>• En inmunocomprometidos: neumonía grave</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔍 Diagnóstico</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Radiografía de tórax</p>
+                            <p>• Prueba de esputo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• <strong>Primera línea:</strong> Trimetoprim-sulfametoxazol</p>
+                            <p>• <strong>Alternativas:</strong> Pentamidina, Atovaquona</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PENICILLIOSIS -->
+            <div class="pathogen-card section-card rounded-xl p-6 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-3">🌡️</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Penicilliosis</h3>
+                        <p class="text-amber-200 italic">Talaromyces marneffei</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔬 Clasificación</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Reino: Fungi</p>
+                            <p>• Filo: Ascomycota</p>
+                            <p>• Clase: Eurotiomycetes</p>
+                            <p>• Género: Talaromyces</p>
+                            <p>• Especie: T. marneffei</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🌡️ Dimorfismo Térmico</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• <strong>25°C:</strong> Moho (hifas septadas con conidios)</p>
+                            <p>• <strong>37°C:</strong> Levadura intracelular (patógena)</p>
+                            <p>• Dimorfismo crucial para virulencia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🌏 Epidemiología</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• <strong>Región endémica:</strong> Sudeste asiático</p>
+                            <p>• Tailandia, Vietnam, Laos, sur de China</p>
+                            <p>• <strong>Reservorios:</strong> Bambúes y ratas de bambú</p>
+                            <p>• <strong>Transmisión:</strong> Inhalación de conidios</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🎯 Patogenia</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• Conidios inhalados llegan a alvéolos</p>
+                            <p>• Se convierten en forma de levadura</p>
+                            <p>• Invaden macrófagos</p>
+                            <p>• Diseminación reticuloendotelial</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🏥 Manifestaciones Clínicas</h4>
+                        <div class="space-y-2 text-white text-sm">
+                            <p>• <strong>Pulmonar:</strong> Tos, infiltrados bilaterales</p>
+                            <p>• <strong>Sistémica:</strong> Fiebre, pérdida de peso, linfadenopatías</p>
+                            <p>• <strong>Cutánea:</strong> Lesiones tipo molusco contagioso</p>
+                            <p>• Afecta principalmente CD4 < 100 células/μL</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">🔍 Diagnóstico</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Biopsia</p>
+                            <p>• Cultivo en Sabouraud (25° o 37°C)</p>
+                            <p>• Hemocultivo</p>
+                            <p>• PCR</p>
+                            <p>• Imagenología</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 rounded-lg p-4">
+                        <h4 class="text-lg font-semibold text-amber-300 mb-2">💊 Tratamiento</h4>
+                        <div class="space-y-1 text-white text-sm">
+                            <p>• Anfotericina B desoxicolato o liposomal</p>
+                            <p>• Dosis: 0.7-1 mg/kg/día por 2 semanas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consideraciones Especiales -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">⚠️ Consideraciones Especiales</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-amber-300 mb-3">🩺 Pacientes de Riesgo</h4>
+                    <div class="space-y-2 text-white text-sm">
+                        <p>• <strong>VIH/SIDA:</strong> CD4 < 200 células/μL</p>
+                        <p>• <strong>Trasplantados:</strong> Inmunosupresión</p>
+                        <p>• <strong>Cáncer:</strong> Quimioterapia, neutropenia</p>
+                        <p>• <strong>Diabetes:</strong> Control glucémico deficiente</p>
+                        <p>• <strong>Corticosteroides:</strong> Uso prolongado</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-amber-300 mb-3">🔬 Diagnóstico General</h4>
+                    <div class="space-y-2 text-white text-sm">
+                        <p>• <strong>Cultivos:</strong> Agar Sabouraud, 25-37°C</p>
+                        <p>• <strong>Microscopía:</strong> KOH, Gram, PAS</p>
+                        <p>• <strong>Histopatología:</strong> Biopsia tisular</p>
+                        <p>• <strong>Serología:</strong> Antígenos específicos</p>
+                        <p>• <strong>PCR:</strong> Métodos moleculares</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-amber-300 mb-3">💊 Principios de Tratamiento</h4>
+                    <div class="space-y-2 text-white text-sm">
+                        <p>• <strong>Anfotericina B:</strong> Infecciones graves</p>
+                        <p>• <strong>Azoles:</strong> Fluconazol, voriconazol, itraconazol</p>
+                        <p>• <strong>Equinocandinas:</strong> Caspofungina</p>
+                        <p>• <strong>Duración:</strong> Prolongada en inmunocomprometidos</p>
+                        <p>• <strong>Monitoreo:</strong> Función renal y hepática</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métodos Diagnósticos -->
+        <section class="section-card rounded-xl p-6 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">🔬 Métodos Diagnósticos Comparativos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-blue-600/20 to-blue-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">🔍</div>
+                    <h4 class="text-blue-300 font-bold text-lg mb-2">Examen Directo</h4>
+                    <p class="text-white text-sm">KOH, Gram, tinción de Grocott para observar morfología fúngica</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-600/20 to-green-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">🧫</div>
+                    <h4 class="text-green-300 font-bold text-lg mb-2">Cultivo</h4>
+                    <p class="text-white text-sm">Agar Sabouraud, CHROMagar, identificación de especies</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-600/20 to-purple-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">🧬</div>
+                    <h4 class="text-purple-300 font-bold text-lg mb-2">Molecular</h4>
+                    <p class="text-white text-sm">PCR, secuenciación para identificación rápida y específica</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">🩸</div>
+                    <h4 class="text-red-300 font-bold text-lg mb-2">Serología</h4>
+                    <p class="text-white text-sm">Antígenos circulantes, anticuerpos específicos</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/5 backdrop-blur-lg border-t border-white/20 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-amber-200">
+                Material educativo sobre Micosis Oportunistas - Microbiología
+            </p>
+            <p class="text-amber-300 text-sm mt-2">
+                Desarrollado con fines académicos
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Animación suave para las cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los elementos con la clase fade-in
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Efecto hover mejorado para las cards de patógenos
+        document.querySelectorAll('.pathogen-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+</body>
+</html>

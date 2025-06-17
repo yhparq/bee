@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micosis Cutáneas y Subcutáneas - Microbiología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .pathogen-card {
+            transition: all 0.3s ease;
+        }
+        .pathogen-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .derma-icon {
+            color: #f59e0b;
+            filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">
+    
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-white hover:text-orange-300 transition-colors duration-300 flex items-center">
+                    <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="hidden sm:inline">Volver</span>
+                </a>
+                <h1 class="text-2xl sm:text-4xl font-bold text-white text-center tracking-tight">
+                    <span class="bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                        🧫 MICOSIS CUTÁNEAS Y SUBCUTÁNEAS
+                    </span>
+                </h1>
+                <div class="w-8"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Introducción -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <div class="text-center">
+                <div class="derma-icon text-6xl mb-4">🧫</div>
+                <h2 class="text-3xl font-bold text-white mb-4">Clasificación de las Micosis Médicas</h2>
+                <p class="text-orange-100 text-lg leading-relaxed max-w-4xl mx-auto mb-6">
+                    Las micosis médicas se dividen en cuatro categorías principales según su localización y características clínicas.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-gradient-to-br from-blue-600/20 to-blue-700/20 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">🦠</div>
+                        <h4 class="text-blue-300 font-semibold">Cutáneas</h4>
+                        <p class="text-white text-sm">Afectan piel, uñas y pelo</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-600/20 to-green-700/20 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">🔬</div>
+                        <h4 class="text-green-300 font-semibold">Subcutáneas</h4>
+                        <p class="text-white text-sm">Penetran tejido subcutáneo</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">🫁</div>
+                        <h4 class="text-red-300 font-semibold">Sistémicas</h4>
+                        <p class="text-white text-sm">Comprometen órganos internos</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-600/20 to-purple-700/20 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">⚠️</div>
+                        <h4 class="text-purple-300 font-semibold">Oportunistas</h4>
+                        <p class="text-white text-sm">En huéspedes inmunocompromitidos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clasificación por Hábitat -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">📍 Clasificación por Hábitat Natural (Ajello, 1978)</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-3">👥 Antropofílicos</h4>
+                    <p class="text-white text-sm mb-3">Afectan exclusivamente al ser humano. Transmisión directa o por fómites. Lesiones crónicas con poca inflamación.</p>
+                    <div class="space-y-1 text-sm text-orange-200">
+                        <p>• M. audouinii</p>
+                        <p>• M. ferrugineum</p>
+                        <p>• T. rubrum</p>
+                        <p>• T. concentricum</p>
+                        <p>• T. mentagrophytes var. interdigitale</p>
+                        <p>• T. soudanense</p>
+                        <p>• T. schoenleinii</p>
+                        <p>• T. tonsurans</p>
+                        <p>• T. violaceum</p>
+                        <p>• T. megninii</p>
+                        <p>• E. floccosum</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-3">🐕 Zoofílicos</h4>
+                    <p class="text-white text-sm mb-3">Transmisión de animales infectados: perros, gatos y otros animales no domésticos.</p>
+                    <div class="space-y-1 text-sm text-orange-200">
+                        <p>• M. equinum</p>
+                        <p>• M. canis</p>
+                        <p>• M. gallinae</p>
+                        <p>• T. mentagrophytes</p>
+                        <p>• T. verrucosum</p>
+                        <p>• T. equinum</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-3">🌍 Geofílicos</h4>
+                    <p class="text-white text-sm mb-3">Residen en el suelo. Transmisión por contacto con tierra contaminada.</p>
+                    <div class="space-y-1 text-sm text-orange-200">
+                        <p>• M. gypseum</p>
+                        <p>• M. praecox</p>
+                        <p>• M. fulvum</p>
+                        <p>• M. nanum</p>
+                        <p>• T. longifusum</p>
+                        <p>• T. ajelloi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Epidemiología -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">📊 Epidemiología</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">🌍 Distribución Global</h4>
+                    <ul class="text-white text-sm space-y-1">
+                        <li>• Predominan en zonas tropicales cálidas y húmedas</li>
+                        <li>• Afecta ambos sexos y todas las edades</li>
+                        <li>• Frecuencia global: 20-25% de la población (OMS)</li>
+                        <li>• 5-10% son causadas por dermatofitos</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">🔄 Factores de Transmisión</h4>
+                    <ul class="text-white text-sm space-y-1">
+                        <li>• Traumatismo previo</li>
+                        <li>• Susceptibilidad del hospedador</li>
+                        <li>• Predisposición genética</li>
+                        <li>• Fómites contaminados</li>
+                        <li>• Contacto con animales infectados</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dermatófitos -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">🧪 Géneros de Dermatófitos</h3>
+            <p class="text-orange-100 text-center mb-6">
+                Hongos filamentosos pluricelulares, patógenos queratinofílicos con gran capacidad de adaptación ambiental
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🔬</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Trichophyton</h4>
+                            <p class="text-orange-200 italic">Tricofiticias</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-white text-sm">Parasitan piel, uñas y pelo.</p>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-1">Parasitismo del pelo:</h5>
+                            <p class="text-white text-xs">• Endothrix en formas no inflamatorias</p>
+                            <p class="text-white text-xs">• Endo-ectothrix en formas inflamatorias (kerion, sicosis)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🔍</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Microsporum</h4>
+                            <p class="text-orange-200 italic">Microsporosis</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-white text-sm">Parasitan piel lampiña y pelos.</p>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-1">Parasitismo del pelo:</h5>
+                            <p class="text-white text-xs">• Endo-ectothrix</p>
+                            <p class="text-white text-xs">• Filamentos interiores y esporos exteriores</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🦠</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Epidermophyton</h4>
+                            <p class="text-orange-200 italic">E. floccosum</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-white text-sm">Una sola especie que afecta piel y uñas.</p>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-1">Características:</h5>
+                            <p class="text-white text-xs">• Incapaz de parasitar el pelo</p>
+                            <p class="text-white text-xs">• Lesiones en piel glabra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifestaciones Clínicas -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">🩺 Manifestaciones Clínicas</h3>
+            <p class="text-orange-100 text-center mb-6">
+                Ring-worm o tiña: lesiones circulares elevadas. Raramente infecciones sistémicas.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">🦶 Tinea Pedis (Pie de Atleta)</h4>
+                    <p class="text-white text-sm mb-2">Más frecuente. Infección crónica de pliegues de dedos.</p>
+                    <div class="space-y-1 text-xs text-orange-200">
+                        <p>• Tipo vesicular</p>
+                        <p>• Tipo ulcerativo</p>
+                        <p>• Tipo mocasín (descamación seca)</p>
+                        <p>• Hiperqueratosis plantar</p>
+                        <p>• Prurito, vesículas, grietas</p>
+                    </div>
+                    <p class="text-orange-300 text-xs mt-2">Agentes: T. rubrum, T. mentagrophytes, E. floccosum</p>
+                </div>
+
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">💅 Tinea Unguium</h4>
+                    <p class="text-white text-sm mb-2">Sigue a tinea pedis prolongada. Invasión hifal de uñas.</p>
+                    <div class="space-y-1 text-xs text-orange-200">
+                        <p>• Uñas amarillas y quebradizas</p>
+                        <p>• Engrosadas y desmoronadas</p>
+                        <p>• Más de una uña (pies/manos)</p>
+                    </div>
+                    <p class="text-orange-300 text-xs mt-2">Agentes: T. rubrum, E. floccosum</p>
+                </div>
+
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">🤲 Tinea Corporis/Cruris/Manus</h4>
+                    <p class="text-white text-sm mb-2">Piel glabra. Lesiones anulares características.</p>
+                    <div class="space-y-1 text-xs text-orange-200">
+                        <p>• Centro claro escamoso</p>
+                        <p>• Borde rojo activo</p>
+                        <p>• Tinea cruris: inguinal (hombres)</p>
+                        <p>• Lesión seca con picazón</p>
+                    </div>
+                    <p class="text-orange-300 text-xs mt-2">Agentes: T. rubrum, E. floccosum, T. mentagrophytes</p>
+                </div>
+
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">👦 Tinea Capitis</h4>
+                    <p class="text-white text-sm mb-2">Cuero cabelludo y cabello. Invasión hifal folicular.</p>
+                    <div class="space-y-1 text-xs text-orange-200">
+                        <p>• Placas circulares grises</p>
+                        <p>• Alopecia y descamación</p>
+                        <p>• Fluorescencia con luz de Wood</p>
+                        <p>• Querion (especies zoofílicas)</p>
+                    </div>
+                    <p class="text-orange-300 text-xs mt-2">Agentes: T. mentagrophytes, M. canis, T. tonsurans</p>
+                </div>
+
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">🧔 Tinea Barbae</h4>
+                    <p class="text-white text-sm mb-2">Barba. Dermatofitos zoofílicos.</p>
+                    <div class="space-y-1 text-xs text-orange-200">
+                        <p>• Similar a infección piógena</p>
+                        <p>• Inflamación severa</p>
+                        <p>• Supuración</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-2">⚡ Reacción Tricofítide</h4>
+                    <p class="text-white text-sm mb-2">Reacciones alérgicas por hipersensibilidad.</p>
+                    <div class="space-y-1 text-xs text-orange-200">
+                        <p>• Dermatofítides (vesículas)</p>
+                        <p>• Principalmente en manos</p>
+                        <p>• Sin presencia de hongos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnóstico -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">🔬 Pruebas Diagnósticas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-3">🧪 Examen Microscópico</h4>
+                    <div class="space-y-2 text-white text-sm">
+                        <p>• <strong>Muestras:</strong> Raspados de piel, uñas, cabellos</p>
+                        <p>• <strong>KOH 10%:</strong> Observar hifas ramificadas y artroconidios</p>
+                        <p>• <strong>Luz de Wood:</strong> Fluorescencia en cuarto oscuro</p>
+                        <p>• <strong>Endothrix:</strong> T. tonsurans (dentro del tallo)</p>
+                        <p>• <strong>Ectothrix:</strong> Microsporum (exterior del pelo)</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-3">🦠 Cultivo</h4>
+                    <div class="space-y-2 text-white text-sm">
+                        <p>• <strong>Medios:</strong> Agar Sabouraud (SDA) o IMA</p>
+                        <p>• <strong>Aditivos:</strong> Cicloheximida + cloranfenicol</p>
+                        <p>• <strong>Incubación:</strong> 1-3 semanas a temperatura ambiente</p>
+                        <p>• <strong>Identificación:</strong> Morfología colonial y microscópica</p>
+                        <p>• <strong>Criterios:</strong> Textura, pigmentación, macro/microconidios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Micosis Subcutáneas -->
+        <section class="section-card rounded-xl p-6 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">🌿 Micosis Subcutáneas</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+                <!-- Esporotricosis -->
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🌹</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Esporotricosis</h4>
+                            <p class="text-orange-200 italic">Sporothrix schenckii</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🧬 Especies del Complejo</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• <strong>S. brasiliensis:</strong> Muy virulento, epidemias en Brasil (gatos)</p>
+                                <p>• <strong>S. globosa:</strong> Menos agresivo, común en niños asiáticos</p>
+                                <p>• <strong>S. luriei:</strong> Infrecuente, Italia e India</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🔬 Morfología</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• <strong>25°C:</strong> Forma micelial (colonias blancas → negras)</p>
+                                <p>• <strong>37°C:</strong> Forma levaduriforme pleomórfica</p>
+                                <p>• <strong>Microscopía:</strong> Conidios "pétalos de margarita"</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🩺 Manifestaciones</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Lesiones nodulares linfocutáneas</p>
+                                <p>• Cadena lineal indolora</p>
+                                <p>• Ulceración con pus</p>
+                                <p>• Diseminación a huesos, ojos, pulmones</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">💊 Tratamiento</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Yoduro de potasio (saturado)</p>
+                                <p>• Itraconazol</p>
+                                <p>• Terbinafina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cromoblastomicosis -->
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">⚫</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Cromoblastomicosis</h4>
+                            <p class="text-orange-200 italic">Hongos dematiáceos</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🦠 Agentes Etiológicos</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• P. verrucosa</p>
+                                <p>• F. pedrosoi</p>
+                                <p>• F. compacta</p>
+                                <p>• R. aquaersa</p>
+                                <p>• Cladophialophora</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🔬 Características</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Colonias compactas marrón-negro</p>
+                                <p>• Células esféricas oscuras (esclerotiales)</p>
+                                <p>• Hifas septadas ramificadas</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🩺 Patogenia</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Trauma en piernas y pies</p>
+                                <p>• Lesiones satélites</p>
+                                <p>• Diseminación linfática local</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">💊 Tratamiento</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Escisión quirúrgica</p>
+                                <p>• Flucitosina o itraconazol</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Micetoma -->
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🔴</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Micetoma</h4>
+                            <p class="text-orange-200 italic">Infección subcutánea crónica</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🦠 Agentes Fúngicos</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• P. boydii</p>
+                                <p>• M. mycetomatis</p>
+                                <p>• Madurella grisea</p>
+                                <p>• E. jeanselmei</p>
+                                <p>• Acremonium falciforme</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🔬 Características</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Gránulos de micetoma (2mm)</p>
+                                <p>• Gránulos duros con hifas</p>
+                                <p>• Supuración y abscesos</p>
+                                <p>• Senos drenantes</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">💊 Tratamiento</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Desbridamiento quirúrgico</p>
+                                <p>• Itraconazol, ketoconazol</p>
+                                <p>• Anfotericina B</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entomofthoromicosis -->
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🟢</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Entomofthoromicosis</h4>
+                            <p class="text-orange-200 italic">Entomophthorales</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🦠 Especies</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• <strong>Basidiobolus ranarum:</strong> Basidiobolomicosis</p>
+                                <p>• <strong>Conidiobolus coronatus:</strong> Conidiobolomicosis</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🩺 Manifestaciones</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• <strong>Basidiobolomicosis:</strong> Lesión subcutánea indolora tipo placa</p>
+                                <p>• <strong>Conidiobolomicosis:</strong> Daño facial y senos nasales</p>
+                                <p>• "Doughnut lifting sign"</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🔬 Diagnóstico</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Hifas gruesas, hialinas, escasamente septadas</p>
+                                <p>• Reacción eosinofílica (Splendore-Hoeppli)</p>
+                                <p>• Cultivo en agar Sabouraud</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">💊 Tratamiento</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Yoduro de potasio oral</p>
+                                <p>• Itraconazol 100-400 mg/día</p>
+                                <p>• Terbinafina (2-8 meses)</p>
+                                <p>• Resistencia: Anfotericina B</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feohifomicosis -->
+                <div class="pathogen-card section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl mr-3">🟤</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Feohifomicosis</h4>
+                            <p class="text-orange-200 italic">Hongos dematiáceos</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🦠 Agentes</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Exophiala</p>
+                                <p>• Cladophialophora</p>
+                                <p>• Curvularia</p>
+                                <p>• Fonsecaea</p>
+                                <p>• Alternaria</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🩺 Manifestaciones</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Nódulos, quistes o abscesos</p>
+                                <p>• Piel y tejido subcutáneo</p>
+                                <p>• Fluctuantes, crecimiento lento</p>
+                                <p>• Ulcerados o supurantes</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">🔬 Diagnóstico</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Hifas tabicadas pigmentadas</p>
+                                <p>• Pseudohifas marrones</p>
+                                <p>• Células levaduriformes</p>
+                                <p>• Coloración Masson-Fontana (melanina)</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-3">
+                            <h5 class="text-orange-300 font-semibold text-sm mb-2">💊 Tratamiento</h5>
+                            <div class="space-y-1 text-xs text-white">
+                                <p>• Itraconazol</p>
+                                <p>• Voriconazol</p>
+                                <p>• Posaconazol</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tratamiento General -->
+        <section class="section-card rounded-xl p-6 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">💊 Tratamiento Antimicótico</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-blue-600/20 to-blue-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">💊</div>
+                    <h4 class="text-blue-300 font-bold text-lg mb-2">Azoles Tópicos</h4>
+                    <p class="text-white text-sm mb-2">Clotrimazol, Miconazol</p>
+                    <p class="text-blue-200 text-xs">Para lesiones superficiales localizadas</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-600/20 to-green-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">💉</div>
+                    <h4 class="text-green-300 font-bold text-lg mb-2">Azoles Sistémicos</h4>
+                    <p class="text-white text-sm mb-2">Itraconazol, Fluconazol</p>
+                    <p class="text-green-200 text-xs">Para infecciones extensas o resistentes</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-600/20 to-purple-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h4 class="text-purple-300 font-bold text-lg mb-2">Alilaminas</h4>
+                    <p class="text-white text-sm mb-2">Terbinafina</p>
+                    <p class="text-purple-200 text-xs">Especialmente efectiva para dermatofitos</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-600/20 to-orange-700/20 rounded-lg p-6 text-center">
+                    <div class="text-3xl mb-3">🧪</div>
+                    <h4 class="text-yellow-300 font-bold text-lg mb-2">Otros</h4>
+                    <p class="text-white text-sm mb-2">Griseofulvina, KI</p>
+                    <p class="text-yellow-200 text-xs">Tratamientos específicos o históricos</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/5 backdrop-blur-lg border-t border-white/20 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-orange-200">
+                Material educativo sobre Micosis Cutáneas y Subcutáneas - Microbiología
+            </p>
+            <p class="text-orange-300 text-sm mt-2">
+                Desarrollado con fines académicos
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Animación suave para las cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los elementos con la clase fade-in
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Efecto hover mejorado para las cards de patógenos
+        document.querySelectorAll('.pathogen-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micosis Superficiales - Microbiología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .pathogen-card {
+            transition: all 0.3s ease;
+        }
+        .pathogen-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-white hover:text-purple-300 transition-colors duration-300 flex items-center">
+                    <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="hidden sm:inline">Volver</span>
+                </a>
+                <h1 class="text-2xl sm:text-4xl font-bold text-white text-center tracking-tight">
+                    <span class="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+                        MICOSIS SUPERFICIALES
+                    </span>
+                </h1>
+                <div class="w-8"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+            
+            <!-- Hortaea Werneckii -->
+            <div class="pathogen-card section-card rounded-2xl p-6 text-white">
+                <h2 class="text-2xl font-bold mb-4 text-purple-300">🦠 HORTAEA WERNECKII</h2>
+                <div class="space-y-3 text-gray-100">
+                    <p><span class="font-semibold text-purple-200">Características:</span> Hongo halotolerante, dematiáceo (pigmentos oscuros)</p>
+                    <p><span class="font-semibold text-purple-200">Etiología:</span> Tiña negra (no inflamatoria)</p>
+                    <p><span class="font-semibold text-purple-200">Ambiente:</span> Ambientes salinos</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Estructura:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Hifas septadas</li>
+                            <li>• Células levaduriformes fusiformes u ovaladas</li>
+                            <li>• Colonias negras a marrón oscuro</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Signos:</span> Lesiones hiperpigmentadas no descamativas</p>
+                    <p><span class="font-semibold text-purple-200">Cultivo:</span> Colonias negras (5-14 días)</p>
+                    <p><span class="font-semibold text-purple-200">Tratamiento:</span> Antifúngicos tópicos (azoles, terbinafina)</p>
+                </div>
+            </div>
+
+            <!-- Trichosporon spp -->
+            <div class="pathogen-card section-card rounded-2xl p-6 text-white">
+                <h2 class="text-2xl font-bold mb-4 text-purple-300">🧫 TRICHOSPORON SPP</h2>
+                <div class="space-y-3 text-gray-100">
+                    <p><span class="font-semibold text-purple-200">Especies:</span> T. asahii, T. mucoides, T. inkin, T. ovoides, T. asteroides</p>
+                    <p><span class="font-semibold text-purple-200">Generalidades:</span> Levadura basidiomicética, ureasa positiva</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Infecciones:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Tricósfora blanca (superficial)</li>
+                            <li>• Infecciones sistémicas oportunistas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Mecanismos de patogenia:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Biofilm</li>
+                            <li>• Enzimas hidrolíticas</li>
+                            <li>• Artroconidias resistentes</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Diagnóstico:</span> Cultivo Sabouraud, MALDI-TOF o PCR</p>
+                    <p><span class="font-semibold text-purple-200">Tratamiento:</span> Azoles sistémicos, higiene adecuada</p>
+                </div>
+            </div>
+
+            <!-- Piedraia hortae -->
+            <div class="pathogen-card section-card rounded-2xl p-6 text-white">
+                <h2 class="text-2xl font-bold mb-4 text-purple-300">🧬 PIEDRA NEGRA - Piedraia hortae</h2>
+                <div class="space-y-3 text-gray-100">
+                    <p><span class="font-semibold text-purple-200">Definición:</span> Micosis superficial crónica del tallo del pelo</p>
+                    <p><span class="font-semibold text-purple-200">Epidemiología:</span> Zonas rurales tropicales</p>
+                    <p><span class="font-semibold text-purple-200">Estructura:</span> Hongo ascomiceto pigmentado, hifas tabicadas</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Manifestaciones:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Nódulos oscuros, duros, adheridos</li>
+                            <li>• Sonido metálico al peinar</li>
+                            <li>• Asintomática</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Diagnóstico:</span> KOH (10-20%), cultivo Sabouraud</p>
+                    <p><span class="font-semibold text-purple-200">Tratamiento:</span> Corte/afeitado, terbinafina oral (250 mg/día, 6 semanas)</p>
+                </div>
+            </div>
+
+            <!-- Malassezia sympodialis -->
+            <div class="pathogen-card section-card rounded-2xl p-6 text-white">
+                <h2 class="text-2xl font-bold mb-4 text-purple-300">🧫 MALASSEZIA SYMPODIALIS</h2>
+                <div class="space-y-3 text-gray-100">
+                    <p><span class="font-semibold text-purple-200">Características:</span> Levadura lipofílica, parte de microbiota normal</p>
+                    <p><span class="font-semibold text-purple-200">Morfología:</span> Ovalada/esférica, 2-4 μm, seudohifas</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Signos y síntomas:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Dermatitis atópica</li>
+                            <li>• Pitiriasis versicolor</li>
+                            <li>• Foliculitis</li>
+                            <li>• Dermatitis seborreica</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Diagnóstico:</span> Tinción azul de metileno, cultivo agar Dixon</p>
+                    <p><span class="font-semibold text-purple-200">Tratamiento:</span> Inhibidores de síntesis de ergosterol, control de sebo</p>
+                </div>
+            </div>
+
+            <!-- Malassezia restricta -->
+            <div class="pathogen-card section-card rounded-2xl p-6 text-white">
+                <h2 class="text-2xl font-bold mb-4 text-purple-300">🧫 MALASSEZIA RESTRICTA</h2>
+                <div class="space-y-3 text-gray-100">
+                    <p><span class="font-semibold text-purple-200">Características:</span> Levadura lipofílica obligada, comensal</p>
+                    <p><span class="font-semibold text-purple-200">Estructura:</span> Células ovales, 1.5-2.5 µm, gemación monopolar</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Patogenia:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Lipasas y fosfolipasas</li>
+                            <li>• Estimula inmunidad innata (TLR2/4)</li>
+                            <li>• Forma biopelículas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Signos y síntomas:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Caspa (Pitiriasis capitis)</li>
+                            <li>• Dermatitis seborreica</li>
+                            <li>• Foliculitis</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Diagnóstico:</span> KOH, cultivo en medios con lípidos</p>
+                </div>
+            </div>
+
+            <!-- Malassezia globosa -->
+            <div class="pathogen-card section-card rounded-2xl p-6 text-white">
+                <h2 class="text-2xl font-bold mb-4 text-purple-300">🧫 MALASSEZIA GLOBOSA</h2>
+                <div class="space-y-3 text-gray-100">
+                    <p><span class="font-semibold text-purple-200">Características:</span> Levadura pequeña, redonda, flora normal</p>
+                    <p><span class="font-semibold text-purple-200">Clasificación:</span> Basidiomycota, Malasseziaceae</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Patología:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Caspa y dermatitis seborreica</li>
+                            <li>• Pitiriasis versicolor (90-97% de casos)</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Mecanismo:</span> Produce ácido oleico → irritación</p>
+                    <div>
+                        <p class="font-semibold text-purple-200 mb-1">Tratamiento:</p>
+                        <ul class="ml-4 text-sm space-y-1">
+                            <li>• Tópico: ketoconazol, zinc, selenio</li>
+                            <li>• Oral: casos graves o recurrentes</li>
+                        </ul>
+                    </div>
+                    <p><span class="font-semibold text-purple-200">Diagnóstico:</span> KOH, CHROMagar, PCR y RFLP</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/10 backdrop-blur-lg border-t border-white/20 mt-16 py-6">
+        <div class="container mx-auto px-4 text-center text-white/80">
+            <p class="text-sm">© 2025 Microbiología - Micosis Superficiales</p>
+        </div>
+    </footer>
+</body>
+</html>
