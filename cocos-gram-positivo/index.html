@@ -3,91 +3,1172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocos Gram Positivos - Información Completa</title>
+    <title>Cocos Gram Positivos - Microbiología</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../index.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #f97316, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.3), transparent);
+            height: 1px;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
-<body class="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
     
     <!-- Header -->
     <header class="bg-white/10 backdrop-blur-lg border-b border-white/20 py-6">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl sm:text-4xl font-bold text-center">Cocos Gram Positivos</h1>
-            <p class="text-center text-blue-200 mt-2">Patógenos Bacterianos I</p>
+            <div class="flex items-center justify-between mb-4">
+                <a href="../index.html" class="text-orange-400 hover:text-white transition-colors duration-300 text-sm flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver al inicio
+                </a>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
+                <span class="gradient-text">Cocos Gram</span>
+                <span class="text-gray-200">Positivos</span>
+            </h1>
+            <p class="text-center text-orange-200 mt-2 text-lg">Estafilococos y Estreptococos</p>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="bg-white/5 backdrop-blur-lg py-4">
-        <div class="container mx-auto px-4 overflow-x-auto">
-            <div class="flex space-x-4 min-w-max">
-                <a href="especies.html" class="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg transition-colors whitespace-nowrap">Especies</a>
-                <a href="morfologia.html" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors whitespace-nowrap">Morfología</a>
-                <a href="factores-virulencia.html" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors whitespace-nowrap">Factores de Virulencia</a>
-                <a href="diagnostico.html" class="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-lg transition-colors whitespace-nowrap">Diagnóstico</a>
-                <a href="tratamiento.html" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-colors whitespace-nowrap">Tratamiento</a>
+    <!-- Navegación -->
+    <nav class="bg-white/5 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex overflow-x-auto py-4 space-x-6">
+                <a href="#introduccion" class="text-orange-300 hover:text-white transition-colors whitespace-nowrap">Introducción</a>
+                <a href="#estafilococos" class="text-orange-300 hover:text-white transition-colors whitespace-nowrap">Estafilococos</a>
+                <a href="#estreptococos" class="text-orange-300 hover:text-white transition-colors whitespace-nowrap">Estreptococos</a>
+                <a href="#diagnostico" class="text-orange-300 hover:text-white transition-colors whitespace-nowrap">Diagnóstico</a>
+                <a href="#tratamiento" class="text-orange-300 hover:text-white transition-colors whitespace-nowrap">Tratamiento</a>
             </div>
         </div>
     </nav>
-
-    <!-- Main Content -->
-    <main class="flex-1 container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-            
-            <!-- Introducción -->
-            <section class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
-                <h2 class="text-2xl font-bold mb-6 text-cyan-400">Introducción</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <p class="text-lg leading-relaxed mb-4">
-                            Los estafilococos son células esféricas gram positivas, dispuestas en racimos irregulares.
-                        </p>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>• Fermentan carbohidratos y producen pigmentos</li>
-                            <li>• Algunos son microbiota normal de piel y mucosas</li>
-                            <li>• Otros causan infecciones piógenas</li>
-                            <li>• Desarrollan resistencia antimicrobiana rápidamente</li>
+    
+    <!-- Introducción -->
+    <section id="introduccion" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                <svg class="w-6 h-6 mr-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Introducción
+            </h2>
+            <div class="text-gray-200 space-y-4">
+                <p>Los <strong class="text-orange-300">cocos Gram positivos</strong> son bacterias esféricas que retienen el colorante cristal violeta en la tinción de Gram. Los dos géneros más importantes médicamente son <strong>Staphylococcus</strong> y <strong>Streptococcus</strong>.</p>
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-orange-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-orange-300 mb-2">Características Generales:</h3>
+                        <ul class="text-sm space-y-1">
+                            <li>• Células esféricas Gram positivas</li>
+                            <li>• Anaerobios facultativos</li>
+                            <li>• Catalasa diferencial entre géneros</li>
+                            <li>• Productores de diversas toxinas</li>
+                            <li>• Resistencia a antimicrobianos variable</li>
                         </ul>
                     </div>
-                    <div class="flex justify-center">
-                        <img src="imagen.webp" alt="Cocos Gram Positivo" class="w-48 h-48 object-cover rounded-full border-4 border-cyan-400" onerror="this.src='https://via.placeholder.com/200x200/10B981/ffffff?text=Cocos+G%2B'">
+                    <div class="bg-blue-500/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-blue-300 mb-2">Importancia Clínica:</h3>
+                        <ul class="text-sm space-y-1">
+                            <li>• Infecciones cutáneas y sistémicas</li>
+                            <li>• Neumonía y meningitis</li>
+                            <li>• Endocarditis y septicemia</li>
+                            <li>• Intoxicaciones alimentarias</li>
+                            <li>• Infecciones nosocomiales</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-
-            <!-- Características Principales -->
-            <section class="grid md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                    <h3 class="text-xl font-bold mb-4 text-emerald-400">Staphylococcus aureus</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>• Coagulasa positivo</li>
-                        <li>• Produce infecciones cutáneas y alimenticias</li>
-                        <li>• Cuadros leves a graves</li>
-                        <li>• Resistencia a varios antimicrobianos</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                    <h3 class="text-xl font-bold mb-4 text-blue-400">Staphylococcus coagulasa negativo</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>• Microbiota normal de la piel</li>
-                        <li>• Enfermedad en inmunosupresión</li>
-                        <li>• Infecciones de dispositivos protésicos</li>
-                        <li>• S. saprophyticus: infecciones urinarias</li>
-                    </ul>
-                </div>
-            </section>
-
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- ESTAFILOCOCOS -->
+    <section id="estafilococos" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                ESTAFILOCOCOS
+            </h2>
+
+            <!-- Introducción Estafilococos -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-orange-300 mb-4">Introducción</h3>
+                <div class="bg-gray-800/30 p-4 rounded-lg mb-4">
+                    <p class="text-gray-200 mb-3">Los estafilococos son células esféricas gram positivas, dispuestas en racimos irregulares.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-orange-300 mb-2">Actividad metabólica:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Fermentan carbohidratos</li>
+                                <li>• Producen pigmentos (blanco a amarillo intenso)</li>
+                                <li>• Algunos son microbiota normal</li>
+                                <li>• Otros causan infecciones piógenas</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-orange-300 mb-2">Características patógenas:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Producen hemólisis</li>
+                                <li>• Coagulan el plasma</li>
+                                <li>• Diversas enzimas y toxinas</li>
+                                <li>• Resistencia a antimicrobianos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especies de Importancia Médica -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-orange-300 mb-4">Especies de Importancia Médica</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-orange-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-orange-300 mb-3">Principales Especies:</h4>
+                        <div class="space-y-3">
+                            <div class="border-l-3 border-orange-400 pl-3">
+                                <h5 class="font-medium text-white">S. aureus</h5>
+                                <p class="text-sm text-gray-300">Coagulasa positivo, produce infecciones cutáneas y alimenticias</p>
+                            </div>
+                            <div class="border-l-3 border-blue-400 pl-3">
+                                <h5 class="font-medium text-white">S. epidermidis</h5>
+                                <p class="text-sm text-gray-300">Coagulasa negativo, infecciones asociadas a dispositivos</p>
+                            </div>
+                            <div class="border-l-3 border-green-400 pl-3">
+                                <h5 class="font-medium text-white">S. saprophyticus</h5>
+                                <p class="text-sm text-gray-300">Infecciones urinarias en mujeres jóvenes</p>
+                            </div>
+                            <div class="border-l-3 border-purple-400 pl-3">
+                                <h5 class="font-medium text-white">S. lugdunensis</h5>
+                                <p class="text-sm text-gray-300">Infecciones de dispositivos protésicos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-orange-300 mb-3">Origen Histórico:</h4>
+                        <div class="space-y-2 text-sm text-gray-300">
+                            <p><strong>Staphylococcus:</strong> staphylé (racimo de uvas) + coccus (grano)</p>
+                            <p><strong>S. aureus:</strong> aureus (dorado)</p>
+                            <p><strong>S. epidermidis:</strong> porción externa de la piel</p>
+                            <p><strong>S. lugdunensis:</strong> denominación latina de Lyon, Francia</p>
+                            <p><strong>S. saprophyticus:</strong> saprós (pútrido) + phyton (planta)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Morfología e Identificación -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-orange-300 mb-4">Morfología e Identificación</h3>
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-orange-300 mb-2">Características morfológicas:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Diámetro:</strong> 1 µm</li>
+                                <li>• <strong>Disposición:</strong> en racimos</li>
+                                <li>• <strong>Movilidad:</strong> no móviles</li>
+                                <li>• <strong>Esporas:</strong> no forman esporas</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-orange-300 mb-2">Sensibilidad:</h4>
+                            <p class="text-sm text-gray-300">Sensibles a antimicrobianos cuyo mecanismo de acción es inhibir la síntesis de la pared bacteriana como la <strong class="text-orange-300">penicilina</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medio de Cultivo -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-orange-300 mb-4">Medio de Cultivo</h3>
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-orange-300 mb-2">Condiciones de crecimiento:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Condiciones aerobias o microaerofílicas</li>
+                                <li>• Temperatura de 37°C</li>
+                                <li>• Forman pigmento mejor a temperatura ambiente (20-25°C)</li>
+                                <li>• Colonias redondas, lisas, elevadas y brillantes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-orange-300 mb-2">Características coloniales:</h4>
+                            <div class="space-y-2">
+                                <div class="bg-yellow-500/20 p-2 rounded">
+                                    <strong class="text-yellow-300">S. aureus:</strong> colonias gris a amarillo dorado profundo
+                                </div>
+                                <div class="bg-gray-500/20 p-2 rounded">
+                                    <strong class="text-gray-300">S. epidermidis:</strong> colonias gris a blanco
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factores de Virulencia -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-orange-300 mb-4">Factores de Virulencia S. aureus</h3>
+                <div class="space-y-4">
+                    <!-- Componentes estructurales -->
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-orange-300 mb-3">Componentes Estructurales</h4>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-blue-500/20 p-3 rounded">
+                                <h5 class="font-medium text-blue-300 mb-1">Cápsula</h5>
+                                <p class="text-xs text-gray-300">Inhibe la quimiotaxis y la fagocitosis</p>
+                            </div>
+                            <div class="bg-green-500/20 p-3 rounded">
+                                <h5 class="font-medium text-green-300 mb-1">Capa de Limo</h5>
+                                <p class="text-xs text-gray-300">Facilita la adherencia; inhibe la fagocitosis</p>
+                            </div>
+                            <div class="bg-purple-500/20 p-3 rounded">
+                                <h5 class="font-medium text-purple-300 mb-1">Peptidoglucanos</h5>
+                                <p class="text-xs text-gray-300">Aporta estabilidad osmótica; estimula pirógeno endógeno</p>
+                            </div>
+                            <div class="bg-red-500/20 p-3 rounded">
+                                <h5 class="font-medium text-red-300 mb-1">Ácido Teicoico</h5>
+                                <p class="text-xs text-gray-300">Se une a la fibronectina</p>
+                            </div>
+                            <div class="bg-yellow-500/20 p-3 rounded">
+                                <h5 class="font-medium text-yellow-300 mb-1">Proteína A</h5>
+                                <p class="text-xs text-gray-300">Inhibe la eliminación mediada por anticuerpos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toxinas -->
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-orange-300 mb-3">Toxinas</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-medium text-red-300 mb-2">Citotoxinas</h5>
+                                <p class="text-sm text-gray-300">Tóxicas para muchas células, incluidos leucocitos, eritrocitos, fibroblastos, macrófagos y plaquetas</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-red-300 mb-2">Enterotoxinas</h5>
+                                <p class="text-sm text-gray-300">Superantígenos que estimulan la proliferación de linfocitos T y liberación de citocinas</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-red-300 mb-2">Toxinas Exfoliativas</h5>
+                                <p class="text-sm text-gray-300">Proteasas de serina que rompen los puentes intercelulares del estrato granuloso</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-red-300 mb-2">TSST-1</h5>
+                                <p class="text-sm text-gray-300">Superantígeno del síndrome de choque tóxico</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enzimas -->
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-orange-300 mb-3">Enzimas</h4>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Coagulasa</h5>
+                                <p class="text-xs text-gray-300">Convierte el fibrinógeno en fibrina</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Hialuronidasa</h5>
+                                <p class="text-xs text-gray-300">Hidroliza los ácidos hialurónicos del tejido conjuntivo</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Fibrinolisina</h5>
+                                <p class="text-xs text-gray-300">Disuelve los coágulos de fibrina</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Lipasas</h5>
+                                <p class="text-xs text-gray-300">Hidrolizan los lípidos</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Nucleasas</h5>
+                                <p class="text-xs text-gray-300">Hidrolizan el ADN</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Catalasa</h5>
+                                <p class="text-xs text-gray-300">Diferencial con estreptococos (+)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-orange-300 mb-4">Manifestaciones Clínicas</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-red-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-300 mb-3">Infecciones Invasivas</h4>
+                        <ul class="text-sm text-gray-300 space-y-1">
+                            <li>• <strong>Osteomielitis:</strong> destrucción de huesos</li>
+                            <li>• <strong>Neumonía:</strong> consolidación y formación de abscesos</li>
+                            <li>• <strong>Meningitis:</strong> infección del SNC</li>
+                            <li>• <strong>Endocarditis:</strong> vegetaciones valvulares</li>
+                            <li>• <strong>Septicemia:</strong> diseminación hematógena</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-yellow-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-yellow-300 mb-3">Infecciones Cutáneas</h4>
+                        <ul class="text-sm text-gray-300 space-y-1">
+                            <li>• <strong>Impétigo:</strong> vesículas con pus sobre base eritematosa</li>
+                            <li>• <strong>Foliculitis:</strong> infección de folículos pilosos</li>
+                            <li>• <strong>Forúnculos:</strong> nódulos cutáneos con pus</li>
+                            <li>• <strong>Celulitis:</strong> infección de tejidos subcutáneos</li>
+                            <li>• <strong>Síndrome de piel escaldada:</strong> descamación generalizada</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-purple-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-purple-300 mb-3">Síndromes Tóxicos</h4>
+                        <ul class="text-sm text-gray-300 space-y-1">
+                            <li>• <strong>Síndrome de choque tóxico:</strong> fiebre, hipotensión, exantema</li>
+                            <li>• <strong>Intoxicación alimentaria:</strong> náuseas, vómitos, diarrea</li>
+                            <li>• <strong>Síndrome de epidermólisis:</strong> descamación cutánea</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-300 mb-3">Características del Absceso</h4>
+                        <ul class="text-sm text-gray-300 space-y-1">
+                            <li>• Supuración focal característica</li>
+                            <li>• Formación de pared de fibrina</li>
+                            <li>• Limita la diseminación</li>
+                            <li>• Requiere drenaje quirúrgico</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ESTREPTOCOCOS -->
+    <section id="estreptococos" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"></path>
+                </svg>
+                ESTREPTOCOCOS
+            </h2>
+
+            <!-- Introducción Estreptococos -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-purple-300 mb-4">Introducción</h3>
+                <div class="bg-gray-800/30 p-4 rounded-lg mb-4">
+                    <p class="text-gray-200 mb-3">Los estreptococos son bacterias esféricas que forman los característicos pares o cadenas.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-purple-300 mb-2">Etimología:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Streptus:</strong> flexible</li>
+                                <li>• <strong>Coccus:</strong> grano o baya</li>
+                                <li>• Forman largas y flexibles cadenas de cocos</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-purple-300 mb-2">Especies importantes:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• S. pyogenes (Grupo A)</li>
+                                <li>• S. agalactiae (Grupo B)</li>
+                                <li>• S. pneumoniae</li>
+                                <li>• Estreptococos viridans</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clasificación -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-purple-300 mb-4">Clasificación</h3>
+                
+                <!-- Por Hemólisis -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-purple-300 mb-3">Por Hemólisis</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-red-500/20 p-4 rounded-lg text-center">
+                            <h5 class="font-semibold text-red-300 mb-2">Hemólisis β (Beta)</h5>
+                            <p class="text-sm text-gray-300 mb-2">Hemólisis completa</p>
+                            <ul class="text-xs text-gray-400">
+                                <li>S. pyogenes</li>
+                                <li>S. agalactiae</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-500/20 p-4 rounded-lg text-center">
+                            <h5 class="font-semibold text-green-300 mb-2">Hemólisis α (Alfa)</h5>
+                            <p class="text-sm text-gray-300 mb-2">Hemólisis parcial</p>
+                            <ul class="text-xs text-gray-400">
+                                <li>S. pneumoniae</li>
+                                <li>Grupo viridans</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-500/20 p-4 rounded-lg text-center">
+                            <h5 class="font-semibold text-gray-300 mb-2">Hemólisis γ (Gamma)</h5>
+                            <p class="text-sm text-gray-300 mb-2">Sin hemólisis</p>
+                            <ul class="text-xs text-gray-400">
+                                <li>Enterococcus faecalis</li>
+                                <li>Enterococcus faecium</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clasificación de Lancefield -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-purple-300 mb-3">Clasificación de Lancefield</h4>
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <p class="text-gray-300 mb-3">Basada en carbohidratos específicos de la pared bacteriana:</p>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <div class="bg-red-500/20 p-3 rounded">
+                                <strong class="text-red-300">Grupo A:</strong> S. pyogenes
+                            </div>
+                            <div class="bg-blue-500/20 p-3 rounded">
+                                <strong class="text-blue-300">Grupo B:</strong> S. agalactiae
+                            </div>
+                            <div class="bg-green-500/20 p-3 rounded">
+                                <strong class="text-green-300">Grupo C:</strong> S. dysgalactiae
+                            </div>
+                            <div class="bg-yellow-500/20 p-3 rounded">
+                                <strong class="text-yellow-300">Grupo D:</strong> S. bovis
+                            </div>
+                            <div class="bg-purple-500/20 p-3 rounded">
+                                <strong class="text-purple-300">Grupo F:</strong> S. anginosus
+                            </div>
+                            <div class="bg-pink-500/20 p-3 rounded">
+                                <strong class="text-pink-300">Grupo G:</strong> S. dysgalactiae
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streptococcus pyogenes -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-red-300 mb-4">Streptococcus pyogenes (Grupo A)</h3>
+                <div class="space-y-4">
+                    <div class="bg-red-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-300 mb-3">Características principales:</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Pertenece al grupo A de Lancefield</li>
+                                    <li>• Principal patógeno humano</li>
+                                    <li>• β-hemolítico</li>
+                                    <li>• Catalasa negativo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Produce patología por invasión local/sistémica</li>
+                                    <li>• Sensible a bacitracina</li>
+                                    <li>• Factor importante de virulencia: Proteína M</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-300 mb-3">Factores de Virulencia:</h4>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div>
+                                <h5 class="font-medium text-orange-300 mb-1">Proteína M</h5>
+                                <p class="text-xs text-gray-300">Factor de virulencia principal, resistencia a fagocitosis</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-blue-300 mb-1">Cápsula</h5>
+                                <p class="text-xs text-gray-300">Ácido hialurónico, impide fagocitosis</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-green-300 mb-1">Estreptolisina O</h5>
+                                <p class="text-xs text-gray-300">Hemolisina, destructiva para membranas</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-purple-300 mb-1">Estreptolisina S</h5>
+                                <p class="text-xs text-gray-300">Hemolisina estable al oxígeno</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-yellow-300 mb-1">Estreptocinasa</h5>
+                                <p class="text-xs text-gray-300">Convierte plasminógeno en plasmina</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-red-300 mb-1">Hialuronidasa</h5>
+                                <p class="text-xs text-gray-300">Factor de diseminación</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-300 mb-3">Manifestaciones Clínicas:</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-medium text-yellow-300 mb-2">Infecciones Supurativas</h5>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• <strong>Faringitis:</strong> enrojecida con exudados</li>
+                                    <li>• <strong>Escarlatina:</strong> exantema eritematoso difuso</li>
+                                    <li>• <strong>Piodermia:</strong> infección cutánea localizada</li>
+                                    <li>• <strong>Erisipela:</strong> infección cutánea con dolor</li>
+                                    <li>• <strong>Celulitis:</strong> tejidos subcutáneos</li>
+                                    <li>• <strong>Fascitis necrosante:</strong> infección profunda</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-blue-300 mb-2">Infecciones No Supurativas</h5>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• <strong>Fiebre reumática:</strong> alteraciones inflamatorias del corazón</li>
+                                    <li>• <strong>Glomerulonefritis aguda:</strong> inflamación de glomérulos renales</li>
+                                </ul>
+                                
+                                <h5 class="font-medium text-red-300 mb-2 mt-4">Síndrome de Choque Tóxico</h5>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Infección multiorgánica</li>
+                                    <li>• Fiebre, hipotensión, exantema</li>
+                                    <li>• Elevada mortalidad</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streptococcus agalactiae -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-blue-300 mb-4">Streptococcus agalactiae (Grupo B)</h3>
+                <div class="bg-blue-500/20 p-4 rounded-lg">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-blue-300 mb-2">Características:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Estreptococos del grupo B</li>
+                                <li>• Hidrólisis del hipurato de sodio (+)</li>
+                                <li>• Prueba de CAMP positiva</li>
+                                <li>• Microbioma vaginal y digestivo normal</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blue-300 mb-2">Importancia clínica:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Septicemia neonatal</strong></li>
+                                <li>• <strong>Meningitis neonatal</strong></li>
+                                <li>• <strong>Síndrome de insuficiencia respiratoria</strong></li>
+                                <li>• Infecciones en inmunocomprometidos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streptococcus pneumoniae -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-green-300 mb-4">Streptococcus pneumoniae</h3>
+                <div class="space-y-4">
+                    <div class="bg-green-500/20 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-300 mb-3">Características morfológicas:</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• <strong>Diplococos</strong> gram positivos</li>
+                                    <li>• Forma de <strong>lanceta</strong></li>
+                                    <li>• <strong>Cápsula</strong> de polisacárido</li>
+                                    <li>• <strong>α-hemolíticos</strong></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• <strong>Sensible a optoquina</strong></li>
+                                    <li>• Catalasa negativo</li>
+                                    <li>• Autólisis espontánea</li>
+                                    <li>• 91 serotipos capsulares</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-300 mb-3">Patogenia:</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-medium text-yellow-300 mb-2">Factor de virulencia principal:</h5>
+                                <div class="bg-yellow-500/20 p-3 rounded">
+                                    <p class="text-sm text-gray-300"><strong>CÁPSULA:</strong> Evita la fagocitosis, factor determinante de virulencia</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-red-300 mb-2">Pérdida de barrera natural:</h5>
+                                <ul class="text-xs text-gray-300 space-y-1">
+                                    <li>• Infecciones virales respiratorias</li>
+                                    <li>• Intoxicación (alcohol, fármacos)</li>
+                                    <li>• Inmunosupresión</li>
+                                    <li>• Desnutrición, anemia drepanocítica</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/30 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-300 mb-3">Manifestaciones Clínicas:</h4>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-red-500/20 p-3 rounded">
+                                <h5 class="font-medium text-red-300 mb-1">Neumonía</h5>
+                                <ul class="text-xs text-gray-300 space-y-1">
+                                    <li>• Fiebre, escalofríos</li>
+                                    <li>• Dolor pleural intenso</li>
+                                    <li>• Esputo purulento</li>
+                                    <li>• Consolidación lobar</li>
+                                </ul>
+                            </div>
+                            <div class="bg-blue-500/20 p-3 rounded">
+                                <h5 class="font-medium text-blue-300 mb-1">Meningitis</h5>
+                                <ul class="text-xs text-gray-300 space-y-1">
+                                    <li>• Cefalea intensa</li>
+                                    <li>• Rigidez de nuca</li>
+                                    <li>• Fiebre alta</li>
+                                    <li>• Alteración del estado mental</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-500/20 p-3 rounded">
+                                <h5 class="font-medium text-purple-300 mb-1">Otras Infecciones</h5>
+                                <ul class="text-xs text-gray-300 space-y-1">
+                                    <li>• Sinusitis, otitis media</li>
+                                    <li>• Bacteriemia</li>
+                                    <li>• Endocarditis</li>
+                                    <li>• Artritis séptica</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNÓSTICO -->
+    <section id="diagnostico" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                DIAGNÓSTICO DE LABORATORIO
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Muestras -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4">Muestras Clínicas</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-red-500/20 p-3 rounded">
+                            <h4 class="font-medium text-red-300 mb-1">Muestras Hemáticas</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Toma sanguínea</li>
+                                <li>• Hemocultivos</li>
+                                <li>• Para bacteriemia/septicemia</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-500/20 p-3 rounded">
+                            <h4 class="font-medium text-blue-300 mb-1">Muestras Respiratorias</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Hisopado faríngeo</li>
+                                <li>• Expectoración/esputo</li>
+                                <li>• Lavado broncoalveolar</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-500/20 p-3 rounded">
+                            <h4 class="font-medium text-purple-300 mb-1">Otras Muestras</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Punción lumbar (LCR)</li>
+                                <li>• Aspiración percutánea</li>
+                                <li>• Muestras de heridas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Examen Microscópico -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4">Examen Microscópico (Frotis)</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-orange-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-orange-300 mb-2">Estafilococos</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Morfología:</strong> Cocos</li>
+                                <li>• <strong>Agrupación:</strong> Racimos irregulares</li>
+                                <li>• <strong>Tinción:</strong> Gram positivos</li>
+                                <li>• <strong>Diagnóstico:</strong> Staphylococcus spp.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-purple-300 mb-2">Estreptococos</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Morfología:</strong> Cocos</li>
+                                <li>• <strong>Agrupación:</strong> Cadenas/pares</li>
+                                <li>• <strong>Tinción:</strong> Gram positivos</li>
+                                <li>• <strong>Diagnóstico:</strong> Streptococcus spp.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultivo -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4">Cultivo</h3>
+                    <div class="space-y-4">
+                        <div class="bg-red-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-red-300 mb-2">Agar Sangre</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-yellow-300 mb-1">Condiciones:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Temperatura: 37°C</li>
+                                        <li>• Atmósfera: CO₂ 5-10%</li>
+                                        <li>• Tiempo: 18-24 horas</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-yellow-300 mb-1">Características coloniales:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Estafilococos: colonias redondas, pigmentadas</li>
+                                        <li>• Estreptococos: colonias pequeñas, hemólisis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-blue-300 mb-2">Medios Selectivos</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-green-300 mb-1">Para Estafilococos:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Agar sal y manitol</li>
+                                        <li>• Agar cromogénico</li>
+                                        <li>• NaCl 7.5% selectivo</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-green-300 mb-1">Para Estreptococos:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Agar sangre con CO₂</li>
+                                        <li>• Todd-Hewitt (S. agalactiae)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas de Identificación -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4">Pruebas de Identificación</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-orange-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-orange-300 mb-3">Estafilococos</h4>
+                            <div class="space-y-3">
+                                <div class="bg-green-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-green-300">Catalasa (+)</h5>
+                                    <p class="text-xs text-gray-300">Diferencial con estreptococos</p>
+                                </div>
+                                <div class="bg-blue-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-blue-300">Coagulasa</h5>
+                                    <p class="text-xs text-gray-300">S. aureus (+), otros (-)</p>
+                                </div>
+                                <div class="bg-purple-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-purple-300">Fermentación Manitol</h5>
+                                    <p class="text-xs text-gray-300">S. aureus (+), S. epidermidis (-)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-purple-300 mb-3">Estreptococos</h4>
+                            <div class="space-y-3">
+                                <div class="bg-red-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-red-300">Catalasa (-)</h5>
+                                    <p class="text-xs text-gray-300">Diferencial con estafilococos</p>
+                                </div>
+                                <div class="bg-yellow-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-yellow-300">Hemólisis</h5>
+                                    <p class="text-xs text-gray-300">α, β, o γ (sin hemólisis)</p>
+                                </div>
+                                <div class="bg-blue-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-blue-300">Sensibilidad a Bacitracina</h5>
+                                    <p class="text-xs text-gray-300">S. pyogenes sensible</p>
+                                </div>
+                                <div class="bg-green-500/20 p-2 rounded">
+                                    <h5 class="font-medium text-green-300">Optoquina</h5>
+                                    <p class="text-xs text-gray-300">S. pneumoniae sensible</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pruebas Serológicas -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-300 mb-4">Pruebas Serológicas</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-blue-300 mb-2">Antígenos</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Polisacárido C:</strong> S. pneumoniae (detección rápida)</li>
+                                <li>• <strong>Antígenos de Lancefield:</strong> Grupos A, B, C, etc.</li>
+                                <li>• <strong>Proteína A:</strong> S. aureus</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-green-300 mb-2">Anticuerpos</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>ASTO:</strong> Antiestreptolisina O</li>
+                                <li>• <strong>Anti-DNasa B:</strong> Contra estreptococos</li>
+                                <li>• <strong>Anti-hialuronidasa:</strong> Infecciones estreptocócicas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMIENTO -->
+    <section id="tratamiento" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"></path>
+                </svg>
+                TRATAMIENTO
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Principios Generales -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-4">Principios Generales del Tratamiento</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-blue-300 mb-2">Medidas Complementarias</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Drenaje quirúrgico:</strong> infecciones localizadas</li>
+                                <li>• <strong>Incisión y drenaje:</strong> abscesos</li>
+                                <li>• <strong>Debridamiento:</strong> tejido necrótico</li>
+                                <li>• <strong>Tratamiento sintomático:</strong> intoxicación alimentaria</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-green-300 mb-2">Medidas Preventivas</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Lavado de manos:</strong> prevención de diseminación</li>
+                                <li>• <strong>Asepsia:</strong> procedimientos médicos</li>
+                                <li>• <strong>Aislamiento:</strong> pacientes infectados</li>
+                                <li>• <strong>Desinfección:</strong> superficies y equipos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tratamiento de Estafilococos -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-orange-300 mb-4">Tratamiento de Infecciones Estafilocócicas</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-orange-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-orange-300 mb-3">S. aureus Sensible a Meticilina (MSSA)</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-yellow-300 mb-2">Primera línea:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Cloxacilina:</strong> infecciones severas IV</li>
+                                        <li>• <strong>Flucloxacilina:</strong> alternativa oral</li>
+                                        <li>• <strong>Cefalexina:</strong> infecciones leves-moderadas</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-yellow-300 mb-2">Alternativas:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Clindamicina:</strong> infecciones de piel y tejidos blandos</li>
+                                        <li>• <strong>Eritromicina:</strong> si resistencia limitada</li>
+                                        <li>• <strong>Cefazolina:</strong> infecciones sistémicas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-red-300 mb-3">S. aureus Resistente a Meticilina (MRSA)</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-green-300 mb-2">Tratamiento empírico:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Vancomicina:</strong> fármaco de elección IV</li>
+                                        <li>• <strong>Linezolid:</strong> alternativa oral/IV</li>
+                                        <li>• <strong>Daptomicina:</strong> infecciones complicadas</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-green-300 mb-2">Nuevas opciones:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Tigeciclina:</strong> infecciones de piel</li>
+                                        <li>• <strong>Ceftarolina:</strong> β-lactámico anti-MRSA</li>
+                                        <li>• <strong>Telavancina:</strong> alternativa a vancomicina</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-gray-300 mb-3">Estafilococos Coagulasa Negativos</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-blue-300 mb-2">Tratamiento habitual:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Vancomicina:</strong> primera línea</li>
+                                        <li>• <strong>Linezolid:</strong> alternativa</li>
+                                        <li>• <strong>Daptomicina:</strong> infecciones bacterémicas</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-blue-300 mb-2">Consideraciones:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Alta resistencia a β-lactámicos</li>
+                                        <li>• Remoción de dispositivos infectados</li>
+                                        <li>• Duración prolongada del tratamiento</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tratamiento de Estreptococos -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-purple-300 mb-4">Tratamiento de Infecciones Estreptocócicas</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-purple-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-purple-300 mb-3">S. pyogenes (Grupo A)</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-green-300 mb-2">Primera línea:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Penicilina G:</strong> IV para infecciones severas</li>
+                                        <li>• <strong>Penicilina V:</strong> oral para infecciones leves</li>
+                                        <li>• <strong>Amoxicilina:</strong> alternativa oral</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-green-300 mb-2">Alternativas (alergia a penicilina):</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Eritromicina:</strong> macrólido de elección</li>
+                                        <li>• <strong>Clindamicina:</strong> excelente para tejidos blandos</li>
+                                        <li>• <strong>Azitromicina:</strong> curso corto</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-3 bg-red-600/20 p-3 rounded">
+                                <p class="text-sm text-gray-300"><strong>Nota:</strong> Los estreptococos del grupo A mantienen sensibilidad universal a penicilina</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-blue-300 mb-3">S. pneumoniae</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-yellow-300 mb-2">Sensible a penicilina:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Penicilina G:</strong> IV para meningitis</li>
+                                        <li>• <strong>Amoxicilina:</strong> oral, dosis altas</li>
+                                        <li>• <strong>Ceftriaxona:</strong> alternativa</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-yellow-300 mb-2">Resistente a penicilina:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Ceftriaxona:</strong> + vancomicina (meningitis)</li>
+                                        <li>• <strong>Levofloxacina:</strong> neumonía</li>
+                                        <li>• <strong>Moxifloxacina:</strong> infecciones respiratorias</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-3 bg-yellow-600/20 p-3 rounded">
+                                <p class="text-sm text-gray-300"><strong>Importante:</strong> Realizar siempre pruebas de susceptibilidad para S. pneumoniae</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-green-300 mb-3">S. agalactiae (Grupo B)</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-blue-300 mb-2">Tratamiento:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Penicilina G:</strong> + gentamicina (sinergismo)</li>
+                                        <li>• <strong>Ampicilina:</strong> + gentamicina</li>
+                                        <li>• <strong>Cefazolina:</strong> alternativa</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-blue-300 mb-2">Profilaxis neonatal:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Penicilina G:</strong> intraparto</li>
+                                        <li>• <strong>Ampicilina:</strong> alternativa</li>
+                                        <li>• <strong>Clindamicina:</strong> si alergia a penicilina</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-teal-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-teal-300 mb-3">Estreptococos Viridans</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium text-pink-300 mb-2">Endocarditis:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Penicilina G:</strong> + gentamicina (sinergia)</li>
+                                        <li>• <strong>Ceftriaxona:</strong> alternativa</li>
+                                        <li>• <strong>Vancomicina:</strong> si resistencia</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-pink-300 mb-2">Duración:</h5>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• <strong>Válvula nativa:</strong> 4 semanas</li>
+                                        <li>• <strong>Válvula protésica:</strong> 6 semanas</li>
+                                        <li>• <strong>Aminoglucósidos:</strong> 2 semanas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resistencia Antimicrobiana -->
+                <div class="bg-gray-800/30 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-red-300 mb-4">Resistencia Antimicrobiana</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-red-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-red-300 mb-3">Mecanismos de Resistencia</h4>
+                            <div class="space-y-2">
+                                <div class="bg-gray-700/30 p-2 rounded">
+                                    <h5 class="font-medium text-yellow-300">β-lactamasas</h5>
+                                    <p class="text-xs text-gray-300">Estafilococos: resistencia a penicilinas</p>
+                                </div>
+                                <div class="bg-gray-700/30 p-2 rounded">
+                                    <h5 class="font-medium text-yellow-300">PBP alteradas</h5>
+                                    <p class="text-xs text-gray-300">MRSA: resistencia a β-lactámicos</p>
+                                </div>
+                                <div class="bg-gray-700/30 p-2 rounded">
+                                    <h5 class="font-medium text-yellow-300">Bombas de eflujo</h5>
+                                    <p class="text-xs text-gray-300">Resistencia a múltiples antimicrobianos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-yellow-500/20 p-4 rounded">
+                            <h4 class="font-semibold text-yellow-300 mb-3">Estrategias de Control</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• <strong>Uso racional:</strong> de antimicrobianos</li>
+                                <li>• <strong>Estudios de susceptibilidad:</strong> obligatorios</li>
+                                <li>• <strong>Programas de stewardship:</strong> antimicrobiano</li>
+                                <li>• <strong>Vigilancia epidemiológica:</strong> de resistencias</li>
+                                <li>• <strong>Medidas de control:</strong> de infecciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-black/20 backdrop-blur-lg border-t border-white/10 py-6">
-        <div class="container mx-auto text-center px-4">
-            <p class="text-gray-300 mb-2">© 2025 Microbiología Leída - Ivett Jaliri Ccuno</p>
-            <a href="../flashcards.html" class="text-cyan-400 hover:text-white transition-colors">← Volver a Flashcards</a>
+    <footer class="bg-white/5 backdrop-blur-lg border-t border-white/10 py-8 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm mb-2">Material de estudio - Microbiología</p>
+                <p class="text-gray-500 text-xs">Universidad Privada Franz Tamayo - Carrera de Medicina</p>
+                <p class="text-orange-400 text-xs mt-2">Dr. Andrés F. Mendoza Moscoso - Docente de Microbiología</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight de la sección activa en la navegación
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'font-semibold');
+                link.classList.add('text-orange-300');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.remove('text-orange-300');
+                    link.classList.add('text-white', 'font-semibold');
+                }
+            });
+        });
+
+        // Animación de aparición de elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a todas las secciones
+        document.querySelectorAll('section > div').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
