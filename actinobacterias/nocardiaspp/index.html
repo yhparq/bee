@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocardia - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+            min-height: 100vh;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .glass-header {
+            background: rgba(185, 28, 28, 0.35);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(185, 28, 28, 0.4);
+            box-shadow: 0 0 30px rgba(185, 28, 28, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 15px rgba(185, 28, 28, 0.6);
+        }
+        
+        .border-glow {
+            border: 2px solid rgba(185, 28, 28, 0.4);
+            box-shadow: 0 0 25px rgba(185, 28, 28, 0.3);
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 0;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .content-box:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(185, 28, 28, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .opportunistic-pathogen {
+            background-color: rgba(251, 191, 36, 0.25);
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .immunocompromised {
+            background-color: rgba(147, 51, 234, 0.25);
+            border-color: rgba(147, 51, 234, 0.4);
+        }
+
+        .cns-predilection {
+            background-color: rgba(34, 197, 94, 0.25);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .exogenous-infection {
+            background-color: rgba(59, 130, 246, 0.25);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .taxonomic-confusion {
+            background-color: rgba(245, 101, 101, 0.25);
+            border-color: rgba(245, 101, 101, 0.4);
+        }
+
+        .species-table {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            background: rgba(185, 28, 28, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-row {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .table-row:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .virulence-factors {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6">
+    <div class="w-full max-w-none">
+        <!-- Header -->
+        <div class="glass-header rounded-3xl p-8 mb-8 text-center border-glow">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-glow">Nocardia</h1>
+            <p class="text-xl md:text-2xl text-red-100">Actinomicetos aerobios - Patógenos oportunistas con predilección por el SNC</p>
+        </div>
+
+        <!-- Contenido principal sin espacios laterales -->
+        <div class="space-y-8">
+            
+            <!-- Fisiología y Estructura -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Fisiología y Estructura
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Morfología y características básicas:</strong> Las nocardias son bacilos aerobios estrictos que forman hifas ramificadas delicadas en los tejidos y cultivos, característica que inicialmente llevó a confundirlos con hongos. Los microorganismos son grampositivos, aunque muchos se tiñen mal y pueden parecer gramnegativos con cuentas intracelulares grampositivas. Esta tinción variable representa uno de los desafíos diagnósticos más importantes en el laboratorio clínico.</p>
+                        
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Composición de la pared celular</p>
+                            <p>La estructura de la pared celular de estas bacterias es semejante a la de las micobacterias, conteniendo ácido 10-metil-esteárico (ácido tuberculoesteárico), ácido meso-diaminopimélico (meso-DAP), arabinosa, galactosa y ácidos micólicos. Sin embargo, la longitud de los ácidos micólicos en las nocardias (50 a 62 átomos de carbono) es significativamente menor que en las micobacterias (70 a 90 átomos de carbono). Esta diferencia estructural explica por qué Nocardia se describe como "acidorresistente débil", requiriendo una solución decolorante débil de ácido hidroclorhídrico para demostrar su acidorresistencia.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Factor cord y virulencia:</strong> La mayor parte de las cepas de Nocardia presentan trehalosa unida a dos moléculas de ácido micólico, conocida como trehalosa-6,6'-dimicolato o factor cord. Este factor cord constituye un importante factor de virulencia que facilita significativamente la supervivencia intracelular de las nocardias en los macrófagos del hospedador, interfiriendo con la fusión del fagosoma-lisosoma.</p>
+
+                        <p><strong class="text-red-200">Características de crecimiento:</strong> Las especies de Nocardia son catalasa positivas, oxidan hidratos de carbono y son capaces de crecer en la mayoría de los medios de laboratorio no selectivos para bacterias, micobacterias y hongos. Sin embargo, su aislamiento puede requerir entre 3 y 5 días de incubación, considerablemente más tiempo que la mayoría de bacterias patógenas. El aspecto de las colonias varía desde seco hasta céreo y de blanco a anaranjado, con la presencia característica de hifas aéreas que se proyectan desde la superficie de la colonia.</p>
+
+                        <div class="content-box taxonomic-confusion">
+                            <p class="text-lg font-semibold text-orange-200 mb-3">Confusión taxonómica histórica</p>
+                            <p>La clasificación taxonómica del género es extremadamente compleja y ha sido objeto de múltiples revisiones. Tradicionalmente, estos microorganismos se clasificaban basándose en su capacidad de utilizar hidratos de carbono y descomponer diversos sustratos, así como por sus patrones de sensibilidad antimicrobiana. Un ejemplo notable de esta confusión es que anteriormente se consideraba que Nocardia asteroides constituía el patógeno humano más frecuente, pero hoy se reconoce que casi todas sus cepas habían sido clasificadas incorrectamente, y N. asteroides rara vez se asocia realmente a enfermedad humana.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Diferenciación con microorganismos similares:</strong> La acidorresistencia parcial resulta fundamental para distinguir Nocardia de otros microorganismos de morfología semejante, especialmente Actinomyces, que no es acidorresistente. La presencia de hifas aéreas y la acidorresistencia son distintivas de Nocardia y pueden emplearse para la rápida identificación preliminar del género en el laboratorio clínico.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Especies clínicamente relevantes</p>
+                            <div class="species-table">
+                                <div class="table-header p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-red-100 font-bold">
+                                        <div>Especie</div>
+                                        <div>Presentación Clínica Principal</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">N. cyriacigeorgica</div>
+                                        <div>Enfermedad broncopulmonar, abscesos cerebrales</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">N. brasiliensis</div>
+                                        <div>Infecciones cutáneas primarias, micetoma</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">N. farcinica</div>
+                                        <div>Enfermedad diseminada, resistencia antimicrobiana</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">N. nova</div>
+                                        <div>Enfermedad broncopulmonar</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patogenia e Inmunidad -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Patogenia e Inmunidad
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box opportunistic-pathogen">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Patógeno oportunista con tropismo específico</p>
+                            <p>Las nocardias producen característicamente enfermedad broncopulmonar en pacientes inmunodeprimidos y tienen una predilección notable por la diseminación hematógena al sistema nervioso central o la piel. Los pacientes con mayor riesgo de padecer la enfermedad son aquellos con deficiencias de linfocitos T producidas por distintos procesos patológicos como leucemia, síndrome de inmunodeficiencia adquirida, o tratamiento inmunosupresor incluyendo corticosteroides para trasplante renal, cardíaco o de médula ósea.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Vías de infección y desarrollo de la enfermedad:</strong> La enfermedad broncopulmonar aparece tras la colonización inicial de las vías respiratorias superiores por inhalación y posterior aspiración de las secreciones orales hacia las vías respiratorias inferiores. La nocardiosis cutánea primaria se desarrolla posteriormente a la inoculación traumática de los microorganismos en los tejidos subcutáneos, especialmente en pacientes que trabajan con tierra o material vegetal contaminado.</p>
+
+                        <p><strong class="text-red-200">Mecanismos de supervivencia intracelular:</strong> El principal factor asociado a la virulencia es la capacidad de las cepas patógenas de evitar su eliminación por los fagocitos mediante múltiples mecanismos sofisticados. Las nocardias pueden sobrevivir y replicarse en el interior de los macrófagos evitando la fusión del fagosoma-lisosoma (mediada por el factor cord), evitando la acidificación del fagosoma por un mecanismo indefinido, y evitando la erradicación mediada por la fosfatasa ácida a través de la utilización metabólica de esta enzima como fuente de átomos de carbono.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Factores de virulencia principales</p>
+                            <div class="virulence-factors">
+                                <div class="table-header p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-red-100 font-bold">
+                                        <div>Factor de Virulencia</div>
+                                        <div>Mecanismo de Acción</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-yellow-200">Factor Cord</div>
+                                        <div>Impide fusión fagosoma-lisosoma</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-blue-200">Catalasa</div>
+                                        <div>Inactiva peróxido de hidrógeno</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-green-200">Superóxido dismutasa</div>
+                                        <div>Neutraliza radicales superóxido</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-purple-200">Utilización de fosfatasa ácida</div>
+                                        <div>Metaboliza enzimas lisosomales</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p><strong class="text-red-200">Protección contra estrés oxidativo:</strong> Cuando los fagocitos entran en contacto con bacterias, se produce un aumento repentino de la actividad oxidativa que genera metabolitos tóxicos del oxígeno como peróxido de hidrógeno y superóxido. Las cepas patógenas de Nocardia se protegen mediante la secreción de catalasa y superóxido-dismutasa, y la superóxido-dismutasa asociada a la superficie confiere protección adicional a las bacterias contra el ambiente hostil intracelular.</p>
+
+                        <p><strong class="text-red-200">Patrón de inflamación y daño tisular:</strong> Las enfermedades pulmonares y cutáneas se caracterizan por necrosis y formación de abscesos semejantes a los observados en infecciones por otras bacterias piógenas. Se pueden producir infecciones crónicas con formación de fístulas, especialmente en las infecciones cutáneas primarias. Aunque se observan "gránulos de azufre" en las especies de Actinomyces, son infrecuentes en el género Nocardia y sólo aparecen ocasionalmente cuando existe afectación cutánea.</p>
+
+                        <div class="content-box immunocompromised">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Susceptibilidad del hospedador</p>
+                            <p>La enfermedad pulmonar localizada crónica puede darse en pacientes inmunocompetentes con patología pulmonar subyacente como bronquitis, enfisema, asma, bronquiectasias y proteinosis alveolar. Sin embargo, la mayoría de las infecciones sistémicas ocurren en pacientes con algún grado de inmunodepresión, especialmente aquellos con deficiencias en la inmunidad celular mediada por linfocitos T.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Manifestaciones Clínicas
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Enfermedad broncopulmonar:</strong> La enfermedad broncopulmonar causada por los miembros del género Nocardia no se puede distinguir radiológicamente de las infecciones por otros microorganismos, aunque la primera se suele desarrollar con mayor lentitud y de forma más indolente. Generalmente están presentes signos como tos, disnea y fiebre, aunque no son diagnósticos específicos. Son frecuentes la cavitación pulmonar y la extensión a la pleura, creando un patrón radiológico que puede simular tuberculosis o malignidad.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Formas de nocardiosis cutánea</p>
+                            <p>Las infecciones cutáneas pueden ser infecciones primarias o deberse a la diseminación de los microorganismos desde una infección pulmonar primaria. La nocardiosis cutánea tiene cuatro presentaciones principales: micetoma, enfermedad linfocutánea, infección cutánea superficial con formación de abscesos o celulitis, y afectación cutánea secundaria tras la diseminación desde una localización pulmonar. N. brasiliensis suele originar infecciones cutáneas primarias en pacientes inmunocompetentes, especialmente en regiones tropicales y subtropicales.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Micetoma actinomicótico:</strong> El micetoma actinomicótico es una infección indolora crónica caracterizada por inflamación subcutánea localizada, supuración y formación de múltiples fístulas que drenan material purulento. Puede existir afectación progresiva de los tejidos conjuntivos, músculos y huesos subyacentes, y las fístulas que drenan suelen desembocar en la superficie cutánea. Varios microorganismos pueden producir un micetoma, aunque N. brasiliensis constituye la causa más frecuente en Norte, Centro y Sudamérica.</p>
+
+                        <p><strong class="text-red-200">Infecciones linfocutáneas:</strong> Las infecciones linfocutáneas se manifiestan con nódulos cutáneos y ulceraciones a lo largo de los vasos linfáticos y afectación de los ganglios linfáticos regionales. Estas infecciones remedan las infecciones cutáneas producidas por algunas especies de micobacterias atípicas y el hongo Sporothrix schenckii, requiriendo diagnóstico diferencial cuidadoso. Asimismo, Nocardia puede originar lesiones ulcerativas crónicas, abscesos subcutáneos y celulitis que pueden confundirse con otras infecciones bacterianas piógenas.</p>
+
+                        <div class="content-box cns-predilection">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Predilección por el sistema nervioso central</p>
+                            <p>Hasta un tercio de los pacientes con infecciones por Nocardia presenta afectación del sistema nervioso central, por lo general con formación de abscesos cerebrales únicos o múltiples. Esta alta frecuencia de diseminación al SNC es característica de Nocardia y la diferencia de muchos otros patógenos oportunistas. La enfermedad se puede manifestar inicialmente como una meningitis crónica con síntomas insidiosos que progresan lentamente, o como abscesos cerebrales con signos neurológicos focales dependiendo de su localización.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Consideraciones diagnósticas:</strong> Aunque el cuadro clínico no sea específico de Nocardia, se debe considerar la participación de estos microorganismos en los pacientes inmunodeprimidos aquejados de neumonía con cavitación, especialmente en presencia de indicios de diseminación al sistema nervioso central o a los tejidos subcutáneos. La combinación de enfermedad pulmonar cavitaria con lesiones cutáneas o neurológicas en un paciente inmunodeprimido debe alertar fuertemente sobre la posibilidad de nocardiosis diseminada.</p>
+
+                        <p><strong class="text-red-200">Evolución y pronóstico:</strong> Las infecciones por Nocardia tienden a seguir un curso clínico prolongado e indolente, con síntomas que pueden desarrollarse durante semanas o meses antes del diagnóstico. La evolución puede ser especialmente grave en pacientes inmunodeprimidos, donde la diseminación hematógena puede resultar en infección multiorgánica con alta mortalidad si no se diagnostica y trata precozmente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico de Laboratorio -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Métodos de Diagnóstico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Estrategias de muestreo:</strong> En los pacientes con afectación pulmonar se deben recoger varias muestras de esputo dado que la eliminación de nocardias puede ser intermitente. La detección microscópica y el aislamiento de Nocardia en cultivos de las muestras de sujetos aquejados de enfermedad cutánea o del sistema nervioso central resultan relativamente sencillos como consecuencia de su distribución homogénea en el tejido y el material de los abscesos, pero requieren técnicas especializadas.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Características microscópicas distintivas</p>
+                            <p>Las delicadas hifas producidas por Nocardia al desarrollarse en un tejido remedan a las observadas en Actinomyces; no obstante, las nocardias se tiñen mal con la tinción de Gram y suelen ser acidorresistentes, características que permiten su diferenciación. La acidorresistencia parcial es crucial para distinguir Nocardia de Actinomyces, que no es acidorresistente, y de las micobacterias, que son fuertemente acidorresistentes.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Requerimientos especiales de cultivo:</strong> Las nocardias crecen en la mayoría de los medios de laboratorio cuando se incuban en una atmósfera con dióxido de carbono al 5% o 10%, aunque la presencia de estos microorganismos de desarrollo lento se puede ver ensombrecida por la de otras bacterias comensales de crecimiento más rápido. La muestra remitida para el análisis de Nocardia se debe inocular en medios selectivos cuando exista la posibilidad de contaminación por otras bacterias.</p>
+
+                        <p><strong class="text-red-200">Medios selectivos especializados:</strong> Se han obtenido resultados satisfactorios con el medio empleado para aislar las especies de Legionella, el agar tamponado con extracto de levadura de carbón (agar BCYE). Este medio se usa efectivamente para recuperar ambos microorganismos de las muestras pulmonares. Nocardia crece algunas veces en los medios utilizados para el aislamiento de micobacterias y hongos; no obstante, este abordaje es menos fiable que el uso de medios bacterianos específicos.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Importancia de la comunicación con el laboratorio</p>
+                            <p>Es fundamental comunicar al laboratorio la sospecha de nocardiosis dado que la mayoría de los laboratorios no incuba de forma sistemática las muestras clínicas durante más de 1 a 3 días. La detección en medios de cultivo de las especies pertenecientes a Nocardia requiere un período más prolongado, típicamente de 3 a 7 días, y algunos aislamientos pueden requerir hasta 2-3 semanas para ser detectados.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Identificación inicial y confirmación:</strong> La identificación inicial de Nocardia no resulta complicada cuando se conocen las características clave. Los miembros del género se clasifican inicialmente por la presencia de bacilos filamentosos parcialmente acidorresistentes e hifas aéreas en la superficie de la colonia. Sin embargo, la identificación definitiva a nivel de especie reviste mayor dificultad y frecuentemente requiere métodos moleculares especializados.</p>
+
+                        <p><strong class="text-red-200">Limitaciones de la identificación fenotípica:</strong> Se ha reconocido la imposibilidad de identificar con precisión la mayoría de las especies mediante pruebas fenotípicas tradicionales como las bioquímicas, aunque muchos laboratorios continúan empleándolas por limitaciones de recursos. La identificación precisa de casi todas las especies implica el análisis molecular de los genes del ácido ribonucleico ribosómico y los genes constitutivos como el gen de la proteína de shock térmico. En la actualidad, estas pruebas se realizan fundamentalmente en laboratorios de referencia o de investigación.</p>
+
+                        <div class="content-box opportunistic-pathogen">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Métodos diagnósticos moleculares</p>
+                            <p>Los métodos de biología molecular, incluyendo la secuenciación del gen 16S rRNA y otros genes housekeeping, han revolucionado la taxonomía de Nocardia y permiten identificación precisa de especies. Sin embargo, para la mayoría de propósitos clínicos, es suficiente identificar el género Nocardia, ya que el tratamiento antimicrobiano es similar para la mayoría de especies y la identificación específica raramente cambia el manejo clínico inicial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Tratamiento y Manejo Clínico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Enfoque terapéutico combinado:</strong> Las infecciones por Nocardia se tratan mediante la combinación de antibióticos apropiados con intervención quirúrgica adecuada cuando está indicada. El tratamiento debe ser prolongado debido a la naturaleza crónica de estas infecciones y la tendencia de las nocardias a persistir en tejidos con vascularización comprometida o en el interior de macrófagos donde pueden sobrevivir a concentraciones subóptimas de antibióticos.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Sulfamidas como tratamiento de elección</p>
+                            <p>Las sulfamidas son los antibióticos de elección en el tratamiento de la nocardiosis, habiendo demostrado eficacia clínica sostenida durante décadas. El sulfametoxazol-trimetoprima es frecuentemente el régimen preferido debido a su buena penetración tisular, incluyendo el sistema nervioso central, y su actividad sinérgica contra las nocardias. Otros compuestos como amikacina, imipenem y las cefalosporinas de amplio espectro también poseen buena actividad in vitro, aunque su eficacia in vivo no está tan bien establecida como la de las sulfamidas.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Duración del tratamiento:</strong> El tratamiento ha de mantenerse durante un período prolongado, típicamente de 6 semanas a 12 meses dependiendo de la localización y extensión de la infección, ya que las nocardias pueden diseminarse y producir una enfermedad significativa desde el punto de vista clínico si el tratamiento es inadecuado. Las infecciones del sistema nervioso central requieren tratamiento especialmente prolongado, frecuentemente de 12 meses o más, debido a la dificultad de erradicar completamente estos microorganismos de sitios anatómicos protegidos.</p>
+
+                        <p><strong class="text-red-200">Consideraciones sobre resistencia antimicrobiana:</strong> La sensibilidad antimicrobiana puede variar significativamente entre diferentes especies de Nocardia, y algunas especies como N. farcinica pueden mostrar resistencia a múltiples agentes antimicrobianos incluyendo sulfamidas. Por esta razón, las pruebas de sensibilidad in vitro son importantes para guiar la terapia, especialmente en infecciones graves o en pacientes que no responden al tratamiento empírico inicial.</p>
+
+                        <div class="content-box immunocompromised">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Manejo quirúrgico adjunto</p>
+                            <p>La intervención quirúrgica puede ser necesaria para el drenaje de abscesos grandes, especialmente en el sistema nervioso central, o para la resección de lesiones necróticas que no responden al tratamiento médico. En casos de micetoma, la escisión quirúrgica amplia de las lesiones puede ser necesaria para lograr la curación, especialmente cuando hay afectación ósea. El desbridamiento quirúrgico también puede ser importante en infecciones cutáneas extensas con formación de fístulas múltiples.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Pronóstico y factores que afectan la respuesta:</strong> Aunque la respuesta clínica es favorable en los pacientes con infecciones localizadas, el pronóstico de los pacientes inmunodeprimidos con enfermedad diseminada es más reservado y depende de factores como el grado de inmunodepresión, la extensión de la enfermedad al momento del diagnóstico, y la rapidez del inicio del tratamiento apropiado. La mortalidad puede ser significativa en pacientes con enfermedad diseminada no tratada o diagnosticada tardíamente.</p>
+
+                        <p><strong class="text-red-200">Monitoreo del tratamiento:</strong> Los pacientes requieren seguimiento clínico estrecho durante el tratamiento prolongado, incluyendo evaluación de la respuesta clínica mediante estudios de imagen seriados, monitoreo de efectos adversos de los antimicrobianos, y evaluación de la función renal y hepática. En infecciones del sistema nervioso central, los estudios de neuroimagen seriados son esenciales para evaluar la respuesta al tratamiento y detectar complicaciones como hidrocefalia o efecto de masa.</p>
+
+                        <div class="content-box opportunistic-pathogen">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Tratamiento en huéspedes especiales</p>
+                            <p>En pacientes inmunodeprimidos, puede ser necesario ajustar o reducir la inmunosupresión cuando sea posible para optimizar la respuesta al tratamiento antimicrobiano. En receptores de trasplante, esto debe equilibrarse cuidadosamente con el riesgo de rechazo del injerto. Algunos pacientes pueden requerir terapia antimicrobiana supresiva prolongada para prevenir recidivas, especialmente aquellos con inmunodepresión que no puede ser revertida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epidemiología y Prevención -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Epidemiología y Prevención
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box exogenous-infection">
+                            <p class="text-lg font-semibold text-blue-200 mb-3">Naturaleza exógena de las infecciones</p>
+                            <p>Las infecciones por Nocardia son características exógenas, es decir, producidas por microorganismos que normalmente no forman parte de la microflora humana normal, pero pueden encontrarse allí de forma temporal después de la exposición ambiental. Esta naturaleza exógena contrasta con infecciones por Actinomyces, que son típicamente endógenas. La presencia ubicua del microorganismo en suelo enriquecido en materia orgánica y el gran número de pacientes inmunodeprimidos en los hospitales se ha traducido en un importante aumento de la enfermedad producida por esta bacteria en las últimas décadas.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Distribución ambiental:</strong> Las nocardias tienen una distribución universal en suelos enriquecidos en materia orgánica, especialmente en regiones con climas cálidos y húmedos. También se encuentran en material vegetal en descomposición, agua estancada, y ocasionalmente en el aire como aerosoles. Esta amplia distribución ambiental hace que la exposición sea prácticamente inevitable, especialmente para personas que trabajan con tierra, jardinería, agricultura, o actividades al aire libre.</p>
+
+                        <p><strong class="text-red-200">Grupos de riesgo específicos:</strong> El incremento en la incidencia es especialmente notable en grupos de alto riesgo como los pacientes infectados por el virus de la inmunodeficiencia humana, los receptores de trasplante de órgano sólido, pacientes con neoplasias hematológicas, y aquellos en tratamiento prolongado con corticosteroides u otros agentes inmunosupresores. También están en riesgo pacientes con enfermedades pulmonares crónicas como bronquiectasias, enfisema, o fibrosis pulmonar.</p>
+
+                        <p><strong class="text-red-200">Factores geográficos y climáticos:</strong> Aunque las nocardias se encuentran mundialmente, ciertas especies muestran predilección geográfica. Por ejemplo, N. brasiliensis es más común en regiones tropicales y subtropicales de América, mientras que otras especies pueden ser más prevalentes en regiones templadas. Factores como la humedad, temperatura, y tipo de suelo pueden influir en la distribución de diferentes especies.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Rutas de transmisión</p>
+                            <p>Las infecciones exógenas se adquieren por inhalación de esporas o fragmentos de hifas desde el ambiente (enfermedad pulmonar) o por inoculación traumática directa en los tejidos subcutáneos (enfermedad cutánea). La transmisión persona a persona es extremadamente rara y no se considera epidemiológicamente significativa. Las actividades que aumentan el riesgo incluyen jardinería, agricultura, excavación, y cualquier actividad que genere aerosoles de tierra o material orgánico.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Limitaciones en la prevención:</strong> Resulta prácticamente imposible impedir la exposición a las nocardias debido a su ubicuidad en el ambiente. No obstante, la enfermedad broncopulmonar producida por estas bacterias es infrecuente en los individuos inmunocompetentes, y las infecciones cutáneas primarias se pueden prevenir mediante el cuidado adecuado de las heridas y el uso de equipo de protección personal durante actividades de riesgo como jardinería o trabajo agrícola.</p>
+
+                        <p><strong class="text-red-200">Estrategias de prevención específicas:</strong> En pacientes inmunodeprimidos de alto riesgo, las medidas preventivas pueden incluir evitar actividades de jardinería o agricultura, usar equipo de protección respiratoria durante actividades que generen polvo, y mantener heridas cutáneas limpias y cubiertas. Sin embargo, estas medidas tienen limitaciones prácticas y no pueden eliminar completamente el riesgo de exposición.</p>
+
+                        <div class="content-box immunocompromised">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Prevención secundaria</p>
+                            <p>Las complicaciones asociadas a la enfermedad diseminada se pueden reducir significativamente al considerar la nocardiosis en el diagnóstico diferencial de los pacientes inmunodeprimidos con enfermedad pulmonar cavitaria e instaurar un tratamiento precoz. La educación de los profesionales de la salud sobre las manifestaciones clínicas de la nocardiosis y los grupos de riesgo es fundamental para mejorar el reconocimiento temprano y los resultados clínicos.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Vigilancia epidemiológica:</strong> Aunque la nocardiosis no es una enfermedad de notificación obligatoria en la mayoría de jurisdicciones, la vigilancia epidemiológica en hospitales y centros de trasplante puede ayudar a identificar brotes nosocomiales raros o factores de riesgo emergentes. La identificación molecular de especies está mejorando nuestra comprensión de los patrones epidemiológicos y puede influir en las estrategias de prevención futuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro resumen de aspectos destacados -->
+        <div class="glass rounded-3xl p-8 mt-12 border-glow">
+            <h2 class="text-3xl font-bold text-red-200 mb-6 text-center text-glow">Aspectos Clínicos Fundamentales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="content-box opportunistic-pathogen">
+                    <h3 class="font-bold text-yellow-300 mb-3 text-lg">Patógeno Oportunista</h3>
+                    <p class="text-white text-sm leading-relaxed">Afecta principalmente pacientes inmunodeprimidos con deficiencias en linfocitos T, con predilección única por diseminación al SNC.</p>
+                </div>
+                <div class="content-box taxonomic-confusion">
+                    <h3 class="font-bold text-orange-300 mb-3 text-lg">Confusión Taxonómica</h3>
+                    <p class="text-white text-sm leading-relaxed">Clasificación histórica incorrecta de N. asteroides; identificación molecular necesaria para especies precisas.</p>
+                </div>
+                <div class="content-box cns-predilection">
+                    <h3 class="font-bold text-green-300 mb-3 text-lg">Tropismo por SNC</h3>
+                    <p class="text-white text-sm leading-relaxed">Hasta 1/3 de pacientes desarrollan abscesos cerebrales; característica distintiva entre patógenos oportunistas.</p>
+                </div>
+                <div class="content-box exogenous-infection">
+                    <h3 class="font-bold text-blue-300 mb-3 text-lg">Infección Exógena</h3>
+                    <p class="text-white text-sm leading-relaxed">Adquirida del ambiente (suelo) por inhalación o inoculación traumática; no forma parte de flora normal humana.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer informativo -->
+        <div class="glass rounded-3xl p-8 mt-8 text-center border-glow">
+            <p class="text-red-100 text-lg leading-relaxed">
+                <strong class="text-glow">Importancia clínica contemporánea:</strong> Nocardia representa un grupo de patógenos 
+                oportunistas de creciente importancia en la era moderna de la inmunodepresión iatrogénica y la epidemia 
+                de VIH. Su capacidad única de supervivencia intracelular, predilección por la diseminación al sistema 
+                nervioso central, y resistencia variable a antimicrobianos hacen que el reconocimiento temprano sea 
+                crítico para optimizar los resultados clínicos. La naturaleza ubicua de estos microorganismos en el 
+                ambiente, combinada con el creciente número de pacientes inmunodeprimidos, sugiere que la incidencia 
+                de nocardiosis continuará aumentando. La comprensión de los factores de virulencia como el factor cord 
+                y los mecanismos de evasión inmune proporciona insights importantes para el desarrollo de estrategias 
+                terapéuticas mejoradas y potenciales blancos para nuevos antimicrobianos.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brucella - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #166534 0%, #84cc16 50%, #dc2626 100%);
+            min-height: 100vh;
+        }
+        .glass {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-yellow {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 235, 59, 0.25);
+            border: 1px solid rgba(255, 235, 59, 0.4);
+        }
+        .glass-green {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        .glass-brown {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(120, 53, 15, 0.3);
+            border: 1px solid rgba(120, 53, 15, 0.4);
+        }
+        .glass-red {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="glass rounded-2xl p-8 mb-8 text-center">
+            <h1 class="text-5xl font-bold text-white mb-4">Brucella</h1>
+            <p class="text-xl text-green-100">Patógeno zoonótico causante de brucelosis - "Fiebre ondulante"</p>
+        </div>
+
+        <!-- Estructura y Fisiología -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Estructura y Fisiología</h2>
+            
+            <div class="glass-yellow rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Características Morfológicas y Metabólicas</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Las brúcelas son cocobacilos gramnegativos de pequeño tamaño (0,5 x 0,6 a 1,5 μm), no encapsulados 
+                    e inmóviles. El microorganismo presenta un crecimiento extremadamente lento en cultivo, requiriendo 
+                    una semana o más para su desarrollo, y necesita medios de cultivo complejos. Son aerobios estrictos 
+                    y el crecimiento de algunas cepas exige la adición de dióxido de carbono. No fermentan hidratos de 
+                    carbono, lo que los diferencia de muchos otros patógenos gramnegativos.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Una característica fundamental es la morfología colonial que determina la virulencia. Las colonias 
+                    pueden adoptar formas lisas (traslúcidas, homogéneas) o rugosas (opacas, granulares o pegajosas), 
+                    determinadas por el antígeno O del lipopolisacárido de la pared celular. La conversión de cepas lisas 
+                    a morfología rugosa se asocia con una notable reducción de la virulencia, estableciendo la cadena O 
+                    del LPS liso como un importante marcador de virulencia.
+                </p>
+            </div>
+
+            <div class="glass-green rounded-xl p-6">
+                <h3 class="text-xl font-semibold text-white mb-3">Clasificación de Especies</h3>
+                <p class="text-green-100 leading-relaxed">
+                    Los estudios moleculares han revelado una estrecha relación entre las cepas de Brucella, que 
+                    pertenecerían a un único género. Se reconocen seis especies, cuatro causantes de enfermedad humana: 
+                    B. abortus (ganado vacuno), B. melitensis (cabras y ovejas), B. suis (cerdos, renos, caribú), y 
+                    B. canis (perros, zorros, coyotes). Las especies se caracterizan por la proporción relativa de 
+                    epítopos antigénicos conocidos como antígenos A y M que residen en la cadena polisacarídica O del LPS liso.
+                </p>
+            </div>
+        </div>
+
+        <!-- Patogenia e Inmunidad -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Patogenia e Inmunidad</h2>
+            
+            <div class="glass-brown rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-yellow-200 mb-3">Mecanismo de Supervivencia Intracelular</h3>
+                <p class="text-yellow-100 leading-relaxed">
+                    Brucella es un parásito intracelular especializado del sistema reticuloendotelial que ha desarrollado 
+                    estrategias sofisticadas para sobrevivir dentro de las células fagocíticas. Tras la exposición inicial, 
+                    los macrófagos y monocitos fagocitan los microorganismos, pero en lugar de ser destruidos, las bacterias 
+                    aprovechan este proceso para establecer su nicho de replicación. Los genes esenciales de virulencia 
+                    del operón virB se inducen específicamente en el ambiente ácido del fagolisosoma y regulan la 
+                    replicación intracelular del patógeno.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-red rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Características de Virulencia</h3>
+                    <p class="text-red-100 leading-relaxed">
+                        Brucella no produce exotoxinas detectables y su endotoxina es considerablemente menos tóxica 
+                        que las de otros bacilos gramnegativos. Esta característica contribuye a su capacidad de causar 
+                        infecciones crónicas y persistentes sin provocar shock séptico. La virulencia depende 
+                        principalmente de su capacidad de resistir la destrucción fagocítica y replicarse 
+                        intracelularmente.
+                    </p>
+                </div>
+
+                <div class="glass rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Diseminación Sistémica</h3>
+                    <p class="text-green-100 leading-relaxed">
+                        Las bacterias fagocitadas se transportan hasta órganos del sistema reticuloendotelial: 
+                        bazo, hígado, médula ósea, ganglios linfáticos y riñones. En estos sitios, las bacterias 
+                        secretan proteínas que inducen la formación de granulomas y pueden causar alteraciones 
+                        destructivas en pacientes con enfermedad avanzada, explicando las manifestaciones 
+                        sistémicas características de la brucelosis.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tropismo Tisular -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Tropismo Tisular y Reservorios</h2>
+            
+            <div class="glass-yellow rounded-xl p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Afinidad por Eritritol</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    El microorganismo presenta un tropismo específico por órganos que contienen eritritol, un azúcar 
+                    metabolizado por numerosas cepas de Brucella de modo preferente con respecto a la glucosa. Los tejidos 
+                    animales ricos en eritritol incluyen la mama, el útero, la placenta y el epidídimo, pero es importante 
+                    destacar que los tejidos humanos no contienen concentraciones significativas de este azúcar.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    En consecuencia, en los reservorios animales, los microorganismos se localizan en estos tejidos 
+                    reproductivos y pueden producir esterilidad, abortos o estados de portador asintomático. Las brúcelas 
+                    abundan en la leche, orina y productos del parto de animales infectados, estableciendo las principales 
+                    vías de transmisión al ser humano a través del contacto con estos materiales contaminados.
+                </p>
+            </div>
+        </div>
+
+        <!-- Manifestaciones Clínicas -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Manifestaciones Clínicas</h2>
+            
+            <div class="glass-brown rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-yellow-200 mb-3">Variabilidad según Especies</h3>
+                <p class="text-yellow-100 leading-relaxed">
+                    El espectro patológico de la brucelosis depende significativamente del microorganismo responsable. 
+                    B. abortus y B. canis tienden a producir un cuadro clínico relativamente leve en el que son infrecuentes 
+                    las complicaciones supurativas. Por el contrario, B. suis da lugar a la formación de lesiones destructivas 
+                    con evolución prolongada y tendencia a la cronicidad. B. melitensis representa la forma más grave, 
+                    causando un cuadro severo con elevada incidencia de complicaciones graves, ya que puede multiplicarse 
+                    hasta alcanzar concentraciones muy elevadas en las células fagocíticas.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="glass-red rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Fase Aguda</h3>
+                    <p class="text-red-100 leading-relaxed">
+                        Aproximadamente el 50% de los pacientes infectados desarrolla enfermedad aguda, con síntomas 
+                        que aparecen hasta dos meses después de la exposición. Los síntomas iniciales son marcadamente 
+                        inespecíficos: malestar general, escalofríos, sudoración profusa, fatiga intensa, debilidad, 
+                        mialgias, pérdida significativa de peso, artralgias y tos no productiva. Prácticamente todos 
+                        los pacientes presentan fiebre, que característicamente puede ser intermitente en pacientes 
+                        no tratados, originando el nombre histórico de "fiebre ondulante".
+                    </p>
+                </div>
+
+                <div class="glass-green rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Manifestaciones Sistémicas</h3>
+                    <p class="text-green-100 leading-relaxed">
+                        Los pacientes con enfermedad avanzada desarrollan un amplio espectro de manifestaciones 
+                        sistémicas. Los síntomas digestivos afectan al 70% de los pacientes, incluyendo dolor 
+                        abdominal, náuseas y diarrea. Las manifestaciones osteoarticulares ocurren en 20-60% 
+                        de casos, presentándose como lesiones osteolíticas o derrames articulares. Los síntomas 
+                        respiratorios aparecen en 25% de pacientes, mientras que las manifestaciones cutáneas, 
+                        neurológicas o cardiovasculares son menos frecuentes pero pueden ser graves.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass-yellow rounded-xl p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Evolución Crónica</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Los pacientes que no reciben tratamiento adecuado pueden desarrollar infecciones crónicas que persisten 
+                    durante meses o años. Esta cronicidad se debe a la capacidad única de Brucella para sobrevivir 
+                    intracelularmente y evadir las defensas del huésped. La enfermedad crónica puede manifestarse con 
+                    síntomas fluctuantes, episodios recurrentes de fiebre, y complicaciones en múltiples sistemas 
+                    orgánicos, requiriendo tratamientos prolongados y seguimiento médico especializado.
+                </p>
+            </div>
+        </div>
+
+        <!-- Diagnóstico de Laboratorio -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Diagnóstico de Laboratorio</h2>
+            
+            <div class="glass-brown rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-yellow-200 mb-3">Recolección y Seguridad</h3>
+                <p class="text-yellow-100 leading-relaxed">
+                    Es fundamental recoger múltiples muestras de sangre para hemocultivos y pruebas serológicas. 
+                    Los mielocultivos y cultivos de tejidos infectados pueden resultar de gran utilidad diagnóstica. 
+                    Un aspecto crítico es notificar al laboratorio la sospecha de brucelosis para garantizar la 
+                    manipulación segura de las muestras, ya que el personal de laboratorio presenta un riesgo 
+                    importante de infección por contacto directo o inhalación del microorganismo.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Microscopía</h3>
+                    <p class="text-green-100 leading-relaxed">
+                        Los microorganismos se tiñen fácilmente con técnicas convencionales, pero su localización 
+                        intracelular y pequeño tamaño dificultan enormemente su detección en muestras clínicas. 
+                        La microscopía no es un método sensible para el diagnóstico de brucelosis.
+                    </p>
+                </div>
+
+                <div class="glass-red rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Cultivo</h3>
+                    <p class="text-red-100 leading-relaxed">
+                        Brucella crece lentamente durante el aislamiento primario, pudiendo requerir al menos 3 días 
+                        en agar, y los hemocultivos deben incubarse 2 semanas antes de considerarse negativos. 
+                        Los sistemas automatizados han mejorado la detección, pero el crecimiento sigue siendo 
+                        un proceso lento.
+                    </p>
+                </div>
+
+                <div class="glass-yellow rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Serología</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        La detección de anticuerpos es crucial ya que se detectan prácticamente en todos los pacientes. 
+                        Se observa inicialmente respuesta IgM, seguida de IgG e IgA. Los anticuerpos pueden persistir 
+                        meses o años, requiriendo aumento de 4 veces del título o título único ≥1:160 para diagnóstico.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Epidemiología -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Epidemiología Global</h2>
+            
+            <div class="glass-green rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-white mb-3">Distribución Mundial</h3>
+                <p class="text-green-100 leading-relaxed">
+                    Las infecciones por Brucella tienen una distribución universal, siendo la enfermedad endémica 
+                    más frecuente en Latinoamérica, África, la cuenca mediterránea, Oriente Medio y Asia occidental. 
+                    Cada año se reportan más de 500,000 casos a nivel mundial, lo que subestima significativamente 
+                    la verdadera incidencia debido al subdiagnóstico y subregistro, especialmente en áreas rurales 
+                    con recursos limitados para diagnóstico.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-brown rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-yellow-200 mb-3">Situación en Estados Unidos</h3>
+                    <p class="text-yellow-100 leading-relaxed">
+                        En contraste con la situación mundial, la incidencia en Estados Unidos es mucho más baja, 
+                        con solo 104 infecciones reportadas en 2004. El mayor número de casos se registra en 
+                        California y Texas, con la mayoría de infecciones en personas residentes en México o 
+                        turistas que han visitado ese país. El control efectivo de la enfermedad en la población 
+                        animal estadounidense mediante destrucción de ejemplares infectados y vacunación ha 
+                        reducido dramáticamente las infecciones ocupacionales.
+                    </p>
+                </div>
+
+                <div class="glass-red rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Vías de Transmisión</h3>
+                    <p class="text-red-100 leading-relaxed">
+                        La brucelosis humana se adquiere mediante tres vías principales: contacto directo con el 
+                        microorganismo (exposición en laboratorio), ingestión de alimentos contaminados 
+                        (especialmente productos lácteos no pasteurizados), o inhalación de aerosoles infectados. 
+                        La posible utilización de Brucella como arma biológica, donde la exposición sería por 
+                        inhalación, constituye un motivo de preocupación en seguridad bioterrorista.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tratamiento -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Tratamiento</h2>
+            
+            <div class="glass-yellow rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Terapia Combinada Estándar</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Las tetraciclinas, con doxiciclina como fármaco de elección, suelen tener actividad contra la 
+                    mayoría de cepas de Brucella. Sin embargo, debido a que se trata de un fármaco bacteriostático, 
+                    es frecuente la recidiva después de una respuesta inicial satisfactoria cuando se usa en monoterapia. 
+                    Por esta razón, la Organización Mundial de la Salud recomienda actualmente la combinación de 
+                    doxiciclina con rifampicina como tratamiento estándar para adultos no gestantes.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-brown rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-yellow-200 mb-3">Poblaciones Especiales</h3>
+                    <p class="text-yellow-100 leading-relaxed">
+                        Dado que las tetraciclinas son tóxicas en niños pequeños y el feto, la doxiciclina debe 
+                        sustituirse por trimetoprim-sulfametoxazol en mujeres embarazadas y niños menores de 8 años. 
+                        El tratamiento debe mantenerse durante al menos 6 semanas para obtener resultados satisfactorios 
+                        y prevenir recidivas, que se deben a tratamiento inadecuado y no al desarrollo de resistencia 
+                        antibiótica.
+                    </p>
+                </div>
+
+                <div class="glass-red rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Limitaciones Terapéuticas</h3>
+                    <p class="text-red-100 leading-relaxed">
+                        Las fluoroquinolonas, macrólidos, penicilinas y cefalosporinas carecen de eficacia o presentan 
+                        actividad impredecible contra Brucella. Esta limitación en las opciones terapéuticas subraya 
+                        la importancia del diagnóstico temprano y la adherencia estricta a los protocolos de tratamiento 
+                        recomendados para prevenir el desarrollo de enfermedad crónica.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prevención y Control -->
+        <div class="glass rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Prevención y Control</h2>
+            
+            <div class="glass-green rounded-xl p-6 mb-6">
+                <h3 class="text-xl font-semibold text-white mb-3">Control en Reservorios Animales</h3>
+                <p class="text-green-100 leading-relaxed">
+                    El control efectivo de la brucelosis humana se logra principalmente a través del control de la 
+                    enfermedad en el ganado, como ha quedado demostrado exitosamente en Estados Unidos. Esta estrategia 
+                    implica la identificación sistemática mediante pruebas serológicas y la destrucción de reses 
+                    infectadas, así como la vacunación de animales sanos. Actualmente se utiliza la cepa rugosa RB51 
+                    de B. abortus para la vacunación del ganado, que ha demostrado ser segura y eficaz.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-brown rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-yellow-200 mb-3">Medidas Preventivas Humanas</h3>
+                    <p class="text-yellow-100 leading-relaxed">
+                        Las medidas para prevenir la brucelosis incluyen evitar el consumo de productos lácteos 
+                        no pasteurizados, implementar medidas de seguridad adecuadas en laboratorios que manejan 
+                        Brucella, y utilizar equipos de protección personal por parte de trabajadores de mataderos, 
+                        veterinarios y personal que tiene contacto directo con animales potencialmente infectados.
+                    </p>
+                </div>
+
+                <div class="glass-red rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Desafío de Vacunación Humana</h3>
+                    <p class="text-red-100 leading-relaxed">
+                        Las vacunas atenuadas de B. abortus y B. melitensis han sido exitosas en animales, pero 
+                        no se han desarrollado vacunas para B. suis ni B. canis. Crucialmente, las vacunas disponibles 
+                        no pueden emplearse en humanos porque producen enfermedad sintomática. La ausencia de una 
+                        vacuna humana eficaz constituye una preocupación, especialmente considerando el potencial 
+                        uso de Brucella como agente de bioterrorismo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aspectos Destacados -->
+        <div class="glass rounded-2xl p-8">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-3">Aspectos Clínicos Destacados</h2>
+            
+            <div class="glass-yellow rounded-xl p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Implicaciones de Bioseguridad y Zoonosis</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La brucelosis representa un ejemplo paradigmático de zoonosis exitosamente controlada en países 
+                    desarrollados mediante programas veterinarios integrales, pero que persiste como problema de salud 
+                    pública significativo en regiones con recursos limitados. La naturaleza intracelular de Brucella 
+                    y su capacidad para causar infección crónica la convierten en un patógeno particularmente desafiante 
+                    tanto para el diagnóstico como para el tratamiento.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    El potencial uso de Brucella como agente de bioterrorismo, combinado con la ausencia de vacunas 
+                    humanas efectivas, resalta la importancia de mantener capacidades diagnósticas especializadas y 
+                    protocolos de bioseguridad estrictos. La transmisión por aerosoles y la resistencia ambiental 
+                    relativa del microorganismo añaden complejidad a las consideraciones de seguridad nacional y 
+                    preparación para emergencias biológicas.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

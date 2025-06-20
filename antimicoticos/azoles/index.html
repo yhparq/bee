@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antifúngicos Azoles - Guía Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        body {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #be185d 100%);
+            min-height: 100vh;
+        }
+        .molecule-bg {
+            background-image: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                              radial-gradient(circle at 40% 80%, rgba(119, 198, 255, 0.3) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white molecule-bg">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="glass rounded-3xl p-8 mb-8 text-center">
+            <h1 class="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
+                Antifúngicos Azoles
+            </h1>
+            <h2 class="text-2xl font-semibold text-cyan-300">Imidazoles y Triazoles: Inhibidores de la Síntesis de Ergosterol</h2>
+            <p class="text-lg mt-4 text-gray-200">Tratamiento sistémico de infecciones fúngicas</p>
+        </div>
+
+        <!-- Clasificación Estructural -->
+        <div class="glass-dark rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-violet-400 flex items-center">
+                <span class="w-3 h-3 bg-violet-400 rounded-full mr-3"></span>
+                Clasificación Estructural y Química
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-6">
+                Los antifúngicos azoles se dividen en dos grupos estructurales principales basados en la composición de su anillo azol. Esta diferencia estructural determina no solo sus propiedades farmacológicas, sino también su espectro de actividad y perfil de seguridad.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-indigo-900/40 border border-indigo-500/50 rounded-xl p-5">
+                    <h4 class="text-xl font-bold text-indigo-300 mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-indigo-300 rounded-full mr-2"></span>
+                        Imidazoles
+                    </h4>
+                    <p class="text-indigo-100 text-sm mb-3">
+                        Contienen dos moléculas de nitrógeno en el anillo azol. Únicamente el ketoconazol dentro de este grupo posee actividad sistémica, siendo principalmente utilizado como tratamiento de segunda línea debido a su perfil de toxicidad.
+                    </p>
+                    <div class="bg-indigo-800/30 rounded-lg p-3">
+                        <span class="text-indigo-200 font-semibold">Representante principal:</span>
+                        <span class="text-indigo-100"> Ketoconazol</span>
+                    </div>
+                </div>
+                
+                <div class="bg-purple-900/40 border border-purple-500/50 rounded-xl p-5">
+                    <h4 class="text-xl font-bold text-purple-300 mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-purple-300 rounded-full mr-2"></span>
+                        Triazoles
+                    </h4>
+                    <p class="text-purple-100 text-sm mb-3">
+                        Contienen tres moléculas de nitrógeno en el anillo azol. Todos presentan actividad sistémica y constituyen la base del tratamiento antifúngico moderno debido a su mayor eficacia y mejor perfil de seguridad.
+                    </p>
+                    <div class="bg-purple-800/30 rounded-lg p-3">
+                        <span class="text-purple-200 font-semibold">Principales representantes:</span>
+                        <span class="text-purple-100"> Fluconazol, Itraconazol, Voriconazol</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mecanismo de Acción -->
+        <div class="glass rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center">
+                <span class="w-3 h-3 bg-emerald-400 rounded-full mr-3"></span>
+                Mecanismo de Acción Molecular
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-4">
+                Tanto los imidazoles como los triazoles actúan mediante la inhibición específica de la enzima lanosterol 14-α-desmetilasa dependiente del citocromo fúngico P-450. Esta enzima desempeña un papel crucial en la biosíntesis del ergosterol, el principal esterol estructural de la membrana celular fúngica.
+            </p>
+            <p class="text-gray-100 leading-relaxed mb-6">
+                La inhibición de esta enzima bloquea la conversión de lanosterol en ergosterol, alterando fundamentalmente la síntesis y la integridad de la membrana celular del hongo. Dependiendo del microorganismo y el azol específico administrado, esta inhibición puede resultar en efectos fungostáticos (inhibición del crecimiento) o fungicidas (muerte celular).
+            </p>
+            
+            <div class="bg-teal-900/30 border border-teal-500/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-teal-300 mb-2">Actividad Diferencial por Tipo de Hongo</h4>
+                <p class="text-teal-100 text-sm">
+                    Los azoles generalmente presentan actividad fungicida frente a hongos levaduriformes como Candida spp. y Cryptococcus neoformans. Específicamente, itraconazol, voriconazol, posaconazol y ravuconazol demuestran actividad fungicida frente a hongos del género Aspergillus.
+                </p>
+            </div>
+        </div>
+
+        <!-- Ketoconazol -->
+        <div class="glass-dark rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-orange-400 flex items-center">
+                <span class="w-3 h-3 bg-orange-400 rounded-full mr-3"></span>
+                Ketoconazol: Imidazol de Primera Generación
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-4">
+                El ketoconazol es una molécula lipofílica administrada por vía oral, representante del grupo de los imidazoles. Su espectro de actividad incluye patógenos dimórficos endémicos, especies del género Candida, Cryptococcus neoformans y Malassezia, aunque generalmente presenta una actividad inferior comparado con los triazoles modernos.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-red-900/30 border border-red-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-red-300 mb-3">Limitaciones Farmacológicas</h4>
+                    <ul class="text-red-100 space-y-2 text-sm">
+                        <li>• Absorción oral inconstante</li>
+                        <li>• Requiere pH gástrico ácido</li>
+                        <li>• Alta unión a proteínas (>99%)</li>
+                        <li>• Penetración limitada en SNC</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-yellow-900/30 border border-yellow-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-yellow-300 mb-3">Efectos Adversos Significativos</h4>
+                    <ul class="text-yellow-100 space-y-2 text-sm">
+                        <li>• Gastrotoxicidad y hepatotoxicidad</li>
+                        <li>• Náuseas y vómitos</li>
+                        <li>• Exantema cutáneo</li>
+                        <li>• Efectos endocrinos (dosis altas)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-orange-900/30 border border-orange-500/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-orange-300 mb-2">Indicaciones Clínicas Actuales</h4>
+                <p class="text-orange-100 text-sm">
+                    Las indicaciones de ketoconazol son limitadas debido a la disponibilidad de fármacos más potentes y menos tóxicos. Se considera un fármaco de segunda línea para formas no meníngeas de histoplasmosis, blastomicosis, coccidioidomicosis y paracoccidioidomicosis en pacientes inmunocompetentes. También puede emplearse en candidiasis mucocutánea y esporotricosis linfocutánea.
+                </p>
+            </div>
+        </div>
+
+        <!-- Fluconazol -->
+        <div class="glass rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-blue-400 flex items-center">
+                <span class="w-3 h-3 bg-blue-400 rounded-full mr-3"></span>
+                Fluconazol: Triazol de Primera Generación
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-4">
+                El fluconazol representa el estándar de oro entre los triazoles de primera generación, caracterizado por una excelente biodisponibilidad y baja toxicidad. Su perfil farmacológico favorable lo ha convertido en uno de los antifúngicos más utilizados en la práctica clínica mundial.
+            </p>
+            
+            <div class="bg-blue-900/30 border border-blue-500/50 rounded-lg p-4 mb-4">
+                <h4 class="text-lg font-semibold text-blue-300 mb-2">Ventajas Farmacológicas</h4>
+                <p class="text-blue-100 text-sm">
+                    Es una molécula soluble en agua con bajo grado de asociación a proteínas, lo que permite una excelente distribución a todos los órganos y tejidos, incluyendo el sistema nervioso central. Su administración puede realizarse tanto por vía oral como intravenosa con efectos secundarios graves infrecuentes.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                <div class="bg-green-900/30 border border-green-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-green-300 mb-3">Espectro de Actividad</h4>
+                    <ul class="text-green-100 space-y-1 text-sm">
+                        <li>• Mayoría de especies de Candida</li>
+                        <li>• Cryptococcus neoformans</li>
+                        <li>• Dermatofitos</li>
+                        <li>• Género Trichosporon</li>
+                        <li>• Histoplasma capsulatum</li>
+                        <li>• Coccidioides immitis</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-red-900/30 border border-red-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-red-300 mb-3">Limitaciones de Espectro</h4>
+                    <ul class="text-red-100 space-y-1 text-sm">
+                        <li>• C. krusei (resistencia intrínseca)</li>
+                        <li>• C. glabrata (sensibilidad reducida)</li>
+                        <li>• Géneros Aspergillus y Fusarium</li>
+                        <li>• Cigomicetos</li>
+                        <li>• Actividad limitada vs B. dermatitidis</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-cyan-900/30 border border-cyan-500/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-cyan-300 mb-2">Indicaciones Clínicas Principales</h4>
+                <p class="text-cyan-100 text-sm">
+                    Fluconazol desempeña un papel destacado como tratamiento primario de candidemia y candidiasis mucocutánea, además de servir como profilaxis en poblaciones de alto riesgo. Es el fármaco de elección para meningitis por Coccidioides immitis y tratamiento de mantenimiento de meningitis criptocócica en pacientes con SIDA. Constituye una opción de segunda línea para histoplasmosis, blastomicosis y esporotricosis.
+                </p>
+            </div>
+        </div>
+
+        <!-- Itraconazol -->
+        <div class="glass-dark rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-purple-400 flex items-center">
+                <span class="w-3 h-3 bg-purple-400 rounded-full mr-3"></span>
+                Itraconazol: Triazol de Amplio Espectro
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-4">
+                El itraconazol es un triazol lipofílico con el espectro de actividad antifúngica más amplio entre los azoles clásicos. Puede administrarse por vía oral (cápsula o solución) o intravenosa, ofreciendo flexibilidad terapéutica según las necesidades clínicas del paciente.
+            </p>
+            
+            <div class="bg-purple-900/30 border border-purple-500/50 rounded-lg p-4 mb-6">
+                <h4 class="text-lg font-semibold text-purple-300 mb-2">Espectro de Actividad Extendido</h4>
+                <p class="text-purple-100 text-sm">
+                    Su actividad abarca géneros Candida, Cryptococcus neoformans, Aspergillus, dermatofitos, hongos miceliales dermatiáceos, Pseudallescheria boydii, Sporothrix schenckii y patógenos dimórficos endémicos. Presenta actividad frente a algunas cepas de C. glabrata y C. krusei resistentes a fluconazol, aunque los cigomicetos, Fusarium y S. prolificans permanecen resistentes.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                <div class="bg-indigo-900/30 border border-indigo-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-indigo-300 mb-3">Consideraciones Farmacológicas</h4>
+                    <ul class="text-indigo-100 space-y-2 text-sm">
+                        <li>• Absorción oral inconstante</li>
+                        <li>• Requiere pH gástrico ácido</li>
+                        <li>• Alta unión a proteínas</li>
+                        <li>• Mejora absorción con solución oral en ayunas</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-pink-900/30 border border-pink-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-pink-300 mb-3">Efectos Adversos</h4>
+                    <ul class="text-pink-100 space-y-2 text-sm">
+                        <li>• Interacciones farmacológicas frecuentes</li>
+                        <li>• Hepatotoxicidad grave (infrecuente)</li>
+                        <li>• Intolerancia gastrointestinal</li>
+                        <li>• Hipopotasemia y edema</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-violet-900/30 border border-violet-500/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-violet-300 mb-2">Indicaciones Terapéuticas Principales</h4>
+                <p class="text-violet-100 text-sm">
+                    Itraconazol es el fármaco de elección para esporotricosis linfocutánea y formas no meníngeas de histoplasmosis, blastomicosis y paracoccidioidomicosis. Es útil en infecciones dermatofíticas, candidiasis cutánea y mucosa, coccidioidomicosis no meníngea, y como tratamiento de mantenimiento en meningitis criptocócica. Se considera segunda línea para aspergilosis invasiva.
+                </p>
+            </div>
+        </div>
+
+        <!-- Voriconazol -->
+        <div class="glass rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-rose-400 flex items-center">
+                <span class="w-3 h-3 bg-rose-400 rounded-full mr-3"></span>
+                Voriconazol: Triazol de Nueva Generación
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-4">
+                El voriconazol representa la evolución más avanzada de los triazoles, ofreciendo un amplio espectro de actividad con eficacia superior frente a hongos tradicionalmente resistentes. Su desarrollo ha revolucionado el tratamiento de infecciones fúngicas complejas y resistentes.
+            </p>
+            
+            <div class="bg-emerald-900/30 border border-emerald-500/50 rounded-lg p-4 mb-6">
+                <h4 class="text-lg font-semibold text-emerald-300 mb-2">Ventajas Únicas del Voriconazol</h4>
+                <p class="text-emerald-100 text-sm">
+                    Presenta actividad frente a C. krusei y la mayoría de cepas de C. albicans y C. glabrata con sensibilidad reducida a fluconazol. Es activo contra hongos resistentes a anfotericina B, como Aspergillus terreus y P. boydii. Su excelente penetración en sistema nervioso central y otros tejidos lo convierte en una opción privilegiada para infecciones del SNC.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                <div class="bg-teal-900/30 border border-teal-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-teal-300 mb-3">Espectro de Actividad Ampliado</h4>
+                    <ul class="text-teal-100 space-y-1 text-sm">
+                        <li>• Especies de Candida (incluyendo C. krusei)</li>
+                        <li>• Cryptococcus neoformans</li>
+                        <li>• Género Trichosporon</li>
+                        <li>• Género Aspergillus</li>
+                        <li>• Género Fusarium</li>
+                        <li>• Hongos dermatiáceos</li>
+                        <li>• Patógenos dimórficos endémicos</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-orange-900/30 border border-orange-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-orange-300 mb-3">Efectos Adversos Característicos</h4>
+                    <ul class="text-orange-100 space-y-1 text-sm">
+                        <li>• Alteraciones visuales transitorias (~30%)</li>
+                        <li>• Anomalías enzimas hepáticas</li>
+                        <li>• Reacciones cutáneas</li>
+                        <li>• Alucinaciones o confusión</li>
+                        <li>• Interacciones con sistema P-450</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-rose-900/30 border border-rose-500/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-rose-300 mb-2">Indicaciones Clínicas Primarias</h4>
+                <p class="text-rose-100 text-sm">
+                    La indicación principal de voriconazol es el tratamiento de aspergilosis invasiva y candidiasis masiva. Ha sido aprobado para infecciones por P. boydii y especies del género Fusarium en pacientes con intolerancia o resistencia a otros antifúngicos. Su eficacia se ha demostrado en diversas formas de candidiasis y en el tratamiento de infecciones por patógenos emergentes o resistentes, incluyendo abscesos cerebrales por Aspergillus y P. boydii.
+                </p>
+            </div>
+        </div>
+
+        <!-- Patologías Tratadas -->
+        <div class="glass-dark rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-amber-400 flex items-center">
+                <span class="w-3 h-3 bg-amber-400 rounded-full mr-3"></span>
+                Patologías y Manifestaciones Clínicas
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-6">
+                Los azoles cubren un amplio espectro de infecciones fúngicas, desde candidiasis superficiales hasta micosis sistémicas potencialmente mortales. La elección del azol específico depende del patógeno involucrado, la localización de la infección, el estado inmunológico del paciente y la presencia de resistencia antifúngica.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-blue-900/40 border border-blue-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-bold text-blue-300 mb-3">Candidiasis</h4>
+                    <p class="text-blue-100 text-sm mb-3">
+                        Desde formas mucocutáneas hasta candidemia sistémica. Los triazoles son primera línea, con fluconazol para especies sensibles y voriconazol para cepas resistentes como C. krusei.
+                    </p>
+                    <div class="text-xs text-blue-200">
+                        <strong>Manifestaciones:</strong> Candidiasis oral, esofágica, vulvovaginal, candidemia, endocarditis
+                    </div>
+                </div>
+                
+                <div class="bg-purple-900/40 border border-purple-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-bold text-purple-300 mb-3">Criptococosis</h4>
+                    <p class="text-purple-100 text-sm mb-3">
+                        Infección por Cryptococcus neoformans, especialmente en pacientes inmunocomprometidos. Fluconazol es el tratamiento de elección para meningitis criptocócica.
+                    </p>
+                    <div class="text-xs text-purple-200">
+                        <strong>Manifestaciones:</strong> Meningitis, neumonía, lesiones cutáneas, infección diseminada
+                    </div>
+                </div>
+                
+                <div class="bg-green-900/40 border border-green-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-bold text-green-300 mb-3">Aspergilosis</h4>
+                    <p class="text-green-100 text-sm mb-3">
+                        Infección por Aspergillus spp. Voriconazol es primera línea para aspergilosis invasiva, con itraconazol como alternativa en formas menos severas.
+                    </p>
+                    <div class="text-xs text-green-200">
+                        <strong>Manifestaciones:</strong> Aspergilosis invasiva pulmonar, sinusal, cerebral, diseminada
+                    </div>
+                </div>
+                
+                <div class="bg-yellow-900/40 border border-yellow-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-bold text-yellow-300 mb-3">Micosis Endémicas</h4>
+                    <p class="text-yellow-100 text-sm mb-3">
+                        Histoplasmosis, blastomicosis, coccidioidomicosis. Itraconazol es primera línea para formas no meníngeas, fluconazol para meningitis por Coccidioides.
+                    </p>
+                    <div class="text-xs text-yellow-200">
+                        <strong>Manifestaciones:</strong> Neumonía, meningitis, lesiones cutáneas, infección diseminada
+                    </div>
+                </div>
+                
+                <div class="bg-red-900/40 border border-red-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-bold text-red-300 mb-3">Dermatofitosis</h4>
+                    <p class="text-red-100 text-sm mb-3">
+                        Infecciones cutáneas por dermatofitos. Itraconazol y fluconazol son efectivos para formas extensas o refractarias al tratamiento tópico.
+                    </p>
+                    <div class="text-xs text-red-200">
+                        <strong>Manifestaciones:</strong> Tiña del cuero cabelludo, corporal, de las uñas, del pie
+                    </div>
+                </div>
+                
+                <div class="bg-pink-900/40 border border-pink-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-bold text-pink-300 mb-3">Esporotricosis</h4>
+                    <p class="text-pink-100 text-sm mb-3">
+                        Infección por Sporothrix schenckii. Itraconazol es el fármaco de elección para formas linfocutáneas y cutáneas localizadas.
+                    </p>
+                    <div class="text-xs text-pink-200">
+                        <strong>Manifestaciones:</strong> Lesiones linfocutáneas, cutáneas fijas, pulmonares, diseminadas
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consideraciones Especiales -->
+        <div class="glass rounded-2xl p-6">
+            <h3 class="text-2xl font-bold mb-4 text-indigo-400 flex items-center">
+                <span class="w-3 h-3 bg-indigo-400 rounded-full mr-3"></span>
+                Consideraciones Terapéuticas Especiales
+            </h3>
+            <p class="text-gray-100 leading-relaxed mb-6">
+                La terapia con azoles requiere consideraciones especiales regarding resistencia emergente, interacciones farmacológicas y monitoreo de efectos adversos. La resistencia puede desarrollarse durante el tratamiento, especialmente en terapias prolongadas o en pacientes inmunocomprometidos.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-cyan-900/30 border border-cyan-500/50 rounded-lg p-4">
+                    <h4 class="text-lg font-semibold text-cyan-300 mb-3">Resistencia Antifúngica</h4>
+                    <p class="text-cyan-100 text-sm mb-3">
+                        La resistencia puede ser intrínseca (C. krusei a fluconazol) o adquirida durante el tratamiento. Es más común en pacientes con exposición prolongada a azoles y en especies como C. glabrata. El monitoreo microbiológico es esencial

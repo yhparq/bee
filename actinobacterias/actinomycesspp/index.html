@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actinomyces - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+            min-height: 100vh;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .glass-header {
+            background: rgba(220, 38, 38, 0.35);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(220, 38, 38, 0.4);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+        }
+        
+        .border-glow {
+            border: 2px solid rgba(220, 38, 38, 0.4);
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.3);
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 0;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .content-box:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(220, 38, 38, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .chronic-infection {
+            background-color: rgba(251, 191, 36, 0.25);
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .granulomatous-lesion {
+            background-color: rgba(147, 51, 234, 0.25);
+            border-color: rgba(147, 51, 234, 0.4);
+        }
+
+        .sulfur-granules {
+            background-color: rgba(34, 197, 94, 0.25);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .endogenous-infection {
+            background-color: rgba(59, 130, 246, 0.25);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .cervicofacial-form {
+            background-color: rgba(245, 101, 101, 0.25);
+            border-color: rgba(245, 101, 101, 0.4);
+        }
+
+        .species-table {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            background: rgba(220, 38, 38, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-row {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .table-row:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6">
+    <div class="w-full max-w-none">
+        <!-- Header -->
+        <div class="glass-header rounded-3xl p-8 mb-8 text-center border-glow">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-glow">Actinomyces</h1>
+            <p class="text-xl md:text-2xl text-red-100">Bacterias grampositivas anaerobias no formadoras de esporas - Agentes de actinomicosis</p>
+        </div>
+
+        <!-- Contenido principal sin espacios laterales -->
+        <div class="space-y-8">
+            
+            <!-- Fisiología y Estructura -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Fisiología y Estructura
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Características morfológicas distintivas:</strong> Los microorganismos pertenecientes al género Actinomyces son bacilos grampositivos anaerobios facultativos o anaerobios estrictos que presentan una morfología única. En las muestras clínicas o cuando se aislan en cultivo forman habitualmente delicados filamentos o hifas que recuerdan a los de los hongos, razón por la cual fueron inicialmente confundidos con organismos fúngicos y de ahí deriva el nombre de actinomicosis (micosis de Actinomyces).</p>
+                        
+                        <p><strong class="text-red-200">Naturaleza bacteriana verdadera:</strong> A pesar de su apariencia filamentosa semejante a los hongos, estos microorganismos son bacterias verdaderas debido a que carecen de mitocondrias y membrana nuclear, se reproducen por fisión binaria simple y se inhiben con penicilina, pero no con los antibióticos antifúngicos. Esta distinción es crucial para el diagnóstico diferencial y el tratamiento apropiado de las infecciones que causan.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Especies clínicamente relevantes</p>
+                            <div class="species-table">
+                                <div class="table-header p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-red-100 font-bold">
+                                        <div>Especie</div>
+                                        <div>Requerimientos de Oxígeno</div>
+                                        <div>Localización Principal</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">A. israelii</div>
+                                        <div>Anaerobio facultativo</div>
+                                        <div>Cavidad bucal, tracto digestivo</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">A. meyeri</div>
+                                        <div>Anaerobio estricto</div>
+                                        <div>Tracto respiratorio superior</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">A. naeslundii</div>
+                                        <div>Anaerobio facultativo</div>
+                                        <div>Cavidad bucal</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">A. odontolyticus</div>
+                                        <div>Anaerobio facultativo</div>
+                                        <div>Cavidad bucal, dental</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-red-200">A. viscosus</div>
+                                        <div>Anaerobio facultativo</div>
+                                        <div>Tracto genital femenino</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p><strong class="text-red-200">Características de crecimiento:</strong> Una característica importante es que no son acidorresistentes, lo que los diferencia de las especies de Nocardia de morfología semejante. Crecen lentamente en cultivos de laboratorio y suelen producir infecciones crónicas que se desarrollan con lentitud a lo largo de semanas o meses. Sólo A. meyeri es anaerobio estricto, mientras que las otras especies crecen mejor en condiciones anaerobias pero pueden desarrollarse en presencia de oxígeno.</p>
+
+                        <p><strong class="text-red-200">Diferenciación con Nocardia:</strong> Es fundamental distinguir Actinomyces de Nocardia, ya que aunque ambos géneros presentan morfología filamentosa, Nocardia es acidorresistente, aerobio, y se encuentra típicamente en el suelo, mientras que Actinomyces no es acidorresistente, es anaerobio o anaerobio facultativo, y forma parte de la flora normal humana. Esta distinción tiene implicaciones importantes para el diagnóstico, tratamiento y pronóstico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patogenia e Inmunidad -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Patogenia e Inmunidad
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Colonización normal del hospedador:</strong> Los actinomicetos colonizan naturalmente las vías respiratorias superiores, el aparato digestivo y el aparato genital femenino como parte de la microflora normal. Estas bacterias no están normalmente presentes en la superficie cutánea, lo que explica por qué las infecciones cutáneas primarias por Actinomyces son extremadamente raras y generalmente resultan de extensión desde focos internos.</p>
+
+                        <div class="content-box endogenous-infection">
+                            <p class="text-lg font-semibold text-blue-200 mb-3">Bajo potencial de virulencia</p>
+                            <p>Los microorganismos tienen un bajo potencial de virulencia intrínseca y únicamente provocan enfermedad cuando las barreras mucosas normales se alteran por traumatismos, cirugía o infección coexistente. Esta característica explica por qué la actinomicosis es relativamente infrecuente a pesar de que estos microorganismos forman parte de la flora normal de muchos individuos sanos.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Desarrollo de lesiones granulomatosas:</strong> La enfermedad producida por Actinomyces se conoce como actinomicosis y se caracteriza por el desarrollo de lesiones granulomatosas crónicas que se tornan supurativas y dan lugar a abscesos conectados entre sí mediante fístulas. Este patrón de diseminación por contigüidad es característico y diferencia la actinomicosis de muchas otras infecciones bacterianas que tienden a diseminarse por vía hematógena o linfática.</p>
+
+                        <div class="content-box sulfur-granules">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Gránulos de azufre característicos</p>
+                            <p>En los abscesos y en los tractos fistulosos se constata frecuentemente la presencia de colonias macroscópicas de microorganismos que remedan granos de arena. Estas colonias, llamadas gránulos de azufre por su aspecto amarillo o naranja característico, son masas de microorganismos filamentosos unidos entre sí por fosfato cálcico. Los gránulos de azufre son prácticamente patognomónicos de actinomicosis y su identificación es crucial para el diagnóstico.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Patrón de inflamación crónica:</strong> Las zonas de supuración se rodean de un tejido fibroso de granulación, lo que confiere una consistencia dura o leñosa a la superficie que recubre los tejidos afectados. Esta fibrosis extensa es característica de la actinomicosis y contribuye a la dificultad del tratamiento, ya que los antibióticos pueden tener dificultad para penetrar en estas áreas fibróticas densas.</p>
+
+                        <p><strong class="text-red-200">Invasión por contigüidad:</strong> Una característica fundamental de la patogénesis de Actinomyces es su tendencia a invadir los tejidos por contigüidad, cruzando los planos anatómicos normales y creando tractos fistulosos complejos. Esta capacidad de invasión directa explica por qué las infecciones por Actinomyces pueden afectar múltiples órganos y sistemas de manera simultánea, especialmente cuando el diagnóstico y tratamiento se retrasan.</p>
+
+                        <div class="content-box granulomatous-lesion">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Respuesta inmune del hospedador</p>
+                            <p>La respuesta inmune característica incluye la formación de granulomas con células epitelioides, células gigantes multinucleadas, y infiltrado inflamatorio crónico. Esta respuesta granulomatosa puede ser similar a la observada en tuberculosis u otras infecciones granulomatosas, lo que a veces complica el diagnóstico diferencial histopatológico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Manifestaciones Clínicas
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box cervicofacial-form">
+                            <p class="text-lg font-semibold text-orange-200 mb-3">Actinomicosis Cervicofacial</p>
+                            <p>La mayoría de los casos de actinomicosis son de tipo cervicofacial, representando aproximadamente el 50-65% de todos los casos. La enfermedad puede presentarse como una infección piógena aguda, pero más frecuentemente se manifiesta como un cuadro de evolución lenta y relativamente indoloro que puede confundirse inicialmente con una neoplasia. El hallazgo de inflamación tisular con fibrosis y cicatrización, así como la aparición de fístulas de drenaje a lo largo del ángulo de la mandíbula y del cuello, debe alertar al médico sobre la posibilidad de actinomicosis.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Actinomicosis torácica:</strong> Los síntomas de la actinomicosis torácica son caracteristicamente inespecíficos, lo que frecuentemente retrasa el diagnóstico. Se pueden formar abscesos en el tejido pulmonar en la etapa inicial del proceso infeccioso, y posteriormente la enfermedad se disemina a los tejidos adyacentes conforme progresa. La invasión puede extenderse através de la pleura hacia la pared torácica, costillas, y ocasionalmente hacia el mediastino, creando un patrón de diseminación complejo que puede simular malignidad.</p>
+
+                        <p><strong class="text-red-200">Actinomicosis abdominal:</strong> La actinomicosis abdominal representa una forma particularmente desafiante de la enfermedad ya que se puede extender por todo el abdomen y podría llegar a afectar prácticamente cualquier órgano intraabdominal. La enfermedad típicamente comienza en el tracto gastrointestinal, especialmente el ciego y el apéndice, y se extiende por contigüidad hacia estructuras adyacentes incluyendo la pared abdominal, órganos pélvicos, y retroperitoneo.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Actinomicosis pélvica</p>
+                            <p>La actinomicosis pélvica puede aparecer como una forma relativamente benigna de vaginitis, especialmente en mujeres portadoras de dispositivos intrauterinos, o más frecuentemente puede provocar una notable destrucción de tejidos con formación de abscesos tuboováricos u obstrucción ureteral. La asociación con dispositivos intrauterinos es bien reconocida, y estos casos pueden ser particularmente difíciles de diagnosticar debido a la similitud con enfermedad inflamatoria pélvica de otras etiologías.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Actinomicosis del sistema nervioso central:</strong> La manifestación más frecuente de la actinomicosis del sistema nervioso central es un absceso cerebral solitario, pero también se pueden observar meningitis, empiema subdural y abscesos epidurales. Estas formas neurológicas representan generalmente la diseminación hematógena desde otros tejidos infectados, como los pulmones, y tienen un pronóstico más reservado debido a la dificultad del tratamiento en el sistema nervioso central.</p>
+
+                        <div class="content-box chronic-infection">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Patrón de presentación característico</p>
+                            <p>Independientemente de la localización, la actinomicosis tiende a presentarse como una infección crónica indolente con formación de masas induradas, fístulas que drenan material purulento, y un curso clínico prolongado. La fiebre puede estar ausente o ser intermitente, y los síntomas constitucionales son generalmente leves, lo que puede llevar a retrasos significativos en el diagnóstico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico de Laboratorio -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Métodos de Diagnóstico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Desafíos en la confirmación diagnóstica:</strong> La confirmación en el laboratorio de la actinomicosis resulta a menudo complicada y requiere un enfoque meticuloso. Se debe tener especial cuidado durante la recogida de las muestras clínicas con el fin de evitar su contaminación por especies de Actinomyces que forman parte de la población bacteriana normal de las superficies mucosas, ya que no se puede determinar el significado clínico de las cepas aisladas de muestras contaminadas.</p>
+
+                        <div class="content-box sulfur-granules">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Importancia de los gránulos de azufre</p>
+                            <p>Puesto que los microorganismos se concentran en los gránulos de azufre y escasean en los tejidos afectados circundantes, se debe recoger una gran cantidad de tejido o de pus para maximizar las posibilidades de aislamiento. Si se detectan gránulos de azufre en una fístula o en un tejido, el gránulo se debe aplastar entre dos portaobjetos de cristal para ser teñido con Gram y observado al microscopio. Se puede apreciar la presencia de bacilos grampositivos delgados y ramificados característicos en la periferia de los gránulos.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Requisitos especiales de cultivo:</strong> Los actinomicetos son microorganismos exigentes que crecen lentamente en condiciones anaerobias, y el aislamiento de estas bacterias puede requerir un período de incubación de 2 o más semanas. Esta lentitud de crecimiento frecuentemente resulta en que los cultivos sean descartados prematuramente como negativos antes de que el crecimiento sea aparente, contribuyendo a la dificultad diagnóstica.</p>
+
+                        <p><strong class="text-red-200">Morfología colonial característica:</strong> Las colonias de Actinomyces son blancas y tienen una superficie en forma de cúpula que se puede tornar irregular después de la incubación durante una semana o más, desarrollando una apariencia que recuerda a la parte superior de una muela dental. Esta morfología colonial distintiva, conocida como "molar tooth" en inglés, es característica del género y ayuda en la identificación preliminar.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Diferenciación de especies</p>
+                            <p>Las especies individuales de Actinomyces se pueden diferenciar mediante pruebas bioquímicas específicas; sin embargo, este procedimiento puede ser prolongado y técnicamente demandante. Para la mayoría de propósitos clínicos, generalmente es suficiente determinar que la cepa pertenece al género Actinomyces, ya que el tratamiento es similar para todas las especies y la diferenciación específica raramente cambia el manejo clínico.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Interpretación de hemocultivos:</strong> La recuperación de actinomicetos a partir de hemocultivos se debe evaluar de manera muy cuidadosa y en el contexto clínico apropiado. La mayor parte de las cepas aisladas de sangre representa una bacteriemia temporal carente de significación clínica procedente de la bucofaringe o el aparato digestivo, especialmente después de procedimientos dentales o manipulación del tracto gastrointestinal. Si la cepa tiene relevancia clínica verdadera, se deben obtener indicios claros de daño tisular y enfermedad invasiva.</p>
+
+                        <div class="content-box chronic-infection">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Métodos diagnósticos complementarios</p>
+                            <p>El diagnóstico histopatológico puede ser útil cuando se observan gránulos de azufre en tejidos, mostrando la morfología filamentosa característica rodeada de inflamación granulomatosa. Los métodos de biología molecular, aunque no están ampliamente disponibles, pueden ser útiles en casos difíciles donde el cultivo es negativo pero la sospecha clínica es alta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Tratamiento y Manejo Clínico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-red-200">Enfoque terapéutico dual:</strong> El tratamiento exitoso de la actinomicosis implica invariablemente la combinación del desbridamiento quirúrgico de los tejidos afectados y la administración prolongada de antibióticos. Ninguna de estas modalidades por sí sola es generalmente suficiente para lograr la curación, especialmente en casos con enfermedad extensa o fibrosis significativa que limita la penetración de los antibióticos.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Terapia antibiótica prolongada</p>
+                            <p>Las especies pertenecientes al género Actinomyces son uniformemente sensibles a penicilina, que se considera el antibiótico de elección para el tratamiento de la actinomicosis. La penicilina G intravenosa en dosis altas (18-24 millones de unidades diarias) seguida de penicilina oral es el régimen estándar. Como alternativas efectivas se pueden utilizar eritromicina y clindamicina, especialmente en pacientes alérgicos a penicilina. Es importante destacar que la mayoría de las especies es resistente a metronidazol y las tetraciclinas tienen una actividad variable e impredecible.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Duración del tratamiento:</strong> El tratamiento antibiótico debe ser prolongado, típicamente de 4 a 12 meses, debido a la naturaleza crónica de la infección, la fibrosis extensa que limita la penetración de los antibióticos, y la tendencia de la enfermedad a recidivar si el tratamiento es inadecuado o insuficientemente prolongado. La duración exacta debe individualizarse basándose en la respuesta clínica, la extensión de la enfermedad, y la resolución de las manifestaciones radiológicas.</p>
+
+                        <div class="content-box granulomatous-lesion">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Manejo quirúrgico</p>
+                            <p>Se debe sospechar la existencia de un foco sin drenaje adecuado en los pacientes que no parecen responder al tratamiento prolongado con antibióticos apropiados. En estos casos, la intervención quirúrgica para drenaje, desbridamiento, o resección de tejidos necróticos o fibróticos puede ser necesaria para lograr la curación. La cirugía es especialmente importante en casos con abscesos grandes, fístulas complejas, o compresión de estructuras vitales.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Pronóstico y respuesta al tratamiento:</strong> A pesar de la naturaleza crónica y destructiva de la enfermedad, la respuesta clínica suele ser favorable incluso en los pacientes que han sufrido una destrucción extensa de los tejidos, siempre que se inicie un tratamiento apropiado y se mantenga durante el tiempo adecuado. El pronóstico es generalmente bueno con tratamiento apropiado, aunque puede quedar algún grado de fibrosis residual o deformidad anatómica.</p>
+
+                        <p><strong class="text-red-200">Monitoreo del tratamiento:</strong> Los pacientes requieren seguimiento clínico estrecho durante el tratamiento prolongado, incluyendo evaluación de la respuesta clínica, tolerancia a los antibióticos, y resolución de las manifestaciones radiológicas. Los estudios de imagen seriados pueden ser útiles para monitorear la respuesta al tratamiento y detectar complicaciones o recidivas tempranamente.</p>
+
+                        <div class="content-box chronic-infection">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Factores que afectan la respuesta</p>
+                            <p>La respuesta al tratamiento puede verse afectada por varios factores incluyendo la localización y extensión de la enfermedad, la presencia de cuerpos extraños (como dispositivos intrauterinos), el estado inmunológico del paciente, y la oportunidad del diagnóstico y tratamiento. Los casos con enfermedad del sistema nervioso central o diseminación extensa pueden requerir tratamientos más prolongados y agresivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epidemiología y Prevención -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-red-200 mb-6 border-b-2 border-red-300 pb-3 text-glow">
+                        Epidemiología y Prevención
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box endogenous-infection">
+                            <p class="text-lg font-semibold text-blue-200 mb-3">Naturaleza endógena de la infección</p>
+                            <p>La actinomicosis es caracteristicamente una infección endógena en la que no existen indicios de transmisión de persona a persona, ni del comienzo de la enfermedad a partir de un foco externo como el suelo o el agua. Esto contrasta marcadamente con infecciones por otros actinomicetos como Nocardia, que típicamente se adquieren del ambiente. Esta naturaleza endógena significa que la prevención se enfoca en evitar los factores predisponentes más que en medidas de control de transmisión.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Clasificación según órganos afectados:</strong> La enfermedad se clasifica epidemiológicamente según los órganos que afecta, cada forma con factores predisponentes específicos. Las infecciones cervicofaciales afectan característicamente a individuos con higiene bucodental deficiente, o bien a aquellos que han sido sometidos a un procedimiento dental invasivo o han sufrido un traumatismo bucal. En estos pacientes, los microorganismos que están presentes normalmente en la cavidad bucal invaden los tejidos traumatizados e inician el proceso infeccioso.</p>
+
+                        <p><strong class="text-red-200">Factores predisponentes respiratorios:</strong> Los pacientes con infecciones torácicas tienen generalmente antecedentes de aspiración pulmonar, con lo que la enfermedad afecta en una primera fase a los pulmones y posteriormente se extiende hacia los tejidos adyacentes. La aspiración puede ocurrir en el contexto de alcoholismo, disfagia, alteraciones del nivel de conciencia, o procedimientos que comprometan los mecanismos de protección de la vía aérea.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Actinomicosis abdominal y pélvica</p>
+                            <p>Las infecciones abdominales suelen ocurrir en sujetos que han sido sometidos a una intervención quirúrgica digestiva o han sufrido un traumatismo intestinal que comprometa la integridad de la mucosa. La infección pélvica puede ser una manifestación secundaria de la actinomicosis abdominal por extensión directa, o puede ser una infección primaria en una mujer portadora de un dispositivo intrauterino, especialmente si ha sido mantenido por períodos prolongados.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Diseminación hematógena:</strong> Las infecciones del sistema nervioso central representan generalmente la diseminación hematógena desde otros tejidos infectados, como los pulmones, en lugar de infección primaria del sistema nervioso. Esta forma de diseminación es relativamente infrecuente pero conlleva un pronóstico más serio debido a la dificultad del tratamiento en el sistema nervioso central.</p>
+
+                        <div class="content-box cervicofacial-form">
+                            <p class="text-lg font-semibold text-orange-200 mb-3">Medidas preventivas específicas</p>
+                            <p>El mantenimiento de una buena higiene bucodental constituye la medida preventiva más importante para prevenir la actinomicosis cervicofacial. El uso de profilaxis antibiótica adecuada cuando se realizan maniobras invasivas en la cavidad bucal o en el tubo digestivo puede disminuir significativamente el riesgo de estas infecciones. En mujeres con dispositivos intrauterinos, el seguimiento regular y el reemplazo oportuno del dispositivo pueden prevenir la actinomicosis pélvica.</p>
+                        </div>
+
+                        <p><strong class="text-red-200">Poblaciones de riesgo:</strong> Ciertos grupos de pacientes tienen mayor riesgo de desarrollar actinomicosis, incluyendo individuos con higiene dental deficiente, alcoholismo crónico, immunosupresión, diabetes mellitus, o condiciones que predispongan a aspiración. El reconocimiento de estos factores de riesgo es importante para la prevención primaria y para mantener un alto índice de sospecha clínica en pacientes que desarrollan infecciones crónicas indolentes.</p>
+
+                        <p><strong class="text-red-200">Prevención iatrogénica:</strong> La prevención de la actinomicosis iatrogénica incluye técnicas quirúrgicas apropiadas para minimizar la contaminación con flora endógena, uso de profilaxis antibiótica cuando esté indicada, y manejo cuidadoso de dispositivos intrauterinos. La educación del paciente sobre los signos y síntomas de infección puede facilitar el diagnóstico temprano y mejorar los resultados del tratamiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro resumen de aspectos destacados -->
+        <div class="glass rounded-3xl p-8 mt-12 border-glow">
+            <h2 class="text-3xl font-bold text-red-200 mb-6 text-center text-glow">Aspectos Clínicos Fundamentales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="content-box sulfur-granules">
+                    <h3 class="font-bold text-green-300 mb-3 text-lg">Gránulos de Azufre</h3>
+                    <p class="text-white text-sm leading-relaxed">Colonias macroscópicas amarillas patognomónicas compuestas de microorganismos filamentosos unidos por fosfato cálcico, clave para el diagnóstico.</p>
+                </div>
+                <div class="content-box chronic-infection">
+                    <h3 class="font-bold text-yellow-300 mb-3 text-lg">Infección Crónica Indolente</h3>
+                    <p class="text-white text-sm leading-relaxed">Evolución lenta con formación de fístulas, fibrosis extensa y diseminación por contigüidad que simula malignidad.</p>
+                </div>
+                <div class="content-box endogenous-infection">
+                    <h3 class="font-bold text-blue-300 mb-3 text-lg">Naturaleza Endógena</h3>
+                    <p class="text-white text-sm leading-relaxed">Infección por flora normal propia sin transmisión persona-persona, requiriendo ruptura de barreras mucosas para causar enfermedad.</p>
+                </div>
+                <div class="content-box granulomatous-lesion">
+                    <h3 class="font-bold text-purple-300 mb-3 text-lg">Tratamiento Prolongado</h3>
+                    <p class="text-white text-sm leading-relaxed">Requiere combinación de cirugía y antibióticos por 4-12 meses, con excelente pronóstico si se trata adecuadamente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer informativo -->
+        <div class="glass rounded-3xl p-8 mt-8 text-center border-glow">
+            <p class="text-red-100 text-lg leading-relaxed">
+                <strong class="text-glow">Importancia clínica:</strong> Actinomyces representa un grupo único de bacterias que, 
+                a pesar de su bajo potencial de virulencia, pueden causar infecciones devastadoras cuando las barreras 
+                naturales del hospedador se comprometen. Su capacidad de formar gránulos de azufre patognomónicos, 
+                crear fístulas complejas, y diseminarse por contigüidad cruzando planos anatómicos hace que el diagnóstico 
+                temprano sea crucial. La naturaleza endógena de la infección enfatiza la importancia de la prevención 
+                mediante el mantenimiento de una buena higiene, especialmente dental, y el uso apropiado de profilaxis 
+                antibiótica en procedimientos invasivos. Con el reconocimiento temprano y el tratamiento prolongado 
+                apropiado, incluso casos con destrucción tisular extensa pueden tener excelentes resultados clínicos.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

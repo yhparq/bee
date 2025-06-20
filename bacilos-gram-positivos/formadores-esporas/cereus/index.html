@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacillus cereus - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+            min-height: 100vh;
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background: linear-gradient(135deg, #064e3b 0%, #059669 100%); }
+            50% { background: linear-gradient(135deg, #14532d 0%, #22c55e 100%); }
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .glass-header {
+            background: rgba(16, 185, 129, 0.3);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .glass-card:nth-child(1) { animation-delay: 0.1s; }
+        .glass-card:nth-child(2) { animation-delay: 0.2s; }
+        .glass-card:nth-child(3) { animation-delay: 0.3s; }
+        .glass-card:nth-child(4) { animation-delay: 0.4s; }
+        .glass-card:nth-child(5) { animation-delay: 0.5s; }
+        .glass-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .toxin-animation {
+            animation: toxinFlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes toxinFlow {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(1deg) scale(1.05); }
+            75% { transform: rotate(-1deg) scale(0.95); }
+        }
+        
+        .spore-float {
+            animation: sporeFloat 6s ease-in-out infinite;
+        }
+        
+        @keyframes sporeFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+        
+        .border-glow {
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
+        
+        .food-pulse {
+            animation: foodPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes foodPulse {
+            0%, 100% { background-color: rgba(251, 191, 36, 0.2); }
+            50% { background-color: rgba(251, 191, 36, 0.3); }
+        }
+        
+        .danger-pulse {
+            animation: dangerPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes dangerPulse {
+            0%, 100% { background-color: rgba(239, 68, 68, 0.2); }
+            50% { background-color: rgba(239, 68, 68, 0.3); }
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .comparison-table {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            background: rgba(16, 185, 129, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-row {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .table-row:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="glass-header rounded-2xl p-8 mb-8 text-center border-glow">
+            <h1 class="text-4xl font-bold text-white mb-4 text-glow">Bacillus cereus</h1>
+            <p class="text-xl text-emerald-100 spore-float">Bacilo grampositivo esporulado - Patógeno oportunista y agente de intoxicación alimentaria</p>
+        </div>
+
+        <!-- Cuadro resumen principal -->
+        <div class="glass-card rounded-xl p-6 mb-8">
+            <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow text-center">
+                Resumen de Bacillus cereus
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="info-box">
+                    <h3 class="font-bold text-emerald-300 mb-2">Fisiología y Estructura</h3>
+                    <p class="text-white text-sm">Bacilos grampositivos esporulados, anaerobios facultativos con requerimientos de crecimiento no exigentes. Presenta β-hemólisis en agar sangre de carnero.</p>
+                </div>
+                <div class="info-box">
+                    <h3 class="font-bold text-emerald-300 mb-2">Factores de Virulencia</h3>
+                    <p class="text-white text-sm">Produce enterotoxina termoestable y termolábil, cereolisina, fosfolipasa C. Las esporas sobreviven en el suelo y resisten el calor.</p>
+                </div>
+                <div class="info-box">
+                    <h3 class="font-bold text-emerald-300 mb-2">Distribución</h3>
+                    <p class="text-white text-sm">Microorganismo ubicuo presente en prácticamente todos los ambientes. Patógeno oportunista con capacidad de virulencia relativamente baja.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de contenido principal -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- Patogenia -->
+            <div class="glass-card rounded-xl p-6 toxin-animation">
+                <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow">
+                    Patogenia
+                </h2>
+                <div class="text-white space-y-4">
+                    <div class="info-box food-pulse">
+                        <p class="text-lg font-semibold text-yellow-200 mb-2">Gastroenteritis mediada por enterotoxinas</p>
+                        <p>La gastroenteritis producida por B. cereus está mediada por una de dos enterotoxinas distintas. La enterotoxina termoestable y resistente a la proteólisis produce la forma emética de la enfermedad, caracterizada por vómitos y náuseas. Por otro lado, la toxina termolábil causa la forma diarreica de la enfermedad. Esta enterotoxina termolábil es similar a las enterotoxinas producidas por Escherichia coli y Vibrio cholerae, estimulando el sistema adenil ciclasa-adenosina monofosfato cíclico de las células epiteliales y originando una diarrea acuosa importante. El mecanismo de acción de la enterotoxina termoestable aún no se conoce completamente.</p>
+                    </div>
+
+                    <div class="info-box danger-pulse">
+                        <p class="text-lg font-semibold text-red-200 mb-2">Infecciones oculares devastadoras</p>
+                        <p>La patogenia de las infecciones oculares por B. cereus no se conoce adecuadamente, pero se han implicado al menos tres toxinas importantes: la toxina necrótica (una enterotoxina termolábil), la cereolisina (una potente hemolisina cuyo nombre deriva del de la especie) y la fosfolipasa C (una potente lecitinasa). Es posible que la rápida destrucción del ojo característica de las infecciones por B. cereus sea consecuencia de la interacción sinérgica de estas toxinas y otros factores aún no identificados.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-emerald-200 mb-2">Infecciones relacionadas con dispositivos</p>
+                        <p>Las especies de Bacillus pueden colonizar de forma transitoria la piel y aislarse en hemocultivos como contaminantes sin significación clínica. Sin embargo, en presencia de un cuerpo extraño intravascular como catéteres o derivaciones, estos microorganismos pueden ser responsables de bacteriemia persistente y signos de septicemia incluyendo fiebre, escalofríos, hipotensión y shock séptico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow">
+                    Manifestaciones Clínicas
+                </h2>
+                <div class="text-white space-y-4">
+                    <div class="info-box food-pulse">
+                        <p class="text-lg font-semibold text-yellow-200 mb-2">Forma Emética (Vómitos)</p>
+                        <p>Se debe al consumo de arroz contaminado. La mayoría de las bacterias muere durante la cocción inicial, pero las esporas termorresistentes sobreviven. Cuando el arroz cocido no se refrigera, las esporas germinan y las bacterias se multiplican rápidamente, liberando enterotoxina termoestable que no se destruye al recalentar. Tras un período de incubación de 1 a 6 horas (media 2 horas), aparece una enfermedad de corta duración (8-10 horas) con vómitos, náuseas y espasmos abdominales. Generalmente no provoca fiebre ni diarrea. Raramente se asocia a insuficiencia hepática fulminante cuando se consume comida con grandes cantidades de toxina.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-orange-200 mb-2">Forma Diarreica</p>
+                        <p>Resulta del consumo de carne, verduras o salsas contaminadas. Se observa un período de incubación más prolongado (más de 6 horas, media 9 horas) durante el cual los microorganismos se multiplican en el aparato digestivo y fabrican la enterotoxina termolábil. Esta enterotoxina origina diarrea, náuseas y espasmos abdominales. La enfermedad se prolonga generalmente de 20 a 36 horas (media 24 horas).</p>
+                    </div>
+
+                    <div class="info-box danger-pulse">
+                        <p class="text-lg font-semibold text-red-200 mb-2">Panoftalmitis</p>
+                        <p>Las infecciones oculares se contraen generalmente posterior a una lesión penetrante y traumática del ojo con un objeto contaminado del suelo. La panoftalmitis por Bacillus es un proceso de progresión rápida que en casi todos los casos termina con la pérdida completa de la percepción de la luz durante las 48 horas siguientes a la lesión. Los adictos a drogas intravenosas pueden contraer infecciones diseminadas con manifestaciones oculares.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-emerald-200 mb-2">Otras Infecciones</p>
+                        <p>Incluyen infecciones de catéteres y derivaciones del sistema nervioso central, endocarditis (más frecuente en drogodependientes intravenosos), neumonitis, bacteriemia y meningitis en pacientes con inmunodepresión grave.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla comparativa de intoxicaciones -->
+            <div class="glass-card rounded-xl p-6 col-span-1 lg:col-span-2">
+                <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow">
+                    Comparación de Intoxicaciones Alimentarias por B. cereus
+                </h2>
+                <div class="comparison-table">
+                    <div class="table-header p-4">
+                        <div class="grid grid-cols-6 gap-4 text-emerald-100 font-bold text-center">
+                            <div>Forma</div>
+                            <div>Alimento</div>
+                            <div>Incubación</div>
+                            <div>Síntomas</div>
+                            <div>Duración</div>
+                            <div>Enterotoxina</div>
+                        </div>
+                    </div>
+                    <div class="table-row p-4">
+                        <div class="grid grid-cols-6 gap-4 text-white text-sm">
+                            <div class="font-semibold text-yellow-200">Emética</div>
+                            <div>Arroz</div>
+                            <div>&lt;6 h (media: 2h)</div>
+                            <div>Vómitos, náuseas, espasmos abdominales</div>
+                            <div>8-10 h (media: 9h)</div>
+                            <div class="text-red-200">Termoestable</div>
+                        </div>
+                    </div>
+                    <div class="table-row p-4">
+                        <div class="grid grid-cols-6 gap-4 text-white text-sm">
+                            <div class="font-semibold text-orange-200">Diarreica</div>
+                            <div>Carne, vegetales</div>
+                            <div>&gt;6 h (media: 9h)</div>
+                            <div>Diarrea, náuseas, espasmos abdominales</div>
+                            <div>20-36 h (media: 24h)</div>
+                            <div class="text-blue-200">Termolábil</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow">
+                    Diagnóstico de Laboratorio
+                </h2>
+                <div class="text-white space-y-4">
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-emerald-200 mb-2">Facilidad de crecimiento</p>
+                        <p>Al igual que B. anthracis, otras especies de Bacillus crecen con facilidad en el laboratorio de microbiología. Para confirmar la existencia de una intoxicación alimentaria, se deben cultivar los alimentos implicados como arroz, carne o verduras, ya que constituyen la fuente primaria de contaminación.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-yellow-200 mb-2">Limitaciones en muestras fecales</p>
+                        <p>No se debe intentar aislar el microorganismo únicamente a partir de muestras del paciente, ya que es frecuente la colonización fecal asintomática. No obstante, el aislamiento del microorganismo en las heces de un grupo de sujetos con relación epidemiológica constituye un indicio de peso para implicar a B. cereus como el agente etiológico de la intoxicación.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-blue-200 mb-2">Detección en sitios estériles</p>
+                        <p>Los microorganismos del género Bacillus crecen rápidamente y se detectan con facilidad mediante tinción de Gram y en cultivos de muestras recogidas de ojos infectados, cultivos de dispositivos intravenosos y otras localizaciones normalmente estériles. Las pruebas de detección de enterotoxinas termolábil y termoestable no se realizan de manera sistemática en la práctica clínica.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento y Prevención -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow">
+                    Tratamiento, Prevención y Control
+                </h2>
+                <div class="text-white space-y-4">
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-green-200 mb-2">Gastroenteritis</p>
+                        <p>Debido a que la evolución de la gastroenteritis por B. cereus es de corta duración y generalmente carece de complicaciones significativas, el tratamiento sintomático es adecuado y suficiente. Se recomienda mantener hidratación adecuada y reposo digestivo según la tolerancia del paciente.</p>
+                    </div>
+
+                    <div class="info-box danger-pulse">
+                        <p class="text-lg font-semibold text-red-200 mb-2">Infecciones invasivas</p>
+                        <p>El tratamiento de otras infecciones por Bacillus se complica por su evolución rápida y progresiva y por la alta incidencia de multirresistencia a fármacos. B. cereus porta genes de resistencia a penicilinas y cefalosporinas. En el tratamiento de estas infecciones se pueden utilizar vancomicina, clindamicina, ciprofloxacino y gentamicina como opciones terapéuticas efectivas. Las penicilinas y cefalosporinas no son efectivas.</p>
+                    </div>
+
+                    <div class="info-box food-pulse">
+                        <p class="text-lg font-semibold text-yellow-200 mb-2">Prevención alimentaria</p>
+                        <p>La intoxicación alimentaria se puede prevenir mediante el consumo rápido de los alimentos después de cocinados y la refrigeración inmediata de la comida sobrante. Es fundamental evitar mantener alimentos cocidos a temperatura ambiente durante períodos prolongados, especialmente arroz y otros cereales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epidemiología -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-emerald-200 mb-4 border-b border-emerald-300 pb-2 text-glow">
+                    Epidemiología
+                </h2>
+                <div class="text-white space-y-4">
+                    <div class="info-box spore-float">
+                        <p class="text-lg font-semibold text-emerald-200 mb-2">Distribución ubicua</p>
+                        <p>B. cereus y otras especies de Bacillus son microorganismos ubicuos que están presentes en prácticamente todos los ambientes naturales, incluyendo suelo, agua, vegetación y alimentos. Esta amplia distribución facilita la contaminación de alimentos y su posterior multiplicación bajo condiciones favorables.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-blue-200 mb-2">Significación clínica variable</p>
+                        <p>El aislamiento de estas bacterias de muestras clínicas sin que exista una enfermedad característica representa generalmente una contaminación carente de relevancia clínica. La interpretación debe realizarse siempre en el contexto clínico del paciente y el tipo de muestra obtenida.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="text-lg font-semibold text-orange-200 mb-2">Grupos de riesgo</p>
+                        <p>Las personas de riesgo incluyen aquellas que consumen comida contaminada con la bacteria (especialmente arroz, carne, vegetales y salsas), las que sufren lesiones penetrantes oculares, y las que reciben inyecciones intravenosas o tienen dispositivos intravasculares permanentes. Los pacientes inmunodeprimidos presentan mayor susceptibilidad a infecciones invasivas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro de especies relacionadas -->
+        <div class="glass rounded-xl p-6 mt-8 border-glow">
+            <h2 class="text-2xl font-bold text-emerald-200 mb-4 text-center text-glow">Otras Especies de Bacillus</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="info-box">
+                    <h3 class="font-bold text-emerald-300 mb-2">B. mycoides</h3>
+                    <p class="text-white text-sm">Miembro del grupo B. cereus. Causa gastroenteritis e infecciones oportunistas. Colonias con morfología rizoide característica.</p>
+                </div>
+                <div class="info-box">
+                    <h3 class="font-bold text-emerald-300 mb-2">B. thuringiensis</h3>
+                    <p class="text-white text-sm">Incluido en el grupo B. cereus. Produce gastroenteritis e infecciones oportunistas. Utilizado como insecticida biológico.</p>
+                </div>
+                <div class="info-box">
+                    <h3 class="font-bold text-emerald-300 mb-2">B. subtilis</h3>
+                    <p class="text-white text-sm">Especie ambiental común. Principalmente causa infecciones oportunistas en pacientes inmunodeprimidos. Raramente patógeno.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer informativo -->
+        <div class="glass rounded-xl p-6 mt-8 text-center border-glow">
+            <p class="text-emerald-100 text-lg">
+                <strong>Nota importante:</strong> Las especies de Bacillus, con excepción de B. anthracis, son fundamentalmente 
+                patógenos oportunistas que tienen una capacidad de virulencia relativamente baja. B. cereus representa 
+                claramente el patógeno más importante del grupo, siendo la gastroenteritis, las infecciones oculares y 
+                las septicemias relacionadas con catéteres las entidades que se observan con mayor frecuencia. La 
+                interpretación clínica del aislamiento debe realizarse siempre considerando el contexto del paciente 
+                y la fuente de la muestra.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

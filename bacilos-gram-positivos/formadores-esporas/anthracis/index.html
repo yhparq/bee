@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacillus anthracis - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+            min-height: 100vh;
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background: linear-gradient(135deg, #134e5e 0%, #71b280 100%); }
+            50% { background: linear-gradient(135deg, #2d5a0b 0%, #4ade80 100%); }
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .glass-header {
+            background: rgba(34, 197, 94, 0.3);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .glass-card:nth-child(1) { animation-delay: 0.1s; }
+        .glass-card:nth-child(2) { animation-delay: 0.2s; }
+        .glass-card:nth-child(3) { animation-delay: 0.3s; }
+        .glass-card:nth-child(4) { animation-delay: 0.4s; }
+        .glass-card:nth-child(5) { animation-delay: 0.5s; }
+        .glass-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .toxin-animation {
+            animation: toxinFlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes toxinFlow {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(1deg) scale(1.05); }
+            75% { transform: rotate(-1deg) scale(0.95); }
+        }
+        
+        .spore-float {
+            animation: sporeFloat 6s ease-in-out infinite;
+        }
+        
+        @keyframes sporeFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+        
+        .border-glow {
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+        }
+        
+        .warning-pulse {
+            animation: warningPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes warningPulse {
+            0%, 100% { background-color: rgba(239, 68, 68, 0.2); }
+            50% { background-color: rgba(239, 68, 68, 0.3); }
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="glass-header rounded-2xl p-8 mb-8 text-center border-glow">
+            <h1 class="text-4xl font-bold text-white mb-4 text-glow">Bacillus anthracis</h1>
+            <p class="text-xl text-green-100 spore-float">Bacilo grampositivo esporulado - Agente causal del carbunco</p>
+        </div>
+
+        <!-- Grid de contenido -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- Estructura y Fisiología -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-green-200 mb-4 border-b border-green-300 pb-2 text-glow">
+                    Estructura y Fisiología
+                </h2>
+                <div class="text-white space-y-4">
+                    <p><strong class="text-green-200">Morfología celular:</strong> B. anthracis se presenta como un microorganismo grande con dimensiones de 1 x 3 a 8 micrometros, disponiéndose de forma aislada o en parejas de bacilos en las muestras clínicas, o bien formando cadenas largas en forma de serpentina característica en los cultivos. Las esporas se observan con facilidad en cultivos de 2 o 3 días de incubación, pero no pueden apreciarse en las muestras clínicas directas, lo que constituye una característica diagnóstica importante.</p>
+                    
+                    <p><strong class="text-green-200">Factores de virulencia principales:</strong> Las cepas virulentas de B. anthracis portan genes que codifican tres componentes proteicos tóxicos localizados en un plásmido de gran tamaño denominado pXO1. Estos componentes incluyen el antígeno protector (PA), el factor del edema (EF) y el factor letal (LF), que individualmente no son tóxicos, pero al combinarse forman potentes toxinas binarias: la toxina del edema resulta de la combinación del antígeno protector con el factor del edema, mientras que la toxina letal se forma por la unión del antígeno protector con el factor letal.</p>
+
+                    <p><strong class="text-green-200">Mecanismo de acción de las toxinas:</strong> El antígeno protector es una proteína de 83 kDa que se une específicamente a receptores presentes en las superficies celulares del organismo hospedador, incluyendo el marcador endotelial tumoral 8 (TEM8) y la proteína de morfogénesis capilar 2 (CMG2). Estos receptores están ampliamente distribuidos en cerebro, corazón, intestino, pulmón, músculo esquelético, páncreas y macrófagos, permitiendo que la toxina del carbunco pueda dañar numerosos tejidos simultáneamente.</p>
+
+                    <p><strong class="text-green-200">Cápsula polipeptídica:</strong> Un segundo factor de virulencia crucial es una prominente cápsula polipeptídica formada por ácido poli-D-glutámico, que se observa en muestras clínicas pero no se produce in vitro a menos que se utilicen condiciones especiales de cultivo. La síntesis de esta cápsula está controlada por tres genes (capA, capB y capC) localizados en un segundo plásmido denominado pXO2, y solo se ha identificado un tipo de cápsula debido a su composición exclusiva de ácido glutámico.</p>
+                </div>
+            </div>
+
+            <!-- Patogenia e Inmunidad -->
+            <div class="glass-card rounded-xl p-6 toxin-animation">
+                <h2 class="text-2xl font-bold text-green-200 mb-4 border-b border-green-300 pb-2 text-glow">
+                    Patogenia e Inmunidad
+                </h2>
+                <div class="text-white space-y-4">
+                    <p><strong class="text-green-200">Mecanismo de entrada celular:</strong> Tras la unión del antígeno protector a sus receptores específicos, las furina proteasas del hospedador degradan esta proteína liberando un pequeño fragmento, pero manteniendo el fragmento de 63 kDa (PA63) en la superficie celular. Los fragmentos PA63 se asocian formando un complejo heptamérico en forma de anillo que actúa como precursor de poro, capaz de unirse a tres moléculas de factor letal y/o factor del edema a través de un mecanismo competitivo.</p>
+
+                    <p><strong class="text-green-200">Actividad de las toxinas:</strong> El factor letal es una metaloproteasa de zinc de 90 kDa capaz de escindir la cinasa de proteínas activadas por mitógenos (MAP) y provocar la muerte celular mediante un mecanismo aún no completamente elucidado. Por su parte, el factor del edema es una adenil ciclasa de 89 kDa que incrementa las concentraciones intracelulares de monofosfato de adenosina cíclico (AMPc) originando el edema característico, y está relacionada con las adenil ciclasas producidas por Bordetella pertussis y Pseudomonas aeruginosa.</p>
+
+                    <p><strong class="text-green-200">Función de la cápsula:</strong> La cápsula polipeptídica inhibe eficazmente la fagocitosis de las células bacterianas en fase de replicación, protegiendo a los microorganismos de la respuesta inmune celular del hospedador. Esta cápsula constituye uno de los principales factores responsables de la virulencia de B. anthracis junto con las toxinas del edema y letal.</p>
+
+                    <p><strong class="text-green-200">Efectos sobre el sistema inmune:</strong> La actividad adenil ciclasa de la toxina del edema origina la acumulación de líquidos característica del carbunco, mientras que la actividad metaloproteasa de la toxina letal estimula la liberación de factor de necrosis tumoral alfa e interleucina 1 beta, así como otras citocinas proinflamatorias por parte de los macrófagos. Además, esta toxina interviene en la lisis de macrófagos en ciertos cultivos celulares, y tanto el factor letal como el factor del edema inhiben activamente el sistema inmunitario del organismo hospedador.</p>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-green-200 mb-4 border-b border-green-300 pb-2 text-glow">
+                    Manifestaciones Clínicas
+                </h2>
+                <div class="text-white space-y-4">
+                    <div class="bg-yellow-600 bg-opacity-20 p-4 rounded-lg border border-yellow-400 border-opacity-30">
+                        <p class="text-lg font-semibold text-yellow-200 mb-2">Carbunco Cutáneo</p>
+                        <p>De forma característica, el carbunco cutáneo comienza con el desarrollo de una pápula indolora en el lugar de la inoculación que se transforma rápidamente en una úlcera rodeada de vesículas para convertirse posteriormente en una escara necrótica característica. El proceso puede acompañarse de signos sistémicos, linfadenopatías dolorosas y edema masivo en la zona afectada. La tasa de mortalidad en pacientes con carbunco cutáneo no tratado alcanza el 20%, pero con tratamiento adecuado el pronóstico es generalmente favorable.</p>
+                    </div>
+
+                    <div class="bg-orange-600 bg-opacity-20 p-4 rounded-lg border border-orange-400 border-opacity-30">
+                        <p class="text-lg font-semibold text-orange-200 mb-2">Carbunco Gastrointestinal</p>
+                        <p>Los síntomas clínicos de la carbuncosis gastrointestinal dependen de la zona anatómica de infección. Cuando los microorganismos invaden la porción superior del tubo digestivo, se forman úlceras en la boca o el esófago, comportando un aumento de las linfadenopatías regionales, edema y septicemia secundaria. Cuando el microorganismo invade el ciego o el íleon terminal, el paciente presenta náuseas, vómitos y malestar general, evolucionando rápidamente hacia una enfermedad sistémica grave. La mortalidad asociada al carbunco digestivo se acerca al 100% si no se trata de manera inmediata y agresiva.</p>
+                    </div>
+
+                    <div class="bg-red-600 bg-opacity-20 p-4 rounded-lg border border-red-400 border-opacity-30 warning-pulse">
+                        <p class="text-lg font-semibold text-red-200 mb-2">Carbunco por Inhalación</p>
+                        <p>A diferencia de las otras formas de carbunco, la carbuncosis por inhalación puede asociarse a un período prolongado de latencia de 2 meses o más durante el cual la persona infectada permanece asintomática. Las esporas pueden permanecer latentes en las fosas nasales o alcanzar las vías respiratorias inferiores, donde los macrófagos alveolares ingieren las esporas y las transportan a los ganglios linfáticos mediastínicos. Los síntomas iniciales son inespecíficos: fiebre, disnea, tos, cefalea, vómitos, escalofríos y dolor abdominal y torácico. La segunda fase es más espectacular, con empeoramiento rápido de la fiebre, edema y adenopatía mediastínica que origina el ensanchamiento mediastínico característico en la radiografía de tórax. Un 50% de los pacientes desarrollan signos meníngeos, y casi todos evolucionan a shock y muerte en los 3 días siguientes al comienzo de los síntomas si no se instaura tratamiento inmediato.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-green-200 mb-4 border-b border-green-300 pb-2 text-glow">
+                    Métodos de Diagnóstico
+                </h2>
+                <div class="text-white space-y-4">
+                    <p><strong class="text-green-200">Características microscópicas:</strong> Las infecciones por B. anthracis se caracterizan por la presencia de concentraciones extremadamente elevadas de microorganismos en las heridas, ganglios linfáticos afectados y sangre, por lo que la detección mediante microscopía y cultivos no representa problema técnico. Los microorganismos aparecen como bacilos grampositivos delgados y largos que se disponen de forma independiente o formando cadenas de gran longitud. Las esporas no aparecen en las muestras clínicas, sino únicamente en cultivos incubados en atmósfera pobre en dióxido de carbono.</p>
+
+                    <p><strong class="text-green-200">Identificación de la cápsula:</strong> Las células de B. anthracis fabrican su cápsula en condiciones in vivo, pero no suelen hacerlo en los cultivos de laboratorio. La cápsula se puede observar mediante tinciones de contraste como la tinta china, donde la cápsula rechaza las partículas de tinta creando un halo claro alrededor de las bacterias, la tinción de azul de metileno (reacción de M'Fadyean) o mediante una prueba con anticuerpo fluorescente directo (DFA) frente al polipéptido capsular específico.</p>
+
+                    <p><strong class="text-green-200">Morfología colonial:</strong> Las colonias cultivadas en agar sangre de carnero son de gran tamaño, carecen de pigmentación y presentan una superficie seca característica de "cristal molido" con bordes irregulares que muestran proyecciones a lo largo de las estrías de inoculación, conocida como morfología de "cabeza de Medusa". Las colonias son relativamente pegajosas y se adhieren al agar de manera que cuando se separan con un asa de siembra el borde se asemeja a la clara de un huevo montada.</p>
+
+                    <p><strong class="text-green-200">Pruebas diferenciales:</strong> A diferencia de B. cereus, las colonias de B. anthracis no son hemolíticas y el microorganismo carece de capacidad de movimiento en las pruebas de movilidad. La identificación definitiva se efectúa en laboratorios de referencia mediante la demostración de la producción de cápsula, lisis por fago gamma o resultados positivos en pruebas de DFA frente a polisacáridos específicos de la pared celular. También se han desarrollado pruebas de amplificación de ácidos nucleicos como la reacción en cadena de la polimerasa (PCR), disponibles comercialmente para confirmación definitiva.</p>
+                </div>
+            </div>
+
+            <!-- Epidemiología -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-green-200 mb-4 border-b border-green-300 pb-2 text-glow">
+                    Epidemiología
+                </h2>
+                <div class="text-white space-y-4">
+                    <p><strong class="text-green-200">Reservorio natural y transmisión:</strong> El carbunco es fundamentalmente una enfermedad que afecta a los herbívoros, infectándose el ser humano como consecuencia de la exposición a animales o productos animales contaminados. La enfermedad constituye un problema grave en países que no llevan a cabo campañas de vacunación animal o no pueden hacerlo, como se observa en la fauna africana. En contraste, las infecciones naturales por B. anthracis se observan excepcionalmente en países desarrollados como Estados Unidos, donde solo se describieron 5 casos entre 1981 y 1999.</p>
+
+                    <p><strong class="text-green-200">Bioterrorismo y guerra bacteriológica:</strong> El riesgo de exposición de poblaciones amplias a este peligroso patógeno se ha incrementado notablemente en la era del bioterrorismo. Diversos países y grupos terroristas independientes han desarrollado programas de guerra bacteriológica utilizando B. anthracis. Los eventos de Sverdlovsk en 1979 en la antigua Unión Soviética (79 casos con 68 muertes) y la contaminación de empleados del Servicio Postal estadounidense en 2001 (11 casos de carbunco por inhalación y 11 cutáneos) han proporcionado información crucial sobre el carbunco adquirido por inhalación.</p>
+
+                    <p><strong class="text-green-200">Vías de infección:</strong> La infección humana por B. anthracis se adquiere por tres vías principales: inoculación, ingestión e inhalación. Aproximadamente el 95% de las infecciones humanas se deben a la inoculación de esporas a través de piel expuesta, ya sea por contacto con tierra contaminada o productos animales infectados como piel, pelo de cabra y lana. La ingestión es muy infrecuente en humanos pero representa una vía frecuente en herbívoros. El carbunco por inhalación, tradicionalmente conocido como "enfermedad de los clasificadores de lana", constituye la vía más probable en el contexto de armas biológicas.</p>
+
+                    <p><strong class="text-green-200">Persistencia ambiental:</strong> La tierra o productos animales contaminados pueden permanecer infectivos durante años debido a la capacidad de B. anthracis de formar esporas altamente resistentes. Se cree que la dosis infecciosa es relativamente baja, aunque depende del estado de preparación de las esporas. Las esporas destinadas a armas biológicas se procesan específicamente para evitar aglutinación y alcanzar las vías respiratorias inferiores, donde pueden ser fagocitadas por macrófagos alveolares e iniciar la replicación bacteriana. No ocurre transmisión horizontal persona a persona porque la replicación se produce en ganglios linfáticos mediastínicos en lugar del árbol broncopulmonar.</p>
+                </div>
+            </div>
+
+            <!-- Tratamiento y Prevención -->
+            <div class="glass-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-green-200 mb-4 border-b border-green-300 pb-2 text-glow">
+                    Tratamiento y Prevención
+                </h2>
+                <div class="text-white space-y-4">
+                    <p><strong class="text-green-200">Tratamiento antimicrobiano:</strong> A diferencia de muchas otras especies de Bacillus, B. anthracis es sensible a penicilina, que tradicionalmente se ha considerado el tratamiento de elección para infecciones sospechosas. Los aislamientos también son sensibles a doxiciclina y ciprofloxacino. Sin embargo, el tratamiento empírico recomendado actualmente se basa en la administración de ciprofloxacino debido a que los genes que codifican resistencia a penicilina y doxiciclina han sido transferidos experimentalmente a B. anthracis. Las cepas son naturalmente resistentes a sulfamidas y cefalosporinas de espectro amplio.</p>
+
+                    <p><strong class="text-green-200">Control de la enfermedad natural:</strong> El control de la enfermedad humana adquirida naturalmente requiere el control de la enfermedad animal, lo que implica la vacunación sistemática del ganado en regiones endémicas, así como la incineración o enterramiento adecuado de animales que hayan muerto por carbunco. La erradicación completa del carbunco es improbable puesto que las esporas pueden existir durante muchos años en el suelo, manteniéndose viables y infectivas durante décadas en condiciones ambientales apropiadas.</p>
+
+                    <p><strong class="text-green-200">Estrategias de vacunación:</strong> La vacunación animal constituye una medida altamente eficaz de control y prevención. La vacunación humana se ha utilizado para proteger poblaciones específicas de riesgo: residentes en zonas endémicas, trabajadores que manejan productos animales importados de países con carbunco endémico, y personal militar potencialmente expuesto. Aunque las vacunas actuales parecen ser eficaces en la prevención de la enfermedad, la investigación de vacunas menos tóxicas y más inmunogénicas constituye una prioridad urgente en la medicina actual.</p>
+
+                    <p><strong class="text-green-200">Desafíos de prevención:</strong> La eliminación completa de las infecciones por carbunco es improbable debido a la persistencia de la amenaza de infecciones de origen bioterrorista y la supervivencia prolongada de esporas en el ambiente. La detección temprana, el tratamiento inmediato y las medidas de bioseguridad son fundamentales para minimizar el impacto de posibles exposiciones. La preparación para emergencias de salud pública debe incluir protocolos específicos para el manejo de casos sospechosos de carbunco, especialmente en contextos de posible bioterrorismo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="glass rounded-xl p-6 mt-8 border-glow">
+            <h2 class="text-2xl font-bold text-green-200 mb-4 text-center text-glow">Aspectos Destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
+                <div class="bg-green-600 bg-opacity-20 p-4 rounded-lg border border-green-400 border-opacity-30 spore-float">
+                    <h3 class="font-bold text-green-200 mb-2">Origen histórico</h3>
+                    <p>El término "anthracis" deriva del griego "anthrax" que significa carbón, haciendo referencia a la herida necrótica negra característica asociada al carbunco cutáneo. Esta enfermedad ha sido reconocida desde la antigüedad y representa una de las primeras enfermedades infecciosas estudiadas científicamente.</p>
+                </div>
+                <div class="bg-yellow-600 bg-opacity-20 p-4 rounded-lg border border-yellow-400 border-opacity-30">
+                    <h3 class="font-bold text-yellow-200 mb-2">Supervivencia extrema</h3>
+                    <p>Las esporas de B. anthracis pueden sobrevivir en el suelo durante décadas manteniendo su viabilidad e infectividad. Esta característica las convierte en un agente de bioterrorismo particularmente peligroso y explica la persistencia de focos endémicos en ciertas regiones del mundo.</p>
+                </div>
+                <div class="bg-blue-600 bg-opacity-20 p-4 rounded-lg border border-blue-400 border-opacity-30 toxin-animation">
+                    <h3 class="font-bold text-blue-200 mb-2">Toxinas binarias únicas</h3>
+                    <p>El mecanismo de acción de las toxinas de B. anthracis es único en la naturaleza: requiere la combinación de dos componentes proteicos separados para ejercer su efecto tóxico, lo que proporciona un nivel adicional de regulación en la patogénesis de la enfermedad.</p>
+                </div>
+                <div class="bg-red-600 bg-opacity-20 p-4 rounded-lg border border-red-400 border-opacity-30 warning-pulse">
+                    <h3 class="font-bold text-red-200 mb-2">Amenaza bioterrorista</h3>
+                    <p>B. anthracis representa el agente de bioterrorismo más temido debido a su capacidad de formar esporas resistentes, su baja dosis infecciosa por inhalación, y la alta mortalidad del carbunco pulmonar si no se trata de inmediato. Los ataques de 2001 demostraron la vulnerabilidad de las poblaciones civiles.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer informativo -->
+        <div class="glass rounded-xl p-6 mt-8 text-center border-glow">
+            <p class="text-green-100 text-lg">
+                <strong>Alerta de salud pública:</strong> B. anthracis constituye un patógeno de nivel de bioseguridad 3 
+                que requiere manejo especializado en laboratorios de referencia. La sospecha clínica de carbunco, 
+                especialmente por inhalación, debe comunicarse inmediatamente a las autoridades de salud pública 
+                debido a las implicaciones epidemiológicas y de seguridad nacional. El tratamiento empírico debe 
+                iniciarse sin demora ante la sospecha fundada, ya que el retraso terapéutico está directamente 
+                relacionado con la mortalidad, particularmente en las formas sistémicas de la enfermedad.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

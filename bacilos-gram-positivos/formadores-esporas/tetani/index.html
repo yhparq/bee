@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clostridium tetani - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #a16207 0%, #f59e0b 100%);
+            min-height: 100vh;
+            animation: gradientShift 12s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background: linear-gradient(135deg, #a16207 0%, #f59e0b 100%); }
+            50% { background: linear-gradient(135deg, #92400e 0%, #fbbf24 100%); }
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .glass-header {
+            background: rgba(245, 158, 11, 0.35);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            animation: headerPulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes headerPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(245, 158, 11, 0.3); }
+            50% { transform: scale(1.005); box-shadow: 0 0 40px rgba(245, 158, 11, 0.5); }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .glass-card:nth-child(1) { animation-delay: 0.1s; }
+        .glass-card:nth-child(2) { animation-delay: 0.2s; }
+        .glass-card:nth-child(3) { animation-delay: 0.3s; }
+        .glass-card:nth-child(4) { animation-delay: 0.4s; }
+        .glass-card:nth-child(5) { animation-delay: 0.5s; }
+        .glass-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .neurotoxin-animation {
+            animation: neurotoxinFlow 6s ease-in-out infinite;
+        }
+        
+        @keyframes neurotoxinFlow {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(2deg) scale(1.03); }
+            75% { transform: rotate(-2deg) scale(0.97); }
+        }
+        
+        .spasm-animation {
+            animation: muscleSpasm 3s ease-in-out infinite;
+        }
+        
+        @keyframes muscleSpasm {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.05) rotate(1deg); }
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+        }
+        
+        .border-glow {
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        .tetanus-pulse {
+            animation: tetanusPulse 2.5s ease-in-out infinite;
+        }
+        
+        @keyframes tetanusPulse {
+            0%, 100% { background-color: rgba(239, 68, 68, 0.25); }
+            50% { background-color: rgba(239, 68, 68, 0.4); }
+        }
+        
+        .vaccination-glow {
+            animation: vaccinationGlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes vaccinationGlow {
+            0%, 100% { background-color: rgba(34, 197, 94, 0.2); }
+            50% { background-color: rgba(34, 197, 94, 0.35); }
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 0;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .content-box:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .full-width-section {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            padding-left: calc(50vw - 50%);
+            padding-right: calc(50vw - 50%);
+        }
+
+        .mechanism-flow {
+            animation: mechanismFlow 8s ease-in-out infinite;
+        }
+
+        @keyframes mechanismFlow {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(5px); }
+        }
+
+        .spore-resistance {
+            animation: sporeResistance 5s ease-in-out infinite;
+        }
+
+        @keyframes sporeResistance {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+        }
+
+        .diagnostic-challenge {
+            animation: diagnosticPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes diagnosticPulse {
+            0%, 100% { background-color: rgba(251, 191, 36, 0.2); }
+            50% { background-color: rgba(251, 191, 36, 0.35); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6">
+    <div class="w-full max-w-none">
+        <!-- Header -->
+        <div class="glass-header rounded-3xl p-8 mb-8 text-center border-glow">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-glow">Clostridium tetani</h1>
+            <p class="text-xl md:text-2xl text-yellow-100 spasm-animation">Bacilo anaerobio esporulador - Agente causal del tétanos</p>
+        </div>
+
+        <!-- Contenido principal sin espacios laterales -->
+        <div class="space-y-8">
+            
+            <!-- Fisiología y Estructura -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Fisiología y Estructura
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-yellow-200">Morfología característica de baqueta:</strong> C. tetani se presenta como un bacilo esporulador móvil de gran tamaño, con dimensiones que oscilan entre 0.5 a 1.7 x 2.1 a 18.1 micrometros. La característica más distintiva es la producción de esporas terminales redondeadas que le confieren un aspecto característico de baqueta o palillo de tambor. Esta morfología es prácticamente patognomónica del microorganismo y permite su identificación microscópica rápida cuando se observa en las muestras clínicas.</p>
+                        
+                        <p><strong class="text-yellow-200">Sensibilidad extrema al oxígeno:</strong> Al contrario que C. perfringens, C. tetani presenta grandes dificultades para crecer debido a su extrema sensibilidad a la toxicidad del oxígeno, siendo un anaerobio estricto. Cuando se detecta su desarrollo en medios de agar, aparece generalmente formando una película difusa sobre la superficie de los mismos en lugar de colonias discretas y bien definidas. Esta característica de crecimiento dificulta significativamente su aislamiento e identificación en el laboratorio clínico.</p>
+
+                        <div class="content-box spore-resistance">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Capacidad de esporulación excepcional</p>
+                            <p>Aunque las células vegetativas de C. tetani mueren rápidamente cuando se exponen al oxígeno, la formación de esporas permite al microorganismo sobrevivir en las condiciones ambientales más adversas durante períodos prolongados, incluso décadas en el suelo.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Actividad metabólica limitada:</strong> Las bacterias presentan actividad proteolítica significativa, lo que contribuye a su capacidad patógena, aunque son incapaces de fermentar hidratos de carbono. Esta característica bioquímica las diferencia de otros clostridios y refleja su metabolismo anaerobio estricto especializado en la degradación de proteínas como fuente principal de energía.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patogenia e Inmunidad -->
+            <div class="glass-card rounded-2xl neurotoxin-animation">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Patogenia e Inmunidad
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-yellow-200">Producción de toxinas específicas:</strong> C. tetani produce dos toxinas principales con significación clínica muy diferente. La tetanolisina es una hemolisina lábil al oxígeno que está relacionada serológicamente con la estreptolisina O y las hemolisinas de C. perfringens y Listeria monocytogenes, aunque se desconoce su significación clínica ya que se inhibe con el oxígeno y el colesterol sérico. La segunda toxina, la tetanoespasmina, es una neurotoxina termolábil codificada por un plásmido que constituye el factor de virulencia principal responsable de las manifestaciones clínicas del tétanos.</p>
+
+                        <div class="content-box mechanism-flow">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Mecanismo de acción de la tetanoespasmina</p>
+                            <p>La tetanoespasmina se produce durante la fase estacionaria de crecimiento y se libera cuando la célula se lisa. Se sintetiza como un único péptido de 150,000 Da y se escinde en una subunidad ligera (cadena A) y una subunidad pesada (cadena B) por una proteasa endógena. Las dos cadenas permanecen unidas por un enlace disulfuro y fuerzas no covalentes, formando una toxina A-B funcional.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Transporte neuronal y mecanismo tóxico:</strong> El dominio de unión a hidratos de carbono de la cadena pesada se une específicamente a receptores para el ácido siálico (polisialogangliósidos) y otras glucoproteínas adyacentes en la superficie de las neuronas motoras. Las moléculas intactas de toxina se internalizan en vesículas endosomales y se transportan desde el axón neuronal hacia el soma de la neurona motora localizado en la médula espinal mediante transporte axonal retrógrado.</p>
+
+                        <p><strong class="text-yellow-200">Inhibición de neurotransmisores:</strong> En el compartimento intracelular, el endosoma se acidifica provocando un cambio conformacional en el dominio N-terminal de la cadena pesada, permitiendo su inserción en la membrana endosomal y el paso de la cadena ligera al citoplasma celular. La cadena ligera es una endopeptidasa de zinc que escinde proteínas clave implicadas en el tráfico y liberación de neurotransmisores. Específicamente, la tetanoespasmina inhibe proteínas que regulan la liberación de los neurotransmisores inhibidores glicina y ácido gamma-aminobutírico (GABA), resultando en una actividad sináptica excitatoria no regulada que provoca parálisis espástica.</p>
+
+                        <div class="content-box tetanus-pulse">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Unión irreversible y recuperación</p>
+                            <p>La unión de la toxina a las terminaciones nerviosas es irreversible, por lo que la recuperación clínica depende completamente de la formación de nuevas terminales axonales, proceso que puede tomar semanas o meses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Manifestaciones Clínicas
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-yellow-200">Período de incubación variable:</strong> El período de incubación del tétanos varía desde unos pocos días hasta varias semanas, estando directamente relacionado con la distancia entre la herida primaria y el sistema nervioso central. Las heridas más cercanas al sistema nervioso central, como las heridas en cabeza y cuello, presentan períodos de incubación más cortos y generalmente asociados con peor pronóstico.</p>
+
+                        <div class="content-box spasm-animation">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Tétanos Generalizado</p>
+                            <p>El tétanos generalizado es la forma más frecuente de presentación. La afectación de los músculos maseteros (trismo) constituye el signo inicial en un gran número de pacientes, manifestándose como dificultad progresiva para abrir la boca. La sonrisa sardónica característica resulta de la contracción mantenida de los músculos faciales, creando una expresión facial grotesca y patognomónica. Otros signos precoces incluyen babeo, sudoración profusa, irritabilidad marcada y espasmos persistentes de la espalda conocidos como opistótonos, donde el paciente se arquea hacia atrás en una posición característica.</p>
+                        </div>
+
+                        <div class="content-box tetanus-pulse">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Afectación del sistema nervioso autónomo</p>
+                            <p>En los pacientes con enfermedad más grave, el sistema nervioso autónomo está significativamente afectado. Los signos y síntomas incluyen arritmias cardíacas potencialmente fatales, fluctuaciones extremas de la tensión arterial, sudoración profusa que puede llevar a deshidratación severa, y alteraciones de la termorregulación que complican significativamente el manejo clínico.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Tétanos localizado:</strong> Otra forma de enfermedad es el tétanos localizado, donde la enfermedad permanece confinada a la musculatura del lugar de la infección primaria. Una variante específica es el tétanos cefálico, donde la localización primaria de la infección es la cabeza. Contrario a lo que podría esperarse, el pronóstico del tétanos cefálico es muy desfavorable, frecuentemente peor que el tétanos generalizado debido a la proximidad al sistema nervioso central.</p>
+
+                        <div class="content-box tetanus-pulse">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Tétanos Neonatal</p>
+                            <p>El tétanos neonatal se asocia característicamente a una infección inicial del muñón umbilical que progresa hasta generalizarse rápidamente. La mortalidad infantil es superior al 90%, y los pocos supervivientes frecuentemente presentan trastornos del desarrollo neurológico permanentes. Esta forma devastadora de la enfermedad se restringe casi exclusivamente a países en vías de desarrollo donde las prácticas de atención del parto no son asépticas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico de Laboratorio -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Métodos de Diagnóstico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box diagnostic-challenge">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Diagnóstico fundamentalmente clínico</p>
+                            <p>El diagnóstico del tétanos, al igual que sucede con la mayoría de las enfermedades por clostridios, se elabora fundamentalmente a partir de la presentación clínica característica. La detección microscópica de C. tetani o su recuperación a partir de cultivo puede ser útil, pero generalmente no permite establecer el diagnóstico de manera confiable debido a las limitaciones técnicas del microorganismo.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Limitaciones del cultivo:</strong> Los resultados de los cultivos únicamente son positivos en alrededor del 30% de los pacientes con tétanos clínico, ya que la enfermedad se puede producir con un número relativamente pequeño de microorganismos y las bacterias de crecimiento lento se mueren rápidamente cuando se exponen al aire. La extrema sensibilidad al oxígeno de las células vegetativas hace que muchas muestras clínicas no rindan el microorganismo incluso cuando está presente.</p>
+
+                        <p><strong class="text-yellow-200">Ausencia de marcadores séricos:</strong> En el paciente no se detecta la toxina libre o los anticuerpos dirigidos frente a la toxina debido a que la tetanoespasmina se une con rapidez a las neuronas motoras para ser internalizada y transportada al sistema nervioso central. Las cantidades mínimas de toxina necesarias para producir la enfermedad están por debajo del límite de detección de los métodos de laboratorio disponibles.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-blue-200 mb-3">Confirmación en laboratorios especializados</p>
+                            <p>Si se logra aislar un microorganismo del cultivo, la producción de toxina por la cepa aislada se puede confirmar mediante la prueba de neutralización de la antitoxina tetánica en ratones, una técnica altamente específica que únicamente se lleva a cabo en laboratorios de referencia especializados. Esta prueba confirma la capacidad toxigénica pero raramente se realiza en la práctica clínica rutinaria.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Importancia del diagnóstico diferencial:</strong> El diagnóstico diferencial debe incluir otras causas de espasmos musculares y rigidez, como intoxicación por estricnina, hipocalcemia, meningitis, encefalitis, y reacciones distónicas a medicamentos. La historia de herida previa y el patrón característico de progresión de los síntomas son elementos clave para establecer el diagnóstico correcto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Tratamiento y Manejo Clínico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-yellow-200">Mejora histórica de la mortalidad:</strong> La mortalidad asociada al tétanos ha disminuido de forma ininterrumpida a lo largo del siglo pasado como consecuencia, en gran medida, de la disminución de la incidencia del tétanos en países desarrollados y la mejora en las medidas de soporte intensivo. Sin embargo, la mortalidad más elevada se sigue registrando en los recién nacidos y en sujetos en los que el período de incubación es inferior a una semana.</p>
+
+                        <div class="content-box tetanus-pulse">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Tratamiento multifacético inmediato</p>
+                            <p>El tratamiento del tétanos requiere un enfoque integral que incluye el desbridamiento quirúrgico de la herida primaria (la cual puede mostrar un aspecto inocuo), la administración de metronidazol como antibiótico de elección, la vacunación pasiva con inmunoglobulina tetánica humana, y la vacunación activa con el toxoide tetánico para prevenir futuros episodios.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Racionalidad del tratamiento:</strong> El cuidado de las heridas y el tratamiento con metronidazol eliminan las bacterias vegetativas que continúan sintetizando la toxina, previniendo la producción de nueva tetanoespasmina. Los anticuerpos antitoxina presentes en la inmunoglobulina actúan uniéndose a las moléculas libres de tetanoespasmina circulantes, neutralizándolas antes de que puedan unirse a las neuronas motoras.</p>
+
+                        <p><strong class="text-yellow-200">Selección antibiótica específica:</strong> El metronidazol y la penicilina tienen una actividad antimicrobiana equivalente frente a C. tetani; sin embargo, la penicilina no se debe emplear en individuos aquejados de tétanos porque, al igual que la tetanoespasmina, inhibe la actividad del neurotransmisor GABA, potencialmente exacerbando los síntomas neurológicos de la enfermedad.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-orange-200 mb-3">Manejo sintomático prolongado</p>
+                            <p>La toxina ya unida a las terminaciones nerviosas se encuentra protegida frente a la acción de los anticuerpos neutralizantes. Por tanto, los efectos tóxicos deben controlarse sintomáticamente mediante sedación, relajantes musculares, y soporte ventilatorio si es necesario, hasta que se restablezca la regulación normal de la transmisión sináptica a través de la regeneración de nuevas terminales axonales.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Soporte intensivo:</strong> El manejo en unidades de cuidados intensivos es frecuentemente necesario para el control de los espasmos musculares severos, el mantenimiento de la vía aérea, la ventilación mecánica si se requiere, y el monitoreo y tratamiento de las complicaciones autonómicas como arritmias cardíacas y fluctuaciones extremas de la presión arterial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epidemiología -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Epidemiología y Distribución Global
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-yellow-200">Distribución universal:</strong> C. tetani es un microorganismo ubicuo que se encuentra ampliamente distribuido en el suelo fértil de prácticamente todo el mundo y coloniza de manera transitoria el aparato digestivo de muchos animales, incluyendo el ser humano. Las formas vegetativas son extremadamente sensibles a la toxicidad del oxígeno, pero los microorganismos forman esporas con facilidad y pueden sobrevivir en la naturaleza durante períodos prolongados, incluso décadas.</p>
+
+                        <div class="content-box vaccination-glow">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Contraste epidemiológico por desarrollo socioeconómico</p>
+                            <p>La enfermedad es relativamente infrecuente en Estados Unidos y otros países desarrollados debido a la alta incidencia de inmunidad lograda mediante programas de vacunación sistemática. Se describen menos de 40 casos cada año en EE.UU., afectando principalmente a pacientes ancianos con disminución de la inmunidad o individuos no vacunados.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Impacto global devastador:</strong> Sin embargo, el tétanos origina todavía muchas muertes en países en vías de desarrollo donde la vacunación no se efectúa de forma rigurosa o los cuidados médicos son inadecuados. Se estima que ocurren más de un millón de casos cada año en todo el mundo, con una tasa de mortalidad comprendida entre un 30% y un 50%. Al menos la mitad de las muertes se registra en neonatos debido a prácticas no asépticas durante el parto.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Grupos de mayor riesgo</p>
+                            <p>El riesgo es mayor en personas con inmunidad inducida por vacunación inadecuada, trabajadores agrícolas expuestos al suelo contaminado, usuarios de drogas intravenosas, y poblaciones en áreas con cobertura de vacunación insuficiente. Es importante destacar que la enfermedad no induce inmunidad protectora duradera, por lo que incluso los supervivientes pueden presentar episodios recurrentes si no se vacunan adecuadamente.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Factores de exposición:</strong> Las esporas están particularmente concentradas en suelos tratados con estiércol animal, áreas agrícolas intensivas, y lugares donde defecan animales de granja. Las heridas punzantes profundas, especialmente aquellas contaminadas con tierra, estiércol, o material vegetal en descomposición, presentan el mayor riesgo de infección debido a las condiciones anaerobias que favorecen la germinación de las esporas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prevención y Control -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-yellow-200 mb-6 border-b-2 border-yellow-300 pb-3 text-glow">
+                        Prevención y Control
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box vaccination-glow">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Vacunación: La medida preventiva más eficaz</p>
+                            <p>La vacunación con una serie de tres dosis de toxoide tetánico seguida de dosis de refuerzo cada 10 años es extraordinariamente eficaz para prevenir el tétanos. El toxoide tetánico es una toxina inactivada que estimula la producción de anticuerpos neutralizantes sin causar enfermedad. Esta estrategia de inmunización ha sido tan exitosa que ha eliminado virtualmente el tétanos de países con programas de vacunación sistemática.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Esquema de vacunación recomendado:</strong> La serie primaria de vacunación consiste en tres dosis de toxoide tetánico administradas con intervalos apropiados durante la infancia, seguidas de dosis de refuerzo cada 10 años durante toda la vida. En situaciones de heridas de alto riesgo en pacientes con estado de vacunación incierto o incompleto, se debe administrar tanto la vacuna como la inmunoglobulina tetánica humana para proporcionar protección inmediata y a largo plazo.</p>
+
+                        <p><strong class="text-yellow-200">Cuidado apropiado de heridas:</strong> El manejo adecuado de las heridas constituye una medida preventiva crucial complementaria a la vacunación. Esto incluye la limpieza minuciosa de todas las heridas, especialmente las punzantes y las contaminadas con tierra o material orgánico, el desbridamiento de tejidos desvitalizados que pueden proporcionar condiciones anaerobias favorables para la germinación de esporas, y la irrigación copiosa con soluciones apropiadas.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-blue-200 mb-3">Profilaxis post-exposición</p>
+                            <p>En casos de heridas de alto riesgo en individuos no vacunados o con estado de vacunación dudoso, la profilaxis post-exposición incluye la administración inmediata de inmunoglobulina tetánica humana (250-500 unidades intramuscular) para neutralizar cualquier toxina que pudiera producirse, junto con el inicio de la serie de vacunación activa con toxoide tetánico.</p>
+                        </div>
+
+                        <p><strong class="text-yellow-200">Consideraciones especiales:</strong> Las mujeres en edad reproductiva en áreas de riesgo deben recibir vacunación sistemática para prevenir el tétanos neonatal a través de la transferencia de anticuerpos maternos. Las heridas en ambientes agrícolas, accidentes con herramientas de jardinería, y lesiones en áreas rurales requieren especial atención debido al mayor riesgo de contaminación con esporas tetánicas.</p>
+
+                        <div class="content-box vaccination-glow">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Impacto de la vacunación global</p>
+                            <p>Los programas de vacunación masiva han demostrado ser una de las intervenciones de salud pública más exitosas en la historia de la medicina. La incidencia global de tétanos ha disminuido dramáticamente en las últimas décadas donde se han implementado programas de inmunización sistemática, demostrando que esta enfermedad devastadora es completamente prevenible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro resumen de aspectos destacados -->
+        <div class="glass rounded-3xl p-8 mt-12 border-glow">
+            <h2 class="text-3xl font-bold text-yellow-200 mb-6 text-center text-glow">Aspectos Clínicos Fundamentales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="content-box spore-resistance">
+                    <h3 class="font-bold text-yellow-300 mb-3 text-lg">Supervivencia Extrema</h3>
+                    <p class="text-white text-sm leading-relaxed">Las esporas de C. tetani pueden sobrevivir décadas en el suelo, resistiendo condiciones ambientales extremas y manteniendo su capacidad infectiva durante períodos prolongados.</p>
+                </div>
+                <div class="content-box tetanus-pulse">
+                    <h3 class="font-bold text-red-300 mb-3 text-lg">Neurotoxina Devastadora</h3>
+                    <p class="text-white text-sm leading-relaxed">La tetanoespasmina es una de las toxinas más potentes conocidas, capaz de causar parálisis espástica severa mediante la inhibición de neurotransmisores inhibidores GABA y glicina.</p>
+                </div>
+                <div class="content-box diagnostic-challenge">
+                    <h3 class="font-bold text-orange-300 mb-3 text-lg">Diagnóstico Clínico</h3>
+                    <p class="text-white text-sm leading-relaxed">El diagnóstico es fundamentalmente clínico debido a la baja sensibilidad de los cultivos (30%) y la ausencia de marcadores séricos detectables.</p>
+                </div>
+                <div class="content-box vaccination-glow">
+                    <h3 class="font-bold text-green-300 mb-3 text-lg">Prevención Exitosa</h3>
+                    <p class="text-white text-sm leading-relaxed">La vacunación con toxoide tetánico es extraordinariamente eficaz, habiendo eliminado virtualmente la enfermedad de países con programas sistemáticos de inmunización.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer informativo -->
+        <div class="glass rounded-3xl p-8 mt-8 text-center border-glow">
+            <p class="text-yellow-100 text-lg leading-relaxed">
+                <strong class="text-glow">Mensaje fundamental:</strong> El tétanos representa una de las enfermedades más graves pero completamente prevenibles 
+                en la medicina moderna. Mientras que las manifestaciones clínicas son devastadoras con alta mortalidad, 
+                la disponibilidad de una vacuna altamente efectiva hace que cada caso de tétanos constituya una tragedia 
+                prevenible. La clave está en mantener programas de vacunación sistemática y asegurar el cuidado apropiado 
+                de heridas en todas las poblaciones. En países desarrollados, el tétanos se ha vuelto tan infrecuente que 
+                muchos profesionales de la salud pueden no estar familiarizados con sus manifestaciones clínicas, 
+                lo que subraya la importancia de mantener la vigilancia y el conocimiento sobre esta enfermedad histórica.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

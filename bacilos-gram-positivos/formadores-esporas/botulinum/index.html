@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clostridium botulinum - Información Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+            min-height: 100vh;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .glass-header {
+            background: rgba(16, 185, 129, 0.35);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+        }
+        
+        .border-glow {
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 0;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .content-box:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .full-width-section {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            padding-left: calc(50vw - 50%);
+            padding-right: calc(50vw - 50%);
+        }
+
+        .botulism-danger {
+            background-color: rgba(239, 68, 68, 0.25);
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .prevention-success {
+            background-color: rgba(34, 197, 94, 0.25);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .diagnostic-challenge {
+            background-color: rgba(251, 191, 36, 0.25);
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .bioweapon-alert {
+            background-color: rgba(147, 51, 234, 0.25);
+            border-color: rgba(147, 51, 234, 0.4);
+        }
+
+        .toxin-table {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            background: rgba(16, 185, 129, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-row {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .table-row:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6">
+    <div class="w-full max-w-none">
+        <!-- Header -->
+        <div class="glass-header rounded-3xl p-8 mb-8 text-center border-glow">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-glow">Clostridium botulinum</h1>
+            <p class="text-xl md:text-2xl text-green-100">Bacilo anaerobio esporulador - Agente causal del botulismo</p>
+        </div>
+
+        <!-- Contenido principal sin espacios laterales -->
+        <div class="space-y-8">
+            
+            <!-- Fisiología y Estructura -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Fisiología y Estructura
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-green-200">Grupo heterogéneo de especies:</strong> C. botulinum, el agente etiológico del botulismo, engloba un grupo heterogéneo de bacilos anaerobios formadores de esporas de tamaño grande (0.6 a 1.4 x 3 a 20.2 micrometros) con necesidades nutricionales exigentes. Estas bacterias se subdividen en cuatro subgrupos basándose en sus propiedades fenotípicas y genéticas, representando claramente cuatro especies que tradicionalmente se han clasificado dentro de una única especie por razones históricas.</p>
+                        
+                        <p><strong class="text-green-200">Diversidad de toxinas botulínicas:</strong> Se han descrito siete toxinas botulínicas antigénicamente diferentes, designadas de la A a la G, aunque la enfermedad en el ser humano se asocia principalmente a los tipos A, B, E y F. La síntesis de estas toxinas se asocia a grupos específicos de cepas con características bioquímicas distintivas. Otras especies de clostridios también pueden producir toxinas botulínicas, incluyendo C. butyricum (toxina tipo E), C. baratii (toxina tipo F) y Clostridium argentinense (toxina tipo G).</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Clasificación por subgrupos</p>
+                            <div class="toxin-table">
+                                <div class="table-header p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-green-100 font-bold">
+                                        <div>Grupo</div>
+                                        <div>Tipo de Toxina</div>
+                                        <div>Propiedades Fenotípicas</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-green-200">I</div>
+                                        <div>A, B, F</div>
+                                        <div>Proteolíticas, sacarolíticas</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-green-200">II</div>
+                                        <div>B, E, F</div>
+                                        <div>No proteolíticas, sacarolíticas</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-green-200">III</div>
+                                        <div>C, D</div>
+                                        <div>Débilmente proteolíticas, sacarolíticas</div>
+                                    </div>
+                                </div>
+                                <div class="table-row p-4">
+                                    <div class="grid grid-cols-3 gap-4 text-white text-sm">
+                                        <div class="font-semibold text-green-200">IV</div>
+                                        <div>G</div>
+                                        <div>Débilmente proteolíticas, asacarolíticas</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p><strong class="text-green-200">Características de crecimiento:</strong> Como anaerobio estricto, las células vegetativas son muy sensibles al oxígeno y requieren condiciones ambientales especializadas para su crecimiento. Las cepas asociadas con enfermedad humana se caracterizan por la producción de lipasa (visible como una película iridiscente en las colonias que crecen en agar de yema de huevo), capacidad para digerir las proteínas de la leche, hidrolizar la gelatina y fermentar la glucosa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patogenia e Inmunidad -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Patogenia e Inmunidad
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-green-200">Estructura y función de la neurotoxina:</strong> Al igual que la toxina del tétanos, la toxina fabricada por C. botulinum es una proteína precursora de 150,000 Da formada por una pequeña subunidad (cadena ligera o cadena A) con actividad de endopeptidasa de zinc y una subunidad no toxigénica de gran tamaño (cadena pesada o cadena B). A diferencia de la neurotoxina del tétanos, la toxina botulínica forma complejos con proteínas no tóxicas que protegen a la neurotoxina durante su estancia en el tubo digestivo, característica innecesaria para la toxina del tétanos.</p>
+
+                        <div class="content-box botulism-danger">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Mecanismo de acción diferencial</p>
+                            <p>La porción carboxilo-terminal de la cadena pesada de la toxina botulínica se une a receptores específicos para el ácido siálico y glucoproteínas distintos de los ocupados por la tetanoespasmina en la superficie de neuronas motoras. A diferencia de la tetanoespasmina, la neurotoxina de C. botulinum permanece en la zona de unión neuromuscular sin transportarse al sistema nervioso central.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Inhibición de la neurotransmisión:</strong> La acidificación del endosoma estimula la liberación de la cadena ligera mediada por la cadena pesada N-terminal. Posteriormente, la endopeptidasa de la toxina inactiva las proteínas que intervienen en la regulación de la acetilcolina, inhibiendo específicamente la neurotransmisión en las sinapsis colinérgicas periféricas. Puesto que la excitación muscular requiere la presencia de acetilcolina, la presentación clínica del botulismo es una parálisis flaccida característica.</p>
+
+                        <p><strong class="text-green-200">Recuperación y regeneración:</strong> Como en el caso del tétanos, la recuperación de la función tras un episodio de botulismo exige la regeneración completa de las terminales neuronales afectadas. Este proceso puede tomar muchos meses o incluso años, lo que explica la prolongada convalecencia observada en muchos pacientes. La unión irreversible de la neurotoxina hace que la enfermedad continúe su evolución a pesar del tratamiento agresivo.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Diferencias clave con la tetanoespasmina</p>
+                            <p>Mientras que la tetanoespasmina inhibe neurotransmisores inhibidores (GABA y glicina) causando parálisis espástica, la toxina botulínica inhibe la liberación de acetilcolina causando parálisis flaccida. Esta diferencia fundamental en el mecanismo de acción explica las manifestaciones clínicas contrastantes entre tétanos y botulismo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifestaciones Clínicas -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Manifestaciones Clínicas
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box botulism-danger">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Botulismo Alimentario Clásico</p>
+                            <p>Los pacientes con botulismo transmitido por alimentos suelen presentar un cuadro de debilidad y mareo 1 o 2 días después del consumo del alimento contaminado. Los signos iniciales incluyen visión borrosa y pupilas fijas y dilatadas, xerostomía (indicador de los efectos anticolinérgicos de la toxina), estreñimiento y dolor abdominal. No se observa fiebre en ningún momento de la enfermedad. La debilidad bilateral descendente de los músculos periféricos se desarrolla en pacientes con enfermedad progresiva, manifestándose como parálisis flaccida característica, y la muerte se suele atribuir a la parálisis respiratoria.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Evolución y pronóstico:</strong> Los pacientes conservan la sensibilidad durante toda la enfermedad, lo que diferencia el botulismo de otras neuropatías. A pesar del tratamiento agresivo, la enfermedad continúa su evolución como consecuencia de la unión irreversible de la neurotoxina, que inhibe la liberación de neurotransmisores excitatorios durante un período prolongado. La recuperación completa necesita muchas veces meses o años hasta que las terminaciones nerviosas afectadas vuelvan a regenerarse. La mortalidad, que anteriormente se acercaba al 70%, se ha reducido al 10% debido al perfeccionamiento del tratamiento de soporte, fundamentalmente en el abordaje de las complicaciones respiratorias.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-orange-200 mb-3">Botulismo del Lactante</p>
+                            <p>El botulismo del lactante se describió por primera vez en 1976 y actualmente constituye la forma más frecuente de botulismo en Estados Unidos. En contraposición con el botulismo alimentario, esta enfermedad se debe a la acción de una neurotoxina producida in vivo por las células de C. botulinum que colonizan el aparato digestivo de los lactantes. Aunque los adultos están expuestos a estos microorganismos en la dieta, C. botulinum es incapaz de sobrevivir en su intestino maduro. Sin embargo, en ausencia de microorganismos intestinales competidores, el patógeno puede establecerse en el aparato digestivo de los lactantes.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Características del botulismo infantil:</strong> Esta entidad afecta de forma característica a niños menores de 1 año, especialmente de edades comprendidas entre 1 y 6 meses, y los síntomas son inespecíficos en su fase inicial, incluyendo estreñimiento, llanto débil, o "dificultad para moverse". Se puede desarrollar una enfermedad progresiva con parálisis flaccida e insuficiencia respiratoria; sin embargo, la mortalidad de los casos demostrados de botulismo del lactante es muy baja (1-2%). Algunas muertes infantiles atribuidas a otras causas, como el síndrome de muerte súbita del lactante, podrían deberse en realidad a casos no diagnosticados de botulismo.</p>
+
+                        <div class="content-box botulism-danger">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Botulismo de las Heridas</p>
+                            <p>El botulismo de las heridas se desarrolla como consecuencia de la producción de toxina por C. botulinum en heridas contaminadas. Aunque los síntomas de la enfermedad son idénticos a los de la infección transmitida por alimentos, el período de incubación es generalmente más largo (4 días o más), y los síntomas del aparato digestivo son menos prominentes debido a que la toxina se produce localmente en la herida en lugar de ser ingerida preformada.</p>
+                        </div>
+
+                        <div class="content-box bioweapon-alert">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Botulismo por Inhalación</p>
+                            <p>El botulismo por inhalación supone un destacado motivo de preocupación como consecuencia de la amenaza bioterrorista. La toxina del botulismo se ha concentrado para su diseminación en forma de partículas transportadas por el aire como arma biológica. Cuando se administra por esta vía, la enfermedad por inhalación se caracteriza por su rápido comienzo y su alta mortalidad, constituyendo una de las formas más letales de botulismo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico de Laboratorio -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Métodos de Diagnóstico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box diagnostic-challenge">
+                            <p class="text-lg font-semibold text-yellow-200 mb-3">Confirmación mediante aislamiento y detección de toxina</p>
+                            <p>El diagnóstico clínico de botulismo se confirma tras el aislamiento del microorganismo en el laboratorio o la detección de la actividad de la toxina. La probabilidad de detectar la actividad de la toxina es mayor en las fases iniciales de la enfermedad. Se debe intentar cultivar C. botulinum a partir de muestras de heces de los pacientes con enfermedad transmitida por alimentos, y en los alimentos implicados si se dispone de ellos.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Sensibilidad variable de las pruebas:</strong> Ninguna prueba de detección de botulismo alimentario dispone de una sensibilidad mayor del 60%, lo que representa una limitación significativa en el diagnóstico. Por el contrario, la toxina se detecta en el suero de más del 90% de los lactantes aquejados de botulismo, haciendo que el diagnóstico sea más confiable en esta población. Esta diferencia se debe a la mayor concentración de toxina circulante en los lactantes donde la producción es continua.</p>
+
+                        <p><strong class="text-green-200">Técnicas de aislamiento especializado:</strong> El aislamiento de C. botulinum a partir de muestras contaminadas por otros microorganismos se puede potenciar mediante el calentamiento de la muestra durante 10 minutos a 80°C con el propósito de destruir todas las células no clostrídiales. El cultivo de la muestra calentada en medios de cultivo anaerobios enriquecidos hace posible la germinación de las esporas termorresistentes de C. botulinum, eliminando la flora competidora.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-blue-200 mb-3">Bioensayo en ratón</p>
+                            <p>La demostración de la producción de toxina, que se suele llevar a cabo en laboratorios de referencia especializados, se debe hacer con un bioensayo de ratón. Este procedimiento consiste en la preparación de dos alícuotas de la cepa, mezclando una alícuota con la antitoxina específica, e inoculando intraperitonealmente cada una de las dos alícuotas en los animales. Si el tratamiento con antitoxina confiere protección a los ratones, se confirma la actividad de la toxina.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Diagnóstico diferencial según forma clínica:</strong> El diagnóstico del botulismo del lactante se confirma mediante el aislamiento de C. botulinum a partir de muestras de heces o la detección de actividad de la toxina en las heces o en el suero. El microorganismo se puede aislar de los coprocultivos en prácticamente todos los pacientes debido a que el estado de portador puede persistir durante muchos meses, incluso tras la recuperación del niño. El botulismo de las heridas se confirma por medio del aislamiento del microorganismo de las heridas o mediante la detección de la actividad de la toxina en el exudado de la herida o en el suero.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Tratamiento y Manejo Clínico
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Enfoque terapéutico multifacético</p>
+                            <p>Los pacientes con botulismo necesitan un enfoque terapéutico integral que incluye: tratamiento ventilatorio de soporte adecuado como medida más crítica; eliminación del microorganismo del aparato digestivo mediante el uso de lavados gástricos y tratamiento con metronidazol o penicilina; y la administración de la antitoxina botulínica trivalente frente a las toxinas A, B y E, que se une a las moléculas de toxina presentes en el torrente circulatorio.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Importancia del soporte ventilatorio:</strong> La ventilación adecuada es extremadamente importante para disminuir la mortalidad, ya que la causa principal de muerte en el botulismo es la insuficiencia respiratoria secundaria a la parálisis de los músculos respiratorios. El manejo en unidades de cuidados intensivos con capacidad de ventilación mecánica prolongada es frecuentemente necesario, especialmente en casos graves donde la recuperación puede tomar meses.</p>
+
+                        <p><strong class="text-green-200">Limitaciones de la inmunidad adquirida:</strong> No se desarrollan concentraciones protectoras de anticuerpos después de la enfermedad, por lo que los pacientes permanecen vulnerables a nuevas infecciones por el mismo u otros tipos de toxinas botulínicas. Esta característica única del botulismo contrasta con muchas otras enfermedades infecciosas donde la infección confiere inmunidad protectora duradera.</p>
+
+                        <div class="content-box botulism-danger">
+                            <p class="text-lg font-semibold text-red-200 mb-3">Consideraciones especiales en el tratamiento</p>
+                            <p>La antitoxina debe administrarse lo más precozmente posible, ya que solo neutraliza la toxina libre circulante y no puede revertir la toxina ya unida a las terminales nerviosas. El tratamiento antimicrobiano es importante para eliminar las bacterias que continúan produciendo toxina, pero no tiene efecto sobre la toxina ya liberada. La recuperación depende completamente de la regeneración de nuevas terminales nerviosas, proceso que no puede acelerarse con ningún tratamiento disponible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epidemiología -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Epidemiología y Distribución
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <p><strong class="text-green-200">Distribución global y ambiental:</strong> C. botulinum se suele aislar a partir del suelo y de las muestras de agua en todo el mundo, manteniéndose como un componente ubicuo de la microflora ambiental. En Estados Unidos, las cepas del tipo A se encuentran fundamentalmente en los terrenos neutros o alcalinos del oeste del río Mississippi; las cepas del tipo B se localizan principalmente en los suelos orgánicos ricos de la región oriental del país; y las cepas del tipo E se detectan únicamente en los suelos húmedos y sedimentos acuáticos.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Cuatro formas principales de botulismo</p>
+                            <p>Se han identificado cuatro formas distintas de botulismo basándose en la ruta de exposición y el mecanismo de intoxicación: la forma clásica o botulismo transmitido por los alimentos, el botulismo del lactante, el botulismo de las heridas, y el botulismo por inhalación. Cada forma presenta características epidemiológicas, clínicas y de manejo específicas que requieren abordajes diferenciados.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Incidencia en Estados Unidos:</strong> A pesar del frecuente aislamiento de C. botulinum a partir de muestras edáficas, la entidad es infrecuente en Estados Unidos. Se observan anualmente menos de 30 casos de botulismo alimentario, siendo la mayoría asociados al consumo de conservas preparadas en casa (toxinas de los tipos A y B), y ocasionalmente con el consumo de pescado en conserva (toxina tipo E). El alimento puede no parecer en mal estado, pero incluso sólo con probarlo puede producirse un cuadro clínico completo.</p>
+
+                        <p><strong class="text-green-200">Botulismo del lactante como forma predominante:</strong> El botulismo del lactante es más frecuente aunque se describen menos de 100 casos cada año, y se ha asociado al consumo de alimentos, fundamentalmente miel, contaminados por esporas de C. botulinum. La incidencia del botulismo de las heridas no se conoce con precisión, pero la enfermedad es muy rara y se asocia principalmente con el uso de drogas intravenosas en ambientes no estériles.</p>
+
+                        <div class="content-box bioweapon-alert">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Amenaza bioterrorista</p>
+                            <p>El botulismo por inhalación supone un destacado motivo de preocupación como consecuencia de la amenaza bioterrorista. La toxina del botulismo se ha concentrado para su diseminación en forma de partículas transportadas por el aire como arma biológica. Cuando se administra por esta vía, la enfermedad por inhalación se caracteriza por su rápido comienzo y su alta mortalidad, constituyendo una de las armas biológicas más temidas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prevención y Control -->
+            <div class="glass-card rounded-2xl">
+                <div class="content-box">
+                    <h2 class="text-3xl font-bold text-green-200 mb-6 border-b-2 border-green-300 pb-3 text-glow">
+                        Prevención y Control
+                    </h2>
+                    <div class="text-white space-y-6 text-lg leading-relaxed">
+                        <div class="content-box prevention-success">
+                            <p class="text-lg font-semibold text-green-200 mb-3">Estrategias de prevención alimentaria</p>
+                            <p>La enfermedad se previene mediante tres enfoques principales: la destrucción de las esporas de los alimentos (casi imposible por razones prácticas debido a su extrema resistencia), evitar la germinación de las esporas manteniendo los alimentos en un pH ácido o almacenados a una temperatura de 4°C o menos, o la destrucción de la toxina preformada. Todas las toxinas del botulismo se inactivan al ser calentadas a una temperatura comprendida entre 60°C y 100°C durante 10 minutos.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Control en la preparación de conservas:</strong> Las conservas caseras representan el mayor riesgo de botulismo alimentario. Los métodos apropiados de enlatado incluyen el uso de presión adecuada para alcanzar temperaturas que destruyan las esporas (121°C durante períodos específicos según el tipo de alimento), mantenimiento de pH ácido (menor a 4.6) que inhibe la germinación de esporas, y refrigeración constante para prevenir la multiplicación bacteriana y producción de toxina.</p>
+
+                        <div class="content-box">
+                            <p class="text-lg font-semibold text-orange-200 mb-3">Prevención del botulismo infantil</p>
+                            <p>El botulismo infantil se ha asociado al consumo de miel contaminada por esporas de C. botulinum, por lo que los niños menores de 1 año no deberían consumir este producto. También se recomienda evitar otros productos que puedan contener esporas como jarabes de maíz y algunos alimentos envasados en casa. La flora intestinal madura de los adultos impide la colonización, pero los lactantes carecen de esta protección natural.</p>
+                        </div>
+
+                        <p><strong class="text-green-200">Medidas de seguridad alimentaria:</strong> Los consumidores deben estar educados sobre los signos de alimentos potencialmente contaminados, incluyendo latas abolladas, hinchadas o que hagan ruido al abrirse, alimentos con olor anormal, y productos caseros enlatados de manera inapropiada. La regla general es "cuando haya duda, deséchelo", ya que incluso pequeñas cantidades de toxina pueden causar enfermedad grave.</p>
+
+                        <div class="content-box bioweapon-alert">
+                            <p class="text-lg font-semibold text-purple-200 mb-3">Preparación para bioterrorismo</p>
+                            <p>Dado el potencial de la toxina botulínica como arma biológica, las autoridades de salud pública mantienen reservas de antitoxina polivalente y protocolos de respuesta rápida para eventos de exposición masiva. La detección temprana de casos y la respuesta coordinada son críticas para minimizar las consecuencias de un posible ataque bioterrorista con toxina botulínica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro resumen de aspectos destacados -->
+        <div class="glass rounded-3xl p-8 mt-12 border-glow">
+            <h2 class="text-3xl font-bold text-green-200 mb-6 text-center text-glow">Aspectos Clínicos Fundamentales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="content-box">
+                    <h3 class="font-bold text-green-300 mb-3 text-lg">Neurotoxina Potente</h3>
+                    <p class="text-white text-sm leading-relaxed">La toxina botulínica es una de las sustancias más tóxicas conocidas, causando parálisis flaccida mediante la inhibición de la liberación de acetilcolina en las sinapsis neuromusculares.</p>
+                </div>
+                <div class="content-box botulism-danger">
+                    <h3 class="font-bold text-red-300 mb-3 text-lg">Diversidad de Presentaciones</h3>
+                    <p class="text-white text-sm leading-relaxed">Cuatro formas distintas: alimentario, del lactante (más común en EE.UU.), de heridas, y por inhalación (amenaza bioterrorista), cada una con características específicas.</p>
+                </div>
+                <div class="content-box diagnostic-challenge">
+                    <h3 class="font-bold text-yellow-300 mb-3 text-lg">Diagnóstico Desafiante</h3>
+                    <p class="text-white text-sm leading-relaxed">Sensibilidad limitada de las pruebas (≤60% para botulismo alimentario) requiere alta sospecha clínica y confirmación en laboratorios especializados.</p>
+                </div>
+                <div class="content-box prevention-success">
+                    <h3 class="font-bold text-green-300 mb-3 text-lg">Prevención Efectiva</h3>
+                    <p class="text-white text-sm leading-relaxed">Completamente prevenible mediante técnicas apropiadas de conservación de alimentos, evitando miel en lactantes, y cuidado de heridas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer informativo -->
+        <div class="glass rounded-3xl p-8 mt-8 text-center border-glow">
+            <p class="text-green-100 text-lg leading-relaxed">
+                <strong class="text-glow">Consideración clínica crucial:</strong> El botulismo representa una emergencia neurológica con potencial 
+                letal que requiere reconocimiento inmediato y manejo agresivo. Aunque es una enfermedad rara, su gravedad y 
+                el potencial de uso como arma biológica hacen que el conocimiento sobre su presentación clínica, diagnóstico 
+                y tratamiento sea esencial para todos los profesionales de la salud. La clave del éxito terapéutico radica 
+                en el soporte ventilatorio precoz y la administración temprana de antitoxina, ya que la toxina unida no puede 
+                ser neutralizada. La prevención mediante educación sobre seguridad alimentaria y técnicas apropiadas de 
+                conservación sigue siendo la medida más efectiva contra esta devastadora intoxicación.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
